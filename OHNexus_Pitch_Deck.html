@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ØHNexus Protocol - Investor Pitch Deck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0d0d0d;
+        --primary: #00b4c8;
+        --text: #ffffff;
+        --support: #a0a0a0;
+        --amber: #f59e0b;
+        --card-bg: #141414;
+        --border: #222222;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg);
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+      .slide {
+        width: 100%;
+        max-width: 1440px;
+        min-height: 810px;
+        aspect-ratio: 16/9;
+        padding: 48px 48px 96px 48px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        page-break-after: always;
+        margin: 0 auto;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #111;
+      }
+      .footer-bar {
+        position: absolute;
+        bottom: 24px;
+        left: 48px;
+        right: 48px;
+        height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: var(--support);
+      }
+      .content-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .title {
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 0 0 16px 0;
+      }
+      .subtitle {
+        font-size: 15px;
+        color: var(--support);
+        margin-bottom: 24px;
+      }
+      p,
+      li,
+      td {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 0;
+      }
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 20px;
+      }
+      .highlight {
+        border-left: 3px solid var(--primary);
+      }
+      .grid-2x2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+      }
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .metric {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 6px;
+      }
+      .metric-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--support);
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(0, 180, 200, 0.1);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .badge-amber {
+        display: inline-block;
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--amber);
+        border: 1px solid var(--amber);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .footnote {
+        font-size: 11px;
+        color: var(--support);
+        font-style: italic;
+        margin-top: 16px;
+      }
+      svg.icon {
+        width: 28px;
+        height: 28px;
+        stroke: var(--primary);
+        stroke-width: 1.5;
+        fill: none;
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th,
+      td {
+        padding: 14px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+      }
+      th {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--support);
+      }
+      .text-support {
+        color: var(--support);
+      }
+      .text-primary {
+        color: var(--primary);
+      }
+      .text-amber {
+        color: var(--amber);
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .mb-1 {
+        margin-bottom: 8px;
+      }
+      .mb-2 {
+        margin-bottom: 16px;
+      }
+      .mt-2 {
+        margin-top: 16px;
+      }
+      .mt-4 {
+        margin-top: 32px;
+      }
+      .cover-slide {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 48px;
+      }
+      .diagram-box {
+        padding: 10px 20px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--card-bg);
+        font-weight: 600;
+      }
+      .diagram-arrow {
+        color: var(--primary);
+        font-weight: bold;
+        margin: 0 16px;
+      }
+    </style>
+  </head>
+  <body style="">
+    <!-- SLIDE 01 — COVER -->
+    <div class="slide cover-slide">
+      <img class="logo-img" alt="ØHNexus Protocol" style="height: 220px; margin-bottom: 28px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+      <div style="font-size: 18px; color: #a0a0a0; max-width: 580px; text-align: center; margin: 0 auto 36px auto">
+        Self-sovereign identity platform for verified credentials and compliant financial services access.
+      </div>
+      <div class="badge" style="font-size: 15px; padding: 8px 24px; margin-bottom: 36px">Pre-Seed Round — 2026</div>
+      <div class="bold" style="color: #fff; font-size: 15px; margin-bottom: 4px">Nikolay Gyuneliev Ivanov</div>
+      <div style="color: #a0a0a0; font-size: 13px">Madrid, EU | April 2026</div>
+      <div style="position: absolute; bottom: 24px; left: 0; right: 0; text-align: center; font-size: 11px; color: #a0a0a0">
+        Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.
+      </div>
+    </div>
+
+    <!-- SLIDE 02 — CAUSE · PROBLEM · CONSEQUENCE -->
+    <div class="slide">
+      <div class="title">The root cause is structural — not technological.</div>
+      <div class="content-area">
+        <div class="grid-3">
+          <div class="card" style="border-left: 3px solid #f59e0b">
+            <div class="bold text-amber mb-2">CAUSE</div>
+            <div class="text-support">
+              European financial regulations (MiFID II, DORA, eIDAS 2.0, AML) require every institution to independently
+              verify user identity and compliance for every interaction. There is no shared trust layer.
+            </div>
+          </div>
+          <div class="card" style="border-left: 3px solid #00b4c8">
+            <div class="bold text-primary mb-2">PROBLEM</div>
+            <div class="text-support">
+              Banks, EMIs and FinTechs build and maintain isolated, non-standardised point-to-point integrations. KYC,
+              AML and MiFID II processes are repeated from scratch with every provider — by every institution — at
+              massive cost.
+            </div>
+          </div>
+          <div class="card" style="border-left: 3px solid #e05c5c">
+            <div class="bold mb-2">CONSEQUENCE</div>
+            <div class="text-support">
+              $85B wasted annually across EMEA in duplicated financial crime compliance processes. Average institution:
+              $72.9M/year. Germany alone: $32.5B. France: $25.3B.
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 8px">
+                Source: LexisNexis Risk Solutions, 2024
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="
+            border-top: 1px solid #00b4c8;
+            padding-top: 16px;
+            margin-top: 32px;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 14px;
+          ">
+          The affected party: Banks, EMIs, FinTechs and asset managers operating in the EU regulated financial
+          ecosystem.
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">02</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 03 — THE PROBLEM -->
+    <div class="slide">
+      <div class="title">The infrastructure of regulated finance is broken.</div>
+      <div class="content-area" style="justify-content: flex-start">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px">
+          <div class="card highlight" style="padding: 14px">
+            <div class="bold" style="margin-bottom: 4px; font-size: 14px">Fragmented Access</div>
+            <div class="text-support" style="font-size: 12px; line-height: 1.4">
+              Costly non-standardized point-to-point integrations. Institutions maintain isolated API silos.
+            </div>
+            <div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              Cost: Core banking integrations take 12–18 months to complete per provider connection — repeated from
+              scratch for every new institutional relationship.
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                Source: Industry benchmark, 2026
+              </div>
+            </div>
+          </div>
+          <div class="card highlight" style="padding: 14px">
+            <div class="bold" style="margin-bottom: 4px; font-size: 14px">Repeated Onboarding</div>
+            <div class="text-support" style="font-size: 12px; line-height: 1.4">
+              Users repeat KYC, AML, and MiFID processes for every new provider. High abandonment rates.
+            </div>
+            <div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              Cost: Up to 100 days per corporate KYC onboarding. Average $2,211 per single KYC review — up 17% since
+              2022. 1,500–2,500 FTEs dedicated to KYC at 52% of institutions.
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                Source: Trulioo; Coforge KYC Survey, 2024–2025
+              </div>
+            </div>
+          </div>
+          <div class="card highlight" style="padding: 14px">
+            <div class="bold" style="margin-bottom: 4px; font-size: 14px">No Traceability</div>
+            <div class="text-support" style="font-size: 12px; line-height: 1.4">
+              No real-time visibility on who accesses what data. Regulatory audits are manual and reactive.
+            </div>
+            <div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              Cost: Manual compliance audit cycles require 3+ weeks of full-time team effort per regulatory review —
+              with no automated audit trail generated.
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                Source: Docsie Financial Services Audit Analysis, 2026
+              </div>
+            </div>
+          </div>
+          <div class="card highlight" style="padding: 14px">
+            <div class="bold" style="margin-bottom: 4px; font-size: 14px">High Compliance Costs</div>
+            <div class="text-support" style="font-size: 12px; line-height: 1.4">
+              Operational burden for banks and FinTechs across every regulated digital interaction.
+            </div>
+            <div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              Cost: $85B annually across EMEA in financial crime compliance. Average institution: $72.9M/year. 60%+ cost
+              increase vs pre-crisis levels. Germany alone: $32.5B. France: $25.3B.
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                Source: LexisNexis Risk Solutions, True Cost of Financial Crime Compliance Study, 2024; Fenergo
+                Financial Institutions Survey, 2025
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="display: flex; align-items: center; justify-content: center; padding: 12px 20px; flex-shrink: 0">
+          <div class="diagram-box" style="padding: 8px 14px; font-size: 13px">Bank A</div>
+          <div class="diagram-arrow" style="margin: 0 10px">→</div>
+          <div class="text-support" style="margin-right: 16px; font-size: 12px">Proprietary API</div>
+          <div class="diagram-box" style="padding: 8px 14px; font-size: 13px">Scoring Provider</div>
+          <div class="diagram-arrow" style="margin: 0 10px">→</div>
+          <div class="text-support" style="margin-right: 16px; font-size: 12px">Legacy System</div>
+          <div class="diagram-box" style="padding: 8px 14px; font-size: 13px">Asset Manager</div>
+          <div class="diagram-arrow" style="margin: 0 10px">→</div>
+          <div class="text-support" style="font-size: 12px">Offline Processes</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">03</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 04 — WHY NOW -->
+    <div class="slide">
+      <div class="title">Why now? Three regulations demand action before 2027.</div>
+      <div class="content-area">
+        <div class="grid-3 mb-4">
+          <div class="card highlight">
+            <div class="bold mb-1">eIDAS 2.0 / EUDI Wallet</div>
+            <div class="badge mb-2">MANDATORY 2026–2027</div>
+            <div class="text-support">
+              EU Regulation 2024/1183. Active May 2024. Every EU member state must deploy EUDI digital identity wallets
+              by 2026–2027. Every bank and FinTech must adapt their identity layer. This is not optional. STRONGEST
+              regulatory pull in EU digital identity history.
+            </div>
+          </div>
+          <div class="card">
+            <div class="bold mb-1">DORA Enforcement</div>
+            <div class="badge-amber mb-2">ACTIVE JAN 2025</div>
+            <div class="text-support">
+              Digital Operational Resilience Act. Mandatory from January 2025. Requires cryptographic audit trails and
+              auditable ICT infrastructure across all regulated EU financial entities. Non-compliance: supervisory
+              sanctions.
+            </div>
+          </div>
+          <div class="card">
+            <div class="bold mb-1">PSD3 / PSR + MiFID II</div>
+            <div class="badge mb-2">2025–2027</div>
+            <div class="text-support">
+              PSD3/PSR expanding Open Banking into Open Finance. 2,500+ TPPs already registered under PSD2. MiFID II
+              structural compliance burden ongoing. Combined: every financial interaction must be traceable, auditable
+              and provable on demand.
+            </div>
+          </div>
+        </div>
+        <div style="
+            background: rgba(0, 180, 200, 0.08);
+            border-left: 3px solid #00b4c8;
+            padding: 16px;
+            border-radius: 0 6px 6px 0;
+          ">
+          <div class="bold text-primary">
+            The compliance window is open now. Institutions that delay face regulatory penalties and operational
+            disruption.
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">04</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 05 — SOLUTION VALUE PROPOSITION -->
+    <div class="slide">
+      <div class="title">One integration. Every institution. Full auditability.</div>
+      <div class="subtitle">
+        ØHNexus Protocol replaces fragmented compliance infrastructure with a single neutral layer.
+      </div>
+      <div class="content-area">
+        <div class="grid-3 mb-4">
+          <div class="card highlight">
+            <svg class="icon" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <line x1="7" y1="15" x2="13" y2="15"></line>
+            </svg>
+            <div class="bold text-primary" style="font-size: 18px; margin-bottom: 10px">
+              One credential. Reused everywhere.
+            </div>
+            <div class="text-support" style="font-size: 14px; line-height: 1.5">
+              A single verified credential works across every connected institution. KYC done once — valid everywhere in
+              the network. No repeated onboarding. No duplicated compliance processes per provider.
+            </div>
+            <div style="
+                font-size: 11px;
+                color: #666;
+                font-style: italic;
+                margin-top: 12px;
+                border-top: 1px solid #222;
+                padding-top: 8px;
+              ">
+              Pilot validation in progress — metrics to be confirmed with first institutional client.
+            </div>
+          </div>
+          <div class="card highlight">
+            <svg class="icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="5" r="3"></circle>
+              <circle cx="4" cy="19" r="3"></circle>
+              <circle cx="20" cy="19" r="3"></circle>
+              <line x1="12" y1="8" x2="4" y2="16"></line>
+              <line x1="12" y1="8" x2="20" y2="16"></line>
+              <line x1="4" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <div class="bold text-primary" style="font-size: 18px; margin-bottom: 10px">
+              Shared infrastructure replaces duplication.
+            </div>
+            <div class="text-support" style="font-size: 14px; line-height: 1.5">
+              A neutral SSI layer eliminates point-to-point integrations. Institutions connect once and access the full
+              network. Compliance costs shift from per-provider duplication to a single shared infrastructure
+              investment.
+            </div>
+            <div style="
+                font-size: 11px;
+                color: #666;
+                font-style: italic;
+                margin-top: 12px;
+                border-top: 1px solid #222;
+                padding-top: 8px;
+              ">
+              Based on architecture design. Cost reduction to be validated with production pilots.
+            </div>
+          </div>
+          <div class="card highlight">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <rect x="10" y="10" width="4" height="5" rx="1"></rect>
+              <circle cx="12" cy="8" r="1.5"></circle>
+            </svg>
+            <div class="bold text-primary" style="font-size: 18px; margin-bottom: 10px">
+              Every interaction. Cryptographically auditable.
+            </div>
+            <div class="text-support" style="font-size: 14px; line-height: 1.5">
+              Every credential verification and service interaction generates a cryptographic proof — stored as a
+              SHA-256 hash. Real-time auditability for regulators. No manual audit cycles. No data exposed
+              unnecessarily.
+            </div>
+            <div style="
+                font-size: 11px;
+                color: #666;
+                font-style: italic;
+                margin-top: 12px;
+                border-top: 1px solid #222;
+                padding-top: 8px;
+              ">
+              Verified — implemented in production. 510 tests passing. AWS deployed.
+            </div>
+          </div>
+        </div>
+        <div style="
+            background: rgba(0, 180, 200, 0.08);
+            border-left: 3px solid #00b4c8;
+            padding: 16px;
+            border-radius: 0 6px 6px 0;
+          ">
+          <div class="bold text-primary">
+            Not DeFi. Not a bank. Not an aggregator. A neutral B2B SaaS infrastructure layer — no balance sheet, no
+            custody, no banking licence required.
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">05</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 06 — END-TO-END FLOW -->
+    <div class="slide">
+      <div class="title">End-to-End Flow — 6 Steps</div>
+      <div class="content-area">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+          <div class="card">
+            <div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">01</div>
+            <div class="bold mb-1" style="font-size: 14px">DID Authentication</div>
+            <div class="text-support" style="font-size: 13px">User authenticates with DID in dApp.</div>
+          </div>
+          <div class="card">
+            <div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">02</div>
+            <div class="bold mb-1" style="font-size: 14px">Presents VCs</div>
+            <div class="text-support" style="font-size: 13px">Presents KYC/AML, MiFID, jurisdiction VCs.</div>
+          </div>
+          <div class="card">
+            <div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">03</div>
+            <div class="bold mb-1" style="font-size: 14px">Smart Contract Validation</div>
+            <div class="text-support" style="font-size: 13px">Contract validates VCs, policies, and consents.</div>
+          </div>
+          <div class="card">
+            <div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">04</div>
+            <div class="bold mb-1" style="font-size: 14px">Signed Request</div>
+            <div class="text-support" style="font-size: 13px">Sealed and signed request created on ledger.</div>
+          </div>
+          <div class="card">
+            <div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">05</div>
+            <div class="bold mb-1" style="font-size: 14px">Oracle Execution</div>
+            <div class="text-support" style="font-size: 13px">
+              Oracle executes API call to provider and collects evidence.
+            </div>
+          </div>
+          <div class="card">
+            <div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">06</div>
+            <div class="bold mb-1" style="font-size: 14px">Verifiable Result</div>
+            <div class="text-support" style="font-size: 13px">
+              Result + cryptographic proof returned. Auditable traces registered.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">06</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 07 — PRODUCT DEMO -->
+    <div class="slide">
+      <div class="title">Production-grade platform. Live today.</div>
+      <div class="content-area">
+        <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 24px; align-items: center">
+          <div class="card">
+            <div class="bold text-primary mb-2">What is built</div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">38 issues closed</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">510 tests passing</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">AWS ECS Fargate deployed</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">Walt.id SSI stack integrated</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">OID4VP QR credential flow live</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">Chainlink-compatible oracle live</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">Silent browser-native VP verification</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #f59e0b;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">Beta pilot in progress</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+              <div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #f59e0b;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+              <div class="text-support">SL constitution pending (Audens)</div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center">
+            <style>
+              @keyframes pulse-glow {
+                0%,
+                100% {
+                  opacity: 1;
+                }
+                50% {
+                  opacity: 0.3;
+                }
+              }
+              @keyframes grid-drift {
+                0% {
+                  background-position: 0 0;
+                }
+                100% {
+                  background-position: 30px 30px;
+                }
+              }
+              .browser-frame {
+                transition:
+                  box-shadow 0.3s ease,
+                  border-color 0.3s ease;
+              }
+              .browser-frame:hover {
+                box-shadow:
+                  0 0 40px rgba(0, 180, 200, 0.3),
+                  0 0 80px rgba(0, 180, 200, 0.1) !important;
+                border-color: rgba(0, 180, 200, 0.8) !important;
+              }
+            </style>
+            <a href="https://d17irz6h7nb562.cloudfront.net/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block; width: 65%">
+              <div class="browser-frame" style="
+                  background: #0a0a0a;
+                  border: 1px solid #00b4c8;
+                  border-radius: 12px;
+                  box-shadow:
+                    0 0 30px rgba(0, 180, 200, 0.15),
+                    0 0 60px rgba(0, 180, 200, 0.05);
+                  cursor: pointer;
+                  overflow: hidden;
+                ">
+                <!-- Top bar -->
+                <div style="
+                    background: #111;
+                    border-bottom: 1px solid #1a1a1a;
+                    border-radius: 12px 12px 0 0;
+                    padding: 10px 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                  ">
+                  <div style="display: flex; gap: 6px; flex-shrink: 0">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f57"></div>
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #febc2e"></div>
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #28c840"></div>
+                  </div>
+                  <div style="
+                      background: rgba(0, 180, 200, 0.1);
+                      border: 1px solid #00b4c8;
+                      border-radius: 4px;
+                      padding: 2px 10px;
+                      font-size: 10px;
+                      color: #00b4c8;
+                      font-weight: 700;
+                      letter-spacing: 1px;
+                      flex-shrink: 0;
+                    ">
+                    LIVE
+                  </div>
+                </div>
+                <!-- Screen area -->
+                <div style="
+                    background: #050505;
+                    border-radius: 0 0 12px 12px;
+                    padding: 16px;
+                    min-height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    overflow: hidden;
+                    background-image:
+                      linear-gradient(rgba(0, 180, 200, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 180, 200, 0.03) 1px, transparent 1px);
+                    background-size: 30px 30px;
+                    animation: grid-drift 20s linear infinite;
+                  ">
+                  <div style="width: 100%">
+                    <div style="
+                        background: #0f0f0f;
+                        border: 1px solid #1e1e1e;
+                        border-radius: 6px;
+                        padding: 10px 16px;
+                        margin-bottom: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                      ">
+                      <div style="color: #fff; font-size: 13px; font-weight: 700">KYC Data Service</div>
+                      <div style="
+                          background: rgba(0, 180, 200, 0.15);
+                          color: #00b4c8;
+                          border: 1px solid #00b4c8;
+                          border-radius: 4px;
+                          padding: 2px 10px;
+                          font-size: 10px;
+                          font-weight: 700;
+                        ">
+                        ELIGIBLE
+                      </div>
+                    </div>
+                    <div style="
+                        background: #0f0f0f;
+                        border: 1px solid #1e1e1e;
+                        border-radius: 6px;
+                        padding: 10px 16px;
+                        margin-bottom: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                      ">
+                      <div style="color: #fff; font-size: 13px; font-weight: 700">MiFID II Scoring</div>
+                      <div style="
+                          background: rgba(0, 180, 200, 0.15);
+                          color: #00b4c8;
+                          border: 1px solid #00b4c8;
+                          border-radius: 4px;
+                          padding: 2px 10px;
+                          font-size: 10px;
+                          font-weight: 700;
+                        ">
+                        ELIGIBLE
+                      </div>
+                    </div>
+                    <div style="
+                        background: #0f0f0f;
+                        border: 1px solid #1e1e1e;
+                        border-radius: 6px;
+                        padding: 10px 16px;
+                        margin-bottom: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                      ">
+                      <div style="color: #fff; font-size: 13px; font-weight: 700">AML Screening</div>
+                      <div style="
+                          background: rgba(245, 158, 11, 0.15);
+                          color: #f59e0b;
+                          border: 1px solid #f59e0b;
+                          border-radius: 4px;
+                          padding: 2px 10px;
+                          font-size: 10px;
+                          font-weight: 700;
+                        ">
+                        LOCKED
+                      </div>
+                    </div>
+                    <div style="
+                        background: #00b4c8;
+                        color: #000;
+                        font-weight: 700;
+                        font-size: 13px;
+                        border: none;
+                        border-radius: 6px;
+                        padding: 10px 0;
+                        width: 100%;
+                        margin-top: 8px;
+                        text-align: center;
+                        cursor: pointer;
+                      ">
+                      Verify Credentials →
+                    </div>
+                  </div>
+                  <div style="
+                      font-size: 10px;
+                      color: rgba(0, 180, 200, 0.5);
+                      font-family: monospace;
+                      margin-top: 16px;
+                      text-align: center;
+                    ">
+                    <span style="animation: pulse-glow 2s ease-in-out infinite; display: inline-block">●</span> LIVE ·
+                    Click to access platform
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div style="text-align: center; color: #a0a0a0; font-size: 12px; font-style: italic; margin-top: 12px">
+              Live credential-gated service catalog — click to access
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="bold text-primary mb-2">Tech stack</div>
+            <div class="text-support" style="font-size: 13px; line-height: 1.8">
+              <div>▸ Rust · Actix-web backend</div>
+              <div>▸ React 18 · Vite · Tailwind</div>
+              <div>▸ AWS ECS Fargate · CloudFront</div>
+              <div>▸ Ethereum Sepolia · Oracle</div>
+              <div>▸ Walt.id SSI stack</div>
+              <div>▸ DynamoDB · Terraform IaC</div>
+              <div>▸ No raw credentials stored</div>
+              <div>▸ SHA-256 hashes only</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">07</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 08 — MARKET SIZE -->
+    <div class="slide">
+      <div class="title">The market ØHNexus sits within is large and growing.</div>
+      <div class="content-area">
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 12px;
+            align-items: start;
+            margin-bottom: 24px;
+          ">
+          <!-- TAM -->
+          <div class="card" style="padding: 24px">
+            <div style="
+                display: inline-block;
+                background: rgba(0, 180, 200, 0.1);
+                color: #00b4c8;
+                border: 1px solid #00b4c8;
+                border-radius: 4px;
+                padding: 3px 10px;
+                font-size: 11px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              ">
+              TAM
+            </div>
+            <div style="font-size: 52px; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 8px">
+              $135B
+            </div>
+            <div style="font-size: 13px; font-weight: 600; color: #a0a0a0; margin-bottom: 16px">
+              Global Open Banking &amp; regulated financial infrastructure market by 2030
+            </div>
+            <div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+              ØHNexus sits above the Open Banking API layer — adding SSI identity, compliance orchestration and
+              cryptographic auditability. The adjacent RegTech and digital identity markets are not included in this
+              figure, making the true serviceable market structurally larger.
+            </div>
+            <div style="font-size: 11px; color: #a0a0a0; font-style: italic; margin-top: 12px">
+              Source: Grand View Research — Open Banking Market Size &amp; Share Report, 2025
+            </div>
+          </div>
+          <!-- Arrow TAM→SAM -->
+          <div style="
+              display: flex;
+              align-items: center;
+              align-self: center;
+              color: #00b4c8;
+              font-size: 24px;
+              font-weight: 700;
+              padding-top: 40px;
+            ">
+            ▸
+          </div>
+          <!-- SAM -->
+          <div class="card" style="padding: 24px">
+            <div style="
+                display: inline-block;
+                background: rgba(245, 158, 11, 0.1);
+                color: #f59e0b;
+                border: 1px solid #f59e0b;
+                border-radius: 4px;
+                padding: 3px 10px;
+                font-size: 11px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              ">
+              SAM
+            </div>
+            <div style="font-size: 52px; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 8px">
+              $44.9B
+            </div>
+            <div style="font-size: 13px; font-weight: 600; color: #a0a0a0; margin-bottom: 16px">
+              European regulated financial infrastructure market by 2030
+            </div>
+            <div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+              Europe held 36.4% of global Open Banking market share in 2024. Target customers: banks, EMIs and FinTechs
+              operating under PSD2/PSD3, DORA and eIDAS 2.0. 2,500+ TPPs already registered under PSD2.
+            </div>
+            <div style="font-size: 11px; color: #a0a0a0; font-style: italic; margin-top: 12px">
+              Source: Grand View Research — Europe Open Banking Market Outlook, 2025; Imarc Group — PSD2 TPP data
+            </div>
+          </div>
+          <!-- Arrow SAM→SOM -->
+          <div style="
+              display: flex;
+              align-items: center;
+              align-self: center;
+              color: #00b4c8;
+              font-size: 24px;
+              font-weight: 700;
+              padding-top: 40px;
+            ">
+            ▸
+          </div>
+          <!-- SOM -->
+          <div class="card" style="padding: 24px">
+            <div style="
+                display: inline-block;
+                background: transparent;
+                color: #a0a0a0;
+                border: 1px solid #a0a0a0;
+                border-radius: 4px;
+                padding: 3px 10px;
+                font-size: 11px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              ">
+              SOM
+            </div>
+            <div style="font-size: 52px; font-weight: 700; color: #a0a0a0; line-height: 1.1; margin-bottom: 8px">
+              €1.2M–€9M
+            </div>
+            <div style="font-size: 13px; font-weight: 600; color: #a0a0a0; margin-bottom: 8px">
+              ØHNexus realistic ARR capture · 2026–2028
+            </div>
+            <div style="
+                display: inline-block;
+                border: 1px solid #a0a0a0;
+                color: #a0a0a0;
+                background: transparent;
+                border-radius: 16px;
+                padding: 4px 10px;
+                font-size: 11px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 16px;
+              ">
+              INFERRED
+            </div>
+            <div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+              Internal model: 10–50 institutional clients at €2,000–€15,000/month base subscription. Consistent with EU
+              enterprise sales cycles of 6–18 months and eIDAS 2.0 regulatory adoption windows 2025–2027. Not a
+              financial commitment — validation pending first pilot conversions.
+            </div>
+            <div style="font-size: 11px; color: #a0a0a0; font-style: italic; margin-top: 12px">
+              Source: Internal model based on Technavio — Open Banking Market Analysis, 2024; Imarc Group PSD2 TPP
+              statistics
+            </div>
+          </div>
+        </div>
+        <!-- Context bar -->
+        <div style="
+            background: rgba(0, 180, 200, 0.05);
+            border-left: 3px solid #00b4c8;
+            border-radius: 0 6px 6px 0;
+            padding: 16px 20px;
+            margin-top: 0;
+          ">
+          <div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+            Market context: ØHNexus operates at the intersection of Open Banking ($135B), RegTech and SSI digital
+            identity — three converging markets with mandatory EU regulatory drivers (eIDAS 2.0, DORA, PSD3) creating
+            structural demand through 2027.
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">08</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 09 — COMPETITIVE LANDSCAPE -->
+    <div class="slide">
+      <div class="title">No player occupies this intersection.</div>
+      <div class="content-area">
+        <table style="margin-bottom: 20px; font-size: 12px; table-layout: fixed; width: 100%">
+          <colgroup>
+            <col style="width: 22%">
+            <col style="width: 13%">
+            <col style="width: 13%">
+            <col style="width: 13%">
+            <col style="width: 13%">
+            <col style="width: 13%">
+            <col style="width: 13%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th style="padding: 10px 8px; font-size: 10px"></th>
+              <th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                DOCK LABS<br><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic">undisclosed</span>
+              </th>
+              <th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                CHEQD<br><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic">$2.6M raised</span>
+              </th>
+              <th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                SPHERITY<br><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic">undisclosed</span>
+              </th>
+              <th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                TINK/VISA<br><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic">$2.15B acq.</span>
+              </th>
+              <th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                SUMSUB<br><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic">~$37M raised</span>
+              </th>
+              <th style="
+                  padding: 10px 6px;
+                  font-size: 10px;
+                  text-align: center;
+                  line-height: 1.4;
+                  background: rgba(0, 180, 200, 0.1);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                  border-top: 1px solid #00b4c8;
+                  color: #00b4c8;
+                ">
+                ØNEXUS<br><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic">Pre-seed 2026</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">SSI / Verifiable Credentials</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">Financial API orchestration</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">Smart contract enforcement</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">Oracle layer</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">EU regulatory native</td>
+              <td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+              <td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">Cryptographic auditability</td>
+              <td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+              <td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+              <td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">No banking licence required</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #555">❌</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+            <tr>
+              <td class="bold" style="padding: 8px; font-size: 12px">Production deployed</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="text-align: center; padding: 8px; color: #fff">✅</td>
+              <td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                  border-bottom: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="font-size: 10px; color: #666; font-style: italic; text-align: right; margin-bottom: 12px">
+          Funding data: cheqd — Tracxn 2026; Tink — TechCrunch 2021; Sumsub — Crunchbase / Finovate 2024; Dock Labs and
+          Spherity — funding undisclosed (no public data)
+        </div>
+        <div style="
+            background: rgba(0, 180, 200, 0.08);
+            border-left: 3px solid #00b4c8;
+            padding: 12px 16px;
+            border-radius: 0 6px 6px 0;
+          ">
+          <div class="bold text-primary" style="font-size: 13px; line-height: 1.5">
+            No identified player combines all four layers: SSI identity + smart contract orchestration + oracle
+            execution + EU regulatory-native financial infrastructure.
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">09</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10 — BUSINESS MODEL -->
+    <div class="slide">
+      <div class="title">B2B SaaS infrastructure. Subscription + usage.</div>
+      <div class="subtitle">Revenue from institutions — not consumers. No token. No balance sheet exposure.</div>
+      <div class="content-area">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px">
+          <div class="card" style="padding:16px;overflow:visible">
+            <div class="bold text-primary" style="font-size:14px;margin-bottom:6px">Revenue streams <span style="font-size:10px;color:#a0a0a0;border:1px solid #a0a0a0;background:transparent;border-radius:4px;padding:2px 8px;font-weight:600;margin-left:6px;vertical-align:middle">INFERRED</span></div>
+            <div class="text-support" style="font-size:13px;line-height:1.4">Base subscription: €5,000–€20,000/month per institution<br>Usage fees: €0.001–€0.01 per API/oracle call<br>Enterprise contracts: €50,000–€250,000/year</div>
+            <div style="font-size:10px;color:#666;font-style:italic;margin-top:8px;border-top:1px solid #222;padding-top:6px">INFERRED from EU SaaS benchmarks. No signed contracts. Source: Technavio 2024; competitive intelligence report April 2026</div>
+          </div>
+          <div class="card" style="padding:16px;overflow:visible">
+            <div class="bold text-primary" style="font-size:14px;margin-bottom:6px">Target customer</div>
+            <div class="text-support" style="font-size:13px;line-height:1.4">Banks · EMIs · FinTechs · Asset managers<br>Operating under: PSD2/PSD3, DORA, MiFID II, eIDAS 2.0<br>Initial market: Spain and EU<br>Distribution: B2B direct + white-label</div>
+          </div>
+          <div class="card" style="padding:16px;overflow:visible">
+            <div class="bold text-primary" style="font-size:14px;margin-bottom:6px">Why institutions pay</div>
+            <div class="text-support" style="font-size:13px;line-height:1.4">Compliance sale — not discretionary<br>eIDAS 2.0 and DORA create mandatory infrastructure need<br>Switching cost is high once integrated<br>Core banking integrations take 12–18 months per provider — shared infrastructure eliminates that</div>
+            <div style="font-size:10px;color:#666;font-style:italic;margin-top:8px;border-top:1px solid #222;padding-top:6px">Source: Industry benchmark, 2026</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px">
+          <div class="card" style="padding:16px">
+            <div class="bold text-primary" style="font-size:14px;margin-bottom:6px">Gross margin <span style="font-size:10px;color:#a0a0a0;border:1px solid #a0a0a0;padding:2px 6px;border-radius:12px;margin-left:6px">INFERRED</span></div>
+            <div class="text-support" style="font-size:13px;line-height:1.4">75%–85% (infrastructure SaaS benchmark)<br>Primary cost: AWS cloud infrastructure<br>Source: Bessemer, OpenView 2023</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="bold text-primary" style="font-size:14px;margin-bottom:6px">ACV per client <span style="font-size:10px;color:#a0a0a0;border:1px solid #a0a0a0;padding:2px 6px;border-radius:12px;margin-left:6px">INFERRED</span></div>
+            <div class="text-support" style="font-size:13px;line-height:1.4">€60,000–€240,000 per year<br>Derived from base subscription of €5,000–€20,000/month × 12 months.<br>Consistent with 10–50 institutional client target.</div>
+            <div style="font-size:10px;color:#666;font-style:italic;margin-top:8px;border-top:1px solid #222;padding-top:6px">INFERRED — modelled from pricing benchmarks. No historical revenue data. Source: Technavio 2024</div>
+          </div>
+        </div>
+        <div style="font-size:10px;color:#666;font-style:italic">Unit economics are modelled assumptions based on EU B2B SaaS infrastructure benchmarks. No historical revenue data yet. Validation pending first pilot conversions.</div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">10</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 11 — GO-TO-MARKET -->
+    <div class="slide">
+      <div class="title">Pilot-first. Spain. EU. Pan-European.</div>
+      <div class="content-area">
+        <div class="grid-3 mb-4">
+          <div class="card highlight">
+            <div class="bold text-primary mb-2">Phase 1 — Pilots · Months 0–12</div>
+            <div class="text-support">
+              Geography: Spain<br>Motion: Founder-led direct outreach<br>Entry: BBVA, BME/SIX, KPMG, Santander
+              network<br>Channels: Outbound ABM to compliance officers, CTOs<br>Target: 1–2 signed pilots<br>Goal:
+              Proof of production deployment
+            </div>
+          </div>
+          <div class="card" style="border-left: 3px solid #f59e0b">
+            <div class="bold text-amber mb-2">Phase 2 — Launch · Months 12–24</div>
+            <div class="text-support">
+              Geography: Spain + Germany, France, Netherlands<br>Motion: Pilot reference + partnership channel<br>Channels:
+              Partner integrations, inbound from eIDAS 2.0 mandates<br>Target: 5–10 paying institutional clients<br>First
+              channel partner or integration deal
+            </div>
+          </div>
+          <div class="card" style="border-left: 3px solid #a0a0a0">
+            <div class="bold text-support mb-2">Phase 3 — Scale · Months 24–36</div>
+            <div class="text-support">
+              Geography: Full EU<br>Motion: Partner-led + regulatory inbound<br>Distribution: White-label, B2B2C via
+              FinTech platforms, Developer API marketplace<br>Target: 25–50 institutional clients<br>First
+              commercial sales hire
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px">
+          <div style="font-size:10px;color:#a0a0a0;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Current status — verified</div>
+          <div style="background:#141414;border:1px solid #222;border-radius:8px;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;width:100%">
+            <div>
+              <div class="bold" style="font-size:24px">38</div>
+              <div style="font-size:12px;color:#a0a0a0">issues closed · verified</div>
+            </div>
+            <div style="border-left:1px solid rgba(0,180,200,0.3);padding-left:24px">
+              <div class="bold" style="font-size:24px">510</div>
+              <div style="font-size:12px;color:#a0a0a0">tests passing · AWS deployed</div>
+            </div>
+            <div style="border-left:1px solid rgba(0,180,200,0.3);padding-left:24px">
+              <div class="bold" style="font-size:24px">1</div>
+              <div style="font-size:12px;color:#a0a0a0">pilot in progress</div>
+            </div>
+            <div style="border-left:1px solid rgba(0,180,200,0.3);padding-left:24px">
+              <div class="bold" style="font-size:24px">Pre-seed</div>
+              <div style="font-size:12px;color:#a0a0a0">round open · April 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">11</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 12 — TRACTION -->
+    <div class="slide">
+      <div class="title">MVP built. Pilot in progress.</div>
+      <div class="content-area">
+        <div class="grid-2x2" style="align-items: stretch; margin-bottom: 32px">
+          <div class="card" style="padding: 32px; display: flex; flex-direction: column; justify-content: center">
+            <div style="display: flex; align-items: center; margin-bottom: 16px">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #00b4c8; margin-right: 16px"></div>
+              <div class="bold" style="width: 100px">Platform:</div>
+              <div class="text-support">MVP built and deployed</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 16px">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b; margin-right: 16px"></div>
+              <div class="bold" style="width: 100px">Pilot:</div>
+              <div class="text-support">1 beta pilot in development</div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 16px">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #a0a0a0; margin-right: 16px"></div>
+              <div class="bold" style="width: 100px">Revenue:</div>
+              <div class="text-support">Pre-revenue</div>
+            </div>
+            <div style="display: flex; align-items: center">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #a0a0a0; margin-right: 16px"></div>
+              <div class="bold" style="width: 100px">Partners:</div>
+              <div class="text-support">None signed yet</div>
+            </div>
+          </div>
+          <div class="card highlight" style="background: rgba(0, 180, 200, 0.04); padding: 40px; display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div class="bold text-primary" style="font-size: 24px; line-height: 1.4">
+              Launching pilots with 2–3 strategic providers in Q3 2026 — 90 days
+            </div>
+          </div>
+        </div>
+        <div class="card" style="display: flex; justify-content: space-between; align-items: center; padding: 24px 48px">
+          <div style="text-align: center; width: 180px">
+            <div style="width: 20px; height: 20px; border-radius: 50%; background: #00b4c8; margin: 0 auto 12px"></div>
+            <div class="bold">NOW</div>
+          </div>
+          <div style="flex: 1; height: 2px; background: #222; position: relative; top: -16px"></div>
+          <div style="text-align: center; width: 180px">
+            <div style="width: 20px; height: 20px; border-radius: 50%; background: #f59e0b; margin: 0 auto 12px"></div>
+            <div class="bold">Pilot (Q3 2026)</div>
+          </div>
+          <div style="flex: 1; height: 2px; background: #222; position: relative; top: -16px"></div>
+          <div style="text-align: center; width: 180px">
+            <div style="width: 20px; height: 20px; border-radius: 50%; background: #a0a0a0; margin: 0 auto 12px"></div>
+            <div class="bold text-support">Production (18 months)</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height: 44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">12</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 13 — TEAM -->
+    <div class="slide">
+      <div class="title">Built by someone who lived the problem.</div>
+      <div class="content-area">
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px">
+          <div class="card highlight" style="padding: 28px">
+            <div style="display: flex; align-items: center">
+              <div style="width: 100px; height: 100px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #a0a0a0; font-size: 13px; margin-right: 20px; flex-shrink: 0;">Photo</div>
+              <div>
+                <div style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 4px">Nikolay Gyuneliev Ivanov</div>
+                <div style="font-size: 14px; color: #00b4c8; margin-bottom: 4px">CEO &amp; Sole Founder</div>
+                <div style="font-size: 13px; color: #a0a0a0">Madrid, Spain</div>
+              </div>
+            </div>
+            <div style="margin-top: 20px">
+              <div style="display: flex; font-size: 13px; line-height: 1.6; margin-bottom: 6px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span class="text-support"><strong style="color: #fff">BBVA Asset Management</strong> (2019–present) — Solution Development Lead &amp; Product Owner. Real-time market risk systems on AWS.</span>
+              </div>
+              <div style="display: flex; font-size: 13px; line-height: 1.6; margin-bottom: 6px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span class="text-support"><strong style="color: #fff">BME / SIX</strong> (2018–2019) — Quantitative Risk Analyst. FX Rolling risk model development.</span>
+              </div>
+              <div style="display: flex; font-size: 13px; line-height: 1.6; margin-bottom: 6px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span class="text-support"><strong style="color: #fff">KPMG</strong> (2017–2018) — Financial Risk Management. Credit model validation at Banco Santander.</span>
+              </div>
+            </div>
+            <div style="margin-top: 16px">
+              <div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span>BSc Finance &amp; Accounting — First Class Honours, UC3M · Winner Extraordinary End of Studies Prize 2016</span>
+              </div>
+              <div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span>Master's Financial Engineering — AFI Madrid</span>
+              </div>
+              <div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span>CFA Level II Candidate</span>
+              </div>
+            </div>
+            <div style="margin-top: 12px">
+              <div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span>Rust/LLMOps — Duke University (2024–2025)</span>
+              </div>
+              <div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+                <span style="color: #00b4c8; margin-right: 8px">▸</span>
+                <span>Ethereum Smart Contracts (2025)</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card mb-2">
+              <div class="bold text-primary mb-2">Institutional pedigree</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">BBVA</span>
+                <span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">Banco Santander</span>
+                <span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">BME·SIX</span>
+                <span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">KPMG</span>
+                <span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">Bank of Spain</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="bold text-amber mb-2">Team growth plan</div>
+              <div class="text-support" style="font-size:13px">Pre-seed funds first 3 hires:<br>Months 0–6: Senior Backend + Mid SSI/API<br>Months 6–12: Smart Contracts/Oracle engineer<br>Months 12–18: DevOps/Security engineer<br>Co-founder search: active</div>
+            </div>
+            <div style="font-size:11px;color:#a0a0a0;font-style:italic;margin-top:12px">Currently transitioning full-time upon pre-seed close.</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height:44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">13</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 14 — THE ASK -->
+    <div class="slide">
+      <div class="title">Pre-Seed Round — €800,000 – €1,000,000</div>
+      <div class="content-area">
+        <div style="display:grid;grid-template-columns:1fr 2px 1.5fr;gap:32px;align-items:center">
+          <div style="text-align:center">
+            <div style="font-size:48px;font-weight:700;margin-bottom:16px">€800K – €1M</div>
+            <div class="badge" style="font-size:14px;padding:8px 20px;margin-bottom:24px">Pre-Seed Round</div>
+            <div style="font-size:15px;margin-bottom:8px">Instrument: Convertible Note</div>
+            <div style="font-size:15px;margin-bottom:8px">Valuation cap: €5M – €6M</div>
+            <div style="font-size:14px;color:#a0a0a0;margin-bottom:6px">Discount: 10%–20%</div>
+            <div style="font-size:14px;color:#a0a0a0;margin-bottom:6px">Maturity: 12–24 months</div>
+            <div style="font-size:12px;color:#a0a0a0">Legal counsel: Audens Legal S.L.P.</div>
+          </div>
+          <div style="width:2px;background:#00b4c8;align-self:stretch"></div>
+          <div>
+            <div class="bold" style="font-size:16px;margin-bottom:20px">Use of funds</div>
+            <div style="margin-bottom:16px">
+              <div style="width:100%;height:40px;background:#1a1a1a;border-radius:6px;overflow:hidden;margin-bottom:8px"><div style="width:40%;height:100%;background:#00b4c8;border-radius:6px 0 0 6px"></div></div>
+              <div class="bold" style="font-size:13px">40% · Engineering — €320k–€400k</div>
+              <div style="font-size:12px;color:#a0a0a0">Senior Backend/Infrastructure + SSI/API + Oracle engineers</div>
+            </div>
+            <div style="margin-bottom:16px">
+              <div style="width:100%;height:40px;background:#1a1a1a;border-radius:6px;overflow:hidden;margin-bottom:8px"><div style="width:30%;height:100%;background:#f59e0b;border-radius:6px 0 0 6px"></div></div>
+              <div class="bold" style="font-size:13px">30% · Legal &amp; Compliance — €240k–€300k</div>
+              <div style="font-size:12px;color:#a0a0a0">SL constitution, regulatory counsel, DORA prep, IP protection</div>
+            </div>
+            <div>
+              <div style="width:100%;height:40px;background:#1a1a1a;border-radius:6px;overflow:hidden;margin-bottom:8px"><div style="width:30%;height:100%;background:#a0a0a0;border-radius:6px 0 0 6px"></div></div>
+              <div class="bold" style="font-size:13px">30% · GTM — €240k–€300k</div>
+              <div style="font-size:12px;color:#a0a0a0">Pilot delivery, BD outreach, EU market entry</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height:44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">14</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 15 — FINANCIAL PROJECTIONS -->
+    <div class="slide">
+      <div class="title">Revenue projections — base scenario.</div>
+      <div class="content-area">
+        <table style="margin-bottom:32px;font-size:15px">
+          <thead>
+            <tr>
+              <th style="color:#00b4c8">METRIC</th>
+              <th style="color:#00b4c8">2026</th>
+              <th style="color:#00b4c8">2027</th>
+              <th style="color:#00b4c8">2028</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(0,180,200,0.08)">
+              <td class="bold text-primary">Clients</td>
+              <td class="bold text-primary">1–3</td>
+              <td class="bold text-primary">8–15</td>
+              <td class="bold text-primary">15–30</td>
+            </tr>
+            <tr><td class="bold">ARR</td><td>€50k–€150k</td><td>€400k–€800k</td><td>€1.2M–€3M</td></tr>
+            <tr><td class="bold">Key market</td><td class="text-support">Spain</td><td class="text-support">Spain + DE/FR</td><td class="text-support">Full EU</td></tr>
+            <tr><td class="bold">Stage</td><td class="text-support">Pilot → Paid</td><td class="text-support">Beta launch</td><td class="text-support">Scale</td></tr>
+          </tbody>
+        </table>
+        <div style="border-top:2px solid #00b4c8;padding-top:20px;margin-bottom:20px">
+          <div class="bold text-primary mb-2" style="font-size:13px;text-transform:uppercase">Key Assumptions</div>
+          <ul class="text-support" style="font-size:14px;column-count:2;column-gap:40px">
+            <li style="margin-bottom:6px">Sales cycle: 6–18 months per institutional client</li>
+            <li style="margin-bottom:6px">ACV: €60,000–€240,000 per year (base subscription €5,000–€20,000/month × 12 months)</li>
+            <li style="margin-bottom:6px">Pilot-to-paid conversion: 50–70%</li>
+            <li style="margin-bottom:6px">Regulatory demand spike: eIDAS 2.0 deployment 2025–2027</li>
+            <li style="margin-bottom:6px">Founder-led sales: first 12–18 months</li>
+            <li style="margin-bottom:6px">Target: 10–50 institutional clients</li>
+          </ul>
+        </div>
+        <div class="footnote" style="margin-top:0">Single base scenario shown. Conservative and optimistic scenarios available on request. All figures are modelled projections — not a financial commitment. Validation pending first pilot conversions.</div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height:44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">15</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 16 — ROADMAP -->
+    <div class="slide">
+      <div class="title">Next 18 months — funded by this raise.</div>
+      <div class="content-area">
+        <div class="grid-3 mb-4">
+          <div class="card highlight">
+            <div class="bold text-primary mb-2">Months 0–6 · Foundations</div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Beta pilot with first real users</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">ØHNexus SL legally constituted</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">First 2 engineering hires</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Admin issuer CRUD endpoint</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Cryptographic VC JWT signing</div></div>
+            <div style="display:flex;align-items:flex-start"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Rate limiting layer</div></div>
+          </div>
+          <div class="card" style="border-left:3px solid #f59e0b">
+            <div class="bold text-amber mb-2">Months 6–12 · Traction</div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Production pilot live with paying institution</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Smart contract library expansion</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Oracle reliability layer</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">First channel partner or integration deal</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">EU market entry (Germany / Netherlands)</div></div>
+            <div style="display:flex;align-items:flex-start"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">5–10 institutional clients pipeline</div></div>
+          </div>
+          <div class="card" style="border-left:3px solid #a0a0a0">
+            <div class="bold text-support mb-2">Months 12–18 · Scale</div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Mainnet migration from Sepolia testnet</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">EU regulatory certification process</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">First commercial sales hire</div></div>
+            <div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">25–50 clients pipeline</div></div>
+            <div style="display:flex;align-items:flex-start"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px">Series A preparation</div></div>
+          </div>
+        </div>
+        <div class="card" style="display:flex;justify-content:space-between;align-items:center;padding:20px 40px">
+          <div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#00b4c8;margin:0 auto 8px"></div><div class="bold" style="font-size:13px">NOW</div></div>
+          <div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+          <div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#f59e0b;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">Q3 2026<br><span class="text-support">Pilot</span></div></div>
+          <div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+          <div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#00b4c8;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">Q1 2027<br><span class="text-support">Production</span></div></div>
+          <div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+          <div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#fff;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">Q3 2027<br><span class="text-support">Scale</span></div></div>
+          <div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+          <div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#a0a0a0;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">2028<br><span class="text-support">Series A</span></div></div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height:44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">16</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 17 — WHY INVEST -->
+    <div class="slide">
+      <div class="title">Three reasons to invest in ØHNexus now.</div>
+      <div class="content-area">
+        <div class="grid-3">
+          <div class="card" style="border:2px solid #00b4c8;padding:28px">
+            <div class="bold text-primary" style="font-size:64px;line-height:1;margin-bottom:12px">01</div>
+            <div class="bold" style="font-size:16px;margin-bottom:12px">Mandatory infrastructure</div>
+            <div class="text-support">eIDAS 2.0 and DORA create non-discretionary demand. Institutions must build or buy SSI compliance infrastructure before 2027 regulatory deadlines. ØHNexus is the only production-ready EU-native stack at this intersection.</div>
+          </div>
+          <div class="card" style="border:2px solid #00b4c8;padding:28px">
+            <div class="bold text-primary" style="font-size:64px;line-height:1;margin-bottom:12px">02</div>
+            <div class="bold" style="font-size:16px;margin-bottom:12px">Unfair founder advantage</div>
+            <div class="text-support">10 years inside BBVA, KPMG, Santander, BME/SIX building the exact systems ØHNexus replaces. Direct institutional network for pilot acquisition. Not guessing at the problem — built from the inside.</div>
+          </div>
+          <div class="card" style="border:2px solid #00b4c8;padding:28px">
+            <div class="bold text-primary" style="font-size:64px;line-height:1;margin-bottom:12px">03</div>
+            <div class="bold" style="font-size:16px;margin-bottom:12px">White space with proof</div>
+            <div class="text-support">No identified player combines SSI + smart contracts + oracle + EU regulatory infrastructure in one production-grade stack. 38 issues closed. 510 tests passing. Deployed on AWS. The platform exists — the raise accelerates adoption.</div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px;font-size:14px;color:#a0a0a0">Raise target: €800K–€1M · Convertible Note · Valuation cap €5M–€6M · Legal: Audens Legal S.L.P.</div>
+      </div>
+      <div class="footer-bar">
+        <img class="logo-img" style="height:44px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+        <div class="bold">17</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 18 — CLOSING -->
+    <div class="slide cover-slide">
+      <img class="logo-img" alt="ØHNexus Protocol" style="height:120px;margin-bottom:20px" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" data-height-listener-added="true">
+      <div class="bold" style="font-size:36px;margin-bottom:8px">ØHNexus Protocol</div>
+      <div style="font-size:16px;color:#a0a0a0;margin-bottom:32px">SSI Infrastructure for Compliant Financial Services</div>
+      <div style="width:200px;height:2px;background:#00b4c8;margin:0 auto 32px"></div>
+      <div style="font-size:15px;margin-bottom:8px"><strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e58b8c8e8a89849ca58a8d8b809d9096cb8c8a">[email&#160;protected]</a></strong></div>
+      <div style="font-size:15px;color:#a0a0a0;margin-bottom:8px">+34 610 983 805</div>
+      <div style="font-size:15px;color:#a0a0a0;margin-bottom:28px">linkedin.com/in/nikolay-gyuneliev-a15aa7a3</div>
+      <div class="badge" style="font-size:14px;padding:10px 28px">Schedule a 30-minute call →</div>
+      <div style="font-size:13px;color:#a0a0a0;margin-top:24px">Madrid, Spain · Pre-Seed Round 2026</div>
+      <div style="position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:10px;color:#a0a0a0">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. All financial projections are modelled assumptions. Not a financial commitment.</div>
+    </div>
+
+
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body></html>
