@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    
+    
+    <title>ØHNexus Protocol - Pre-Seed One-Pager</title>
+    
+    <style>
+      :root {
+        --bg: #0d0d0d;
+        --primary: #00b4c8;
+        --text: #ffffff;
+        --support: #a0a0a0;
+        --amber: #f59e0b;
+        --card-bg: #141414;
+        --border: #222222;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg);
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 12mm 12mm 18mm 12mm;
+        box-sizing: border-box;
+        background: var(--bg);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Typography */
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 0 0 8px 0;
+        color: var(--text);
+      }
+
+      .subtitle {
+        font-size: 13px;
+        color: var(--support);
+        margin-bottom: 14px;
+      }
+
+      p,
+      li,
+      td {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-top: 0;
+      }
+
+      /* Cards */
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 12px; /* tightened slightly for fit */
+      }
+      .card.highlight {
+        border-left: 3px solid var(--primary);
+      }
+
+      /* Grids */
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      /* Metrics */
+      .metric {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 4px;
+        color: var(--text);
+      }
+      .metric-primary {
+        color: var(--primary);
+      }
+      .metric-label {
+        font-size: 10px;
+        font-weight: 600;
+        color: var(--support);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Badges */
+      .badge {
+        display: inline-block;
+        background: rgba(0, 180, 200, 0.1);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        padding: 3px 10px;
+        border-radius: 16px;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .badge-amber {
+        display: inline-block;
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--amber);
+        border: 1px solid var(--amber);
+        padding: 3px 10px;
+        border-radius: 16px;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .badge-muted {
+        display: inline-block;
+        background: transparent;
+        color: var(--support);
+        border: 1px solid var(--support);
+        padding: 3px 10px;
+        border-radius: 16px;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Elements */
+      .glow-panel {
+        background: rgba(0, 180, 200, 0.08);
+        border-left: 3px solid var(--primary);
+        padding: 12px 16px;
+        border-radius: 0 6px 6px 0;
+      }
+
+      .pedigree-pill {
+        display: inline-block;
+        background: #1a1a1a;
+        border: 1px solid #333;
+        padding: 3px 10px;
+        border-radius: 16px;
+        font-size: 10px;
+        font-weight: 600;
+        color: var(--text);
+        margin-right: 4px;
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 11px;
+      }
+      th,
+      td {
+        padding: 6px 10px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+      }
+      th {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: var(--support);
+      }
+
+      /* Footer */
+      .footer-bar {
+        position: absolute;
+        bottom: 8mm;
+        left: 12mm;
+        right: 12mm;
+        height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        color: var(--support);
+      }
+      .footer-bar img {
+        height: 28px;
+      }
+      .footer-bar .bold {
+        font-weight: 700;
+      }
+
+      /* Dot rows */
+      .dot-row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 6px;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-top: 4px;
+        flex-shrink: 0;
+      }
+      .dot-green {
+        background: #22c55e;
+      }
+      .dot-amber {
+        background: var(--amber);
+      }
+      .dot-muted {
+        background: var(--support);
+      }
+      .dot-primary {
+        background: var(--primary);
+      }
+
+      /* Utilities */
+      .text-primary {
+        color: var(--primary);
+      }
+      .text-support {
+        color: var(--support);
+      }
+      .text-amber {
+        color: var(--amber);
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .mb-1 {
+        margin-bottom: 6px;
+      }
+      .mb-2 {
+        margin-bottom: 10px;
+      }
+      .mb-3 {
+        margin-bottom: 10px;
+      } /* adjusted slightly for tight A4 fitting */
+      .footnote {
+        font-size: 9px;
+        color: var(--support);
+        font-style: italic;
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="page">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="ØHNexus Logo" style="height: 32px" data-height-listener-added="true">
+          <div style="font-size: 18px; font-weight: 700; color: #ffffff">ØHNexus Protocol</div>
+        </div>
+        <span class="badge">PRE-SEED · APRIL 2026</span>
+      </div>
+      <div style="font-size: 11px; color: var(--support); margin-bottom: 14px">
+        Self-sovereign identity platform for verified credentials and compliant financial services access.
+      </div>
+
+      
+      <div class="title">SSI infrastructure for compliant EU financial services.</div>
+      <div class="subtitle">MVP deployed · pre-revenue · 1 pilot in development · Madrid, Spain</div>
+      <div class="mb-3">
+        <span class="badge-amber">MVP DEPLOYED</span>
+        <span class="badge-muted">PRE-REVENUE</span>
+        <span class="badge">1 PILOT BETA</span>
+      </div>
+
+      
+      <div class="grid-2 mb-3">
+        <div class="card highlight">
+          <div class="bold text-primary mb-1">PROBLEM</div>
+          <div class="bold mb-2">Financial services access is fragmented, duplicated, and unauditable.</div>
+          <div class="dot-row">
+            <div class="dot dot-amber"></div>
+            <div>Users repeat KYC, AML, MiFID for every new provider.</div>
+          </div>
+          <div class="dot-row">
+            <div class="dot dot-amber"></div>
+            <div>Institutions run costly point-to-point integrations across disconnected systems.</div>
+          </div>
+          <div class="dot-row">
+            <div class="dot dot-amber"></div>
+            <div>No real-time traceability on data access — audits stay manual and reactive.</div>
+          </div>
+          <div class="footnote">
+            EMEA financial crime compliance: ~$85B/year, largely duplicated. Source: LexisNexis Risk Solutions, 2024.
+          </div>
+        </div>
+        <div class="card">
+          <div class="bold text-primary mb-2">MARKET</div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px">
+            <div>
+              <div class="metric metric-primary" style="font-size: 22px; display: inline">$31.6B</div>
+              <span class="metric-label" style="margin-left: 4px">TAM — Global Open Banking 2024</span>
+            </div>
+            <span class="badge">VERIFIED</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px">
+            <div>
+              <div class="metric" style="font-size: 22px; display: inline">$44.9B</div>
+              <span class="metric-label" style="margin-left: 4px">SAM — EU Open Banking by 2030</span>
+            </div>
+            <span class="badge">VERIFIED</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px">
+            <div>
+              <div class="metric text-support" style="font-size: 22px; display: inline">€1.2M–€9M</div>
+              <span class="metric-label" style="margin-left: 4px">SOM ARR 2026–2028</span>
+            </div>
+            <span class="badge-muted">INFERRED</span>
+          </div>
+          <div class="footnote">
+            Sources: Grand View Research (2025); Fortune Business Insights (2026); internal model. Tailwinds: PSD3,
+            DORA, eIDAS 2.0 (EU 2024/1183).
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="grid-2 mb-3">
+        <div class="card highlight">
+          <div class="bold text-primary mb-1">SOLUTION</div>
+          <div class="bold mb-2">
+            A neutral SaaS layer — audited access to regulated financial services. No balance sheet. No custody risk.
+          </div>
+          <div class="dot-row">
+            <div class="dot dot-primary"></div>
+            <div>
+              <span class="bold">SSI identity layer</span> — DIDs + Verifiable Credentials (Walt.id open-source stack).
+            </div>
+          </div>
+          <div class="dot-row">
+            <div class="dot dot-primary"></div>
+            <div>
+              <span class="bold">Smart-contract policy</span> — business rules on-chain; sensitive logic off-chain.
+            </div>
+          </div>
+          <div class="dot-row">
+            <div class="dot dot-primary"></div>
+            <div><span class="bold">Oracle execution</span> — cryptographic proofs on every interaction.</div>
+          </div>
+          <div style="font-size: 10px; color: var(--support); margin-top: 8px">
+            Not DeFi · Not a bank · Not an aggregator · Privacy by Design · EU-regulation native.
+          </div>
+        </div>
+        <div class="card">
+          <div class="bold text-primary mb-2">BUSINESS MODEL</div>
+          <table>
+            <tbody><tr>
+              <th>Tier</th>
+              <th>Price</th>
+              <th>ACV</th>
+            </tr>
+            <tr>
+              <td>Entry</td>
+              <td>€5K/mo</td>
+              <td>€60K</td>
+            </tr>
+            <tr>
+              <td>Base</td>
+              <td>€5K–€15K/mo</td>
+              <td>€60K–€180K</td>
+            </tr>
+            <tr>
+              <td>Enterprise</td>
+              <td>€15K+/mo</td>
+              <td>€180K+</td>
+            </tr>
+          </tbody></table>
+          <div style="margin-top: 8px; font-size: 11px">
+            <span class="bold text-primary">GM 75–85%</span> <span class="badge-muted">[MA]</span> ·
+            <span class="bold">LTV/CAC 3–8×</span> <span class="badge-muted">[MA]</span> ·
+            <span class="bold">Payback 12–24mo</span> <span class="badge-muted">[MA]</span>
+          </div>
+          <div class="footnote">
+            Pricing/unit economics modelled — benchmarks: Bessemer / OpenView 2023; Technavio 2024.
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="card mb-3">
+        <div class="bold text-primary mb-2">TRACTION &amp; PRODUCT STATUS</div>
+        <div class="grid-2">
+          <div>
+            <div class="dot-row">
+              <div class="dot dot-green"></div>
+              <div>
+                <span class="bold">Platform:</span>
+                <span class="text-support">MVP deployed · AWS ECS Fargate · 510 tests passing · 38 issues closed</span>
+              </div>
+            </div>
+            <div class="dot-row">
+              <div class="dot dot-amber"></div>
+              <div><span class="bold">Pilot:</span> <span class="text-support">1 beta pilot in development</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="dot-row">
+              <div class="dot dot-muted"></div>
+              <div>
+                <span class="bold">Revenue:</span>
+                <span class="text-support">Pre-revenue — first revenue modelled M8–9 [MA]</span>
+              </div>
+            </div>
+            <div class="dot-row">
+              <div class="dot dot-muted"></div>
+              <div>
+                <span class="bold">Infrastructure cost:</span>
+                <span class="text-support">€55/mo verified (April 2026, zero traffic)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="grid-2 mb-3">
+        <div class="card">
+          <div class="bold text-primary mb-2">COMPETITION</div>
+          <div class="mb-2">
+            Between SSI players (no financial orchestration) and Open Banking aggregators (no identity or cryptographic
+            auditability).
+          </div>
+          <div class="bold mb-2">
+            No identified competitor combines SSI + smart-contract orchestration + oracle + EU-regulation native design
+            in a single stack.
+          </div>
+          <div><span class="bold text-primary">SSI:</span> Dock · cheqd · Spherity</div>
+          <div><span class="bold text-primary">Open Banking:</span> Tink · Yapily · TrueLayer</div>
+          <div><span class="bold text-primary">Identity:</span> Sumsub · Onfido · Jumio</div>
+          <div class="footnote">Source: competitive intelligence report, April 2026.</div>
+        </div>
+        <div class="card">
+          <div class="bold text-primary mb-2">TEAM</div>
+          <div class="bold mb-1">Nikolay Gyuneliev Ivanov — CEO &amp; Sole Founder</div>
+          <div class="mb-2">
+            10+ years in quantitative risk and data infrastructure at Europe's largest regulated financial institutions.
+            Currently Solution Development Lead / Product Owner at BBVA Asset Management — data, innovation, portfolio
+            management on AWS.
+          </div>
+          <div class="mb-2">
+            <span class="pedigree-pill">BBVA</span>
+            <span class="pedigree-pill">BME (SIX)</span>
+            <span class="pedigree-pill">KPMG</span>
+            <span class="pedigree-pill">UC3M</span>
+            <span class="pedigree-pill">AFI Madrid</span>
+          </div>
+          <div class="footnote">
+            CFA Level II Candidate · Rust/LLMOps Duke University 2024–2025 · Ethereum Smart Contracts 2025.
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="glow-panel mb-3" style="padding: 16px 20px; margin-top: 4px">
+        <div class="bold text-primary mb-2" style="font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase">
+          THE ASK
+        </div>
+        <div class="grid-4">
+          <div>
+            <div class="metric metric-primary">€900K</div>
+            <div class="metric-label">RAISE · €800K–€1M RANGE</div>
+          </div>
+          <div>
+            <div class="metric">Conv. Note</div>
+            <div class="metric-label">SPANISH-LAW COMPLIANT</div>
+          </div>
+          <div>
+            <div class="metric">€5M–€6M</div>
+            <div class="metric-label">CAP · 10–20% DISCOUNT</div>
+          </div>
+          <div>
+            <div class="metric">40/30/30</div>
+            <div class="metric-label">ENG / LEGAL / GTM</div>
+          </div>
+        </div>
+        <div class="footnote" style="margin-top: 10px">
+          Runway: 26–28 months at base burn [MA]. Series A triggers: 5–10 paying clients · €400K–€800K ARR · mainnet
+          live.
+        </div>
+      </div>
+
+      
+      <div class="card" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px">
+        <div>
+          <div class="bold mb-1">Nikolay Gyuneliev Ivanov</div>
+          <div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3cdcac8cccfc2da8dc4dad6cdc6cfcac6d5e3c4cec2cacf8dc0ccce">[email&#160;protected]</a></div>
+          <div>+34 610 983 805</div>
+          <div>linkedin.com/in/nikolay-gyuneliev-a15aa7a3</div>
+        </div>
+        <div style="text-align: right">
+          <div class="mb-2"><span class="text-support">Data room:</span> notion.so/HNexus-Virtual-Data-Room</div>
+          <span class="badge" style="font-size: 12px; padding: 6px 18px">Schedule a 30-min call →</span>
+        </div>
+      </div>
+
+      
+      <div class="footnote" style="text-align: center; margin-top: auto; margin-bottom: 40px">
+        ØHNexus Protocol S.L. in process of constitution — Audens Legal S.L.P., Madrid. Projections are modelled
+        assumptions, not financial commitments.
+      </div>
+
+      
+      <div class="footer-bar">
+        <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="ØHNexus" data-height-listener-added="true">
+        <div class="bold">ONE-PAGER</div>
+        <div>Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</div>
+      </div>
+    </div>
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body></html>
