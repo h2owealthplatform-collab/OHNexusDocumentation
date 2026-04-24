@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    
+    
+    
+    <title>ØHNexus Protocol — Pre-Seed Financial Plan V3 · April 2026</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+      :root {
+        --bg: #0d0d0d;
+        --primary: #00b4c8;
+        --text: #fff;
+        --support: #a0a0a0;
+        --amber: #f59e0b;
+        --card-bg: #141414;
+        --border: #222;
+        --green: #22c55e;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+      }
+      .slide {
+        width: 100%;
+        max-width: 1440px;
+        min-height: 810px;
+        padding: 48px 48px 96px;
+        position: relative;
+        overflow: hidden;
+        page-break-after: always;
+        margin: 0 auto;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #111;
+      }
+      .content-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .title {
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 0 0 16px;
+        color: var(--text);
+      }
+      .subtitle {
+        font-size: 15px;
+        color: var(--support);
+        margin-bottom: 24px;
+      }
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 20px;
+      }
+      .card.highlight {
+        border-left: 3px solid var(--primary);
+      }
+      .card.highlight-amber {
+        border-left: 3px solid var(--amber);
+      }
+      .card.highlight-green {
+        border-left: 3px solid var(--green);
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+      }
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .text-primary {
+        color: var(--primary);
+      }
+      .text-support {
+        color: var(--support);
+      }
+      .text-amber {
+        color: var(--amber);
+      }
+      .text-green {
+        color: var(--green);
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .mb-1 {
+        margin-bottom: 4px;
+      }
+      .mb-2 {
+        margin-bottom: 8px;
+      }
+      .mb-4 {
+        margin-bottom: 16px;
+      }
+      .mb-6 {
+        margin-bottom: 24px;
+      }
+      .mt-4 {
+        margin-top: 16px;
+      }
+      .mt-6 {
+        margin-top: 24px;
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(0, 180, 200, 0.1);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .badge-amber {
+        display: inline-block;
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--amber);
+        border: 1px solid var(--amber);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .badge-gray {
+        display: inline-block;
+        background: transparent;
+        color: var(--support);
+        border: 1px solid var(--support);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .badge-green {
+        display: inline-block;
+        background: rgba(34, 197, 94, 0.1);
+        color: var(--green);
+        border: 1px solid var(--green);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .metric-primary {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--primary);
+      }
+      .metric-sm {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--primary);
+      }
+      .card-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--support);
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      .card-value {
+        font-size: 14px;
+        color: var(--text);
+        line-height: 1.5;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+      }
+      thead tr {
+        border-bottom: 1px solid var(--primary);
+      }
+      th {
+        color: var(--primary);
+        font-weight: 700;
+        text-align: left;
+        padding: 8px 12px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background: transparent;
+        border: none;
+      }
+      td {
+        padding: 8px 12px;
+        color: var(--text);
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 13px;
+      }
+      tr:hover {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      tr.highlight-row {
+        background: rgba(0, 180, 200, 0.08);
+      }
+      .total-row td {
+        font-weight: 700;
+        border-top: 2px solid var(--primary);
+        color: var(--primary);
+      }
+      .footnote {
+        font-size: 11px;
+        color: var(--support);
+        font-style: italic;
+        margin-top: 16px;
+        line-height: 1.5;
+      }
+      .callout {
+        background: rgba(0, 180, 200, 0.08);
+        border-left: 3px solid var(--primary);
+        padding: 12px 16px;
+        border-radius: 0 6px 6px 0;
+        font-size: 13px;
+        color: var(--text);
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .callout-amber {
+        background: rgba(245, 158, 11, 0.08);
+        border-left: 3px solid var(--amber);
+        padding: 12px 16px;
+        border-radius: 0 6px 6px 0;
+        font-size: 13px;
+        color: var(--text);
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .footer-bar {
+        position: absolute;
+        bottom: 24px;
+        left: 48px;
+        right: 48px;
+        height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: var(--support);
+      }
+      .footer-bar img {
+        height: 44px;
+      }
+      .burn-scroll {
+        overflow-x: auto;
+        margin-bottom: 16px;
+      }
+      .burn-table {
+        font-size: 11px;
+      }
+      .burn-table th {
+        font-size: 10px;
+        padding: 6px;
+        white-space: nowrap;
+      }
+      .burn-table td {
+        padding: 6px;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+      .burn-table .key-event td {
+        background: rgba(0, 180, 200, 0.05);
+      }
+      .burn-table .key-event td:first-child {
+        border-left: 3px solid var(--primary);
+        font-weight: 600;
+      }
+      .assumption-list {
+        list-style: none;
+        padding: 0;
+      }
+      .assumption-list li {
+        padding: 8px 0 8px 20px;
+        position: relative;
+        font-size: 13px;
+        line-height: 1.5;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .assumption-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 16px;
+        width: 8px;
+        height: 8px;
+        background: var(--primary);
+        border-radius: 50%;
+      }
+      .bar-container {
+        background: #1a1a1a;
+        border-radius: 4px;
+        height: 24px;
+        position: relative;
+        overflow: hidden;
+      }
+      .bar-fill {
+        height: 100%;
+        background: var(--primary);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #fff;
+        min-width: 60px;
+      }
+      p {
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .modelled-tag {
+        font-size: 10px;
+        color: var(--amber);
+        font-weight: 600;
+        vertical-align: super;
+        margin-left: 2px;
+      }
+      strong {
+        font-weight: 600;
+      }
+      .cover-center {
+        text-align: center;
+      }
+      .cover-center .title {
+        font-size: 42px;
+      }
+      .scenario-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 13px;
+      }
+      .scenario-row .label {
+        color: var(--support);
+        flex: 0 0 50%;
+      }
+      .scenario-row .val {
+        color: var(--text);
+        font-weight: 600;
+        text-align: right;
+      }
+
+      /* V3 additions */
+      .excel-link-card {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--primary);
+        border-radius: 8px;
+        padding: 14px 20px;
+        text-decoration: none;
+        color: var(--text);
+        margin: 16px 0;
+        transition: background 0.2s;
+      }
+      .excel-link-card:hover {
+        background: rgba(0, 180, 200, 0.06);
+      }
+      .excel-icon {
+        font-size: 28px;
+      }
+      .excel-title {
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--text);
+      }
+      .excel-sub {
+        font-size: 12px;
+        color: var(--support);
+        margin-top: 2px;
+      }
+      .excel-arrow {
+        color: var(--primary);
+        font-size: 22px;
+        font-weight: 700;
+        margin-left: 8px;
+      }
+
+      .lang-toggle {
+        position: fixed;
+        top: 16px;
+        right: 20px;
+        z-index: 9999;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 4px 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'Montserrat', sans-serif;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      }
+      .lang-btn {
+        background: transparent;
+        border: none;
+        color: var(--support);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 4px 8px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition:
+          color 0.15s,
+          background 0.15s;
+      }
+      .lang-btn:hover {
+        color: var(--text);
+      }
+      .lang-btn[aria-pressed='true'] {
+        color: var(--primary);
+        background: rgba(0, 180, 200, 0.1);
+      }
+      .lang-sep {
+        color: var(--border);
+        font-size: 11px;
+      }
+
+      html[lang='en'] .lang-es {
+        display: none !important;
+      }
+      html[lang='es'] .lang-en {
+        display: none !important;
+      }
+
+      .qa-block {
+        background: #0f0f0f;
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--amber);
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 16px;
+      }
+      .qa-q {
+        font-weight: 700;
+        color: var(--amber);
+        font-size: 13px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .qa-a {
+        font-size: 13px;
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .tranche-box {
+        background: #0f0f0f;
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--primary);
+        border-radius: 6px;
+        padding: 14px 18px;
+        margin-bottom: 16px;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      @media print {
+        .slide {
+          page-break-after: always;
+          min-height: 0;
+        }
+        body {
+          background: #0d0d0d;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .burn-scroll {
+          overflow-x: visible;
+        }
+        .lang-toggle {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="lang-toggle" role="group" aria-label="Language switcher">
+      <button class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-set-lang="es" aria-pressed="false">ES</button>
+    </div>
+    
+    <div class="slide">
+      <div class="content-area">
+        <div class="cover-center mb-6">
+          <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus Protocol" style="height: 80px; margin-bottom: 24px" data-height-listener-added="true">
+          <div class="title" style="font-size: 42px">
+            <span class="lang-en">PRE-SEED FINANCIAL PLAN</span><span class="lang-es">PLAN FINANCIERO PRE-SEED</span>
+          </div>
+          <div class="subtitle">
+            ØHNexus Protocol S.L. · <span class="lang-en">Pre-Seed Round</span><span class="lang-es">Ronda Pre-Seed</span> · €750K <span class="lang-en">blended</span><span class="lang-es">capital mixto</span> · €450K <span class="lang-en">Convertible Note</span><span class="lang-es">Nota Convertible</span> + €300K ENISA · <span class="lang-en">April 2026</span><span class="lang-es">Abril 2026</span>
+          </div>
+        </div>
+        <div class="grid-4 mb-6">
+          <div class="card highlight">
+            <div class="card-label">
+              <span class="lang-en">Total Raise</span><span class="lang-es">Ronda Total</span>
+            </div>
+            <div class="metric-primary" style="font-size: 32px">€750K</div>
+            <div class="card-value text-support" style="font-size: 12px; margin-top: 4px">
+              <span class="lang-en">€450K equity + €300K ENISA (blended)</span><span class="lang-es">€450K equity + €300K ENISA (capital mixto)</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-label">
+              <span class="lang-en">Months Runway</span><span class="lang-es">Meses de Runway</span>
+            </div>
+            <div class="metric-primary" style="font-size: 36px">22–24</div>
+            <div class="card-value text-support" style="font-size: 12px; margin-top: 4px">
+              <span class="lang-en">Base scenario</span><span class="lang-es">Escenario base</span>
+              <span class="modelled-tag">[MODELLED ASSUMPTION]</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-label">
+              <span class="lang-en">Founder Cost/Mo</span><span class="lang-es">Coste Fundador/Mes</span>
+            </div>
+            <div class="metric-primary" style="font-size: 36px">€5,850</div>
+            <div class="card-value text-support" style="font-size: 12px; margin-top: 4px">
+              <span class="lang-en">Fully loaded incl. 30% Seguridad Social</span><span class="lang-es">Coste total incluida 30% Seguridad Social</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-label">AWS <span class="lang-en">Cost/Mo</span><span class="lang-es">Coste/Mes</span></div>
+            <div class="metric-primary" style="font-size: 36px">€55</div>
+            <div class="card-value text-support" style="font-size: 12px; margin-top: 4px">
+              <span class="lang-en">Verified April 2026 billing</span><span class="lang-es">Facturación verificada abril 2026</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://docs.google.com/spreadsheets/d/159heI9d4BYk34A71DVNfNBhsPOdrTL4q/edit?usp=drive_link&ouid=102690908189081542630&rtpof=true&sd=true" target="_blank" rel="noopener" class="excel-link-card">
+          <div class="excel-icon">📊</div>
+          <div>
+            <div class="excel-title">
+              <span class="lang-en">Download interactive model (Excel)</span><span class="lang-es">Descargar modelo interactivo (Excel)</span>
+            </div>
+            <div class="excel-sub">
+              <span class="lang-en">Full P&amp;L, burn, scenarios and unit economics · Google Drive</span><span class="lang-es">P&amp;L completo, burn, escenarios y unit economics · Google Drive</span>
+            </div>
+          </div>
+          <div class="excel-arrow">→</div>
+        </a>
+        <div class="callout" style="font-size: 12px; line-height: 1.6">
+          <strong><span class="lang-en">Company</span><span class="lang-es">Empresa</span>:</strong> ØHNexus Protocol ·
+          <strong><span class="lang-en">Legal entity</span><span class="lang-es">Entidad legal</span>:</strong> ØHNexus
+          Protocol S.L. (<span class="lang-en">pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">en proceso de constitución — Audens Legal S.L.P., Madrid</span>) ·
+          <strong><span class="lang-en">Stage</span><span class="lang-es">Fase</span>:</strong>
+          <span class="lang-en">Pre-seed · Pre-revenue · MVP deployed</span><span class="lang-es">Pre-seed · Pre-ingresos · MVP desplegado</span> ·
+          <strong><span class="lang-en">Location</span><span class="lang-es">Localización</span>:</strong> Madrid, Spain
+          · <strong><span class="lang-en">Founder</span><span class="lang-es">Fundador</span>:</strong> Nikolay
+          Gyuneliev Ivanov (<span class="lang-en">sole founder, CEO</span><span class="lang-es">fundador único, CEO</span>) ·
+          <strong><span class="lang-en">Instrument</span><span class="lang-es">Instrumento</span>:</strong>
+          <span class="lang-en">Convertible Note + ENISA participative loan</span><span class="lang-es">Nota Convertible + préstamo participativo ENISA</span> ·
+          <strong><span class="lang-en">Valuation cap</span><span class="lang-es">Valuation cap</span>:</strong> €5M–€6M
+          · 10–20% <span class="lang-en">discount</span><span class="lang-es">descuento</span><br><br>
+          <strong><span class="lang-en">Current status</span><span class="lang-es">Estado actual</span>:</strong>
+          <span class="lang-en">Pre-revenue, MVP deployed, 1 pilot in progress.</span><span class="lang-es">Pre-ingresos, MVP desplegado, 1 piloto en curso.</span><br><br>
+          <strong><span class="lang-en">Key message</span><span class="lang-es">Mensaje clave</span>:</strong>
+          <span class="lang-en">This €750K blended raise (€450K convertible + €300K ENISA) funds 22–24 months of product development, team
+            building, legal constitution, and go-to-market execution — delivering the company from a deployed MVP to
+            5–10 paying institutional clients</span><span class="lang-es">Esta ronda mixta de €750K (€450K convertible + €300K ENISA) financia 22–24 meses de desarrollo de producto,
+            construcción de equipo, constitución legal y ejecución GTM — llevando a la empresa de un MVP desplegado a
+            5–10 clientes institucionales de pago</span>
+          <span class="modelled-tag">[MODELLED ASSUMPTION]</span>,
+          <span class="lang-en">Series A readiness, and €400K–€800K ARR</span><span class="lang-es">preparación para Serie A, y €400K–€800K ARR</span>
+          <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.<br><br>
+          <strong><span class="lang-en">Pre-raise founder investment</span><span class="lang-es">Inversión pre-ronda del fundador</span>:</strong>
+          <span class="lang-en">~€4,500 from personal funds already deployed (legal documentation + Nexen Capital business angel network
+            fees). Treated as founder contribution — not capitalised into the company.</span><span class="lang-es">~€4.500 de fondos personales ya desplegados (documentación legal + fees de la red de business angels Nexen
+            Capital). Tratado como aportación del fundador — no capitalizado en la empresa.</span><br><br>
+          <strong><span class="lang-en">Capital efficiency</span><span class="lang-es">Eficiencia de capital</span>:</strong>
+          <span class="lang-en">Production AWS stack runs at €55/month ($59.35) on verified April 2026 billing. MVP deployed on AWS ECS
+            Fargate with 510 tests passing and 38 issues closed.</span><span class="lang-es">Stack AWS en producción opera a €55/mes ($59,35) con facturación verificada de abril 2026. MVP desplegado
+            en AWS ECS Fargate con 510 tests pasando y 38 issues cerradas.</span>
+        </div>
+        <div class="footnote">
+          <span class="lang-en">This financial plan contains forward-looking projections based on modelled assumptions. All figures
+            labelled as projections are directional targets and do not constitute a financial commitment, guarantee, or
+            representation of future performance. ØHNexus Protocol S.L. is not yet incorporated as of April 2026. Audens
+            Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span><span class="lang-es">Este plan financiero contiene proyecciones prospectivas basadas en asunciones modeladas. Todas las cifras
+            etiquetadas como proyecciones son objetivos direccionales y no constituyen un compromiso financiero,
+            garantía ni representación de resultados futuros. ØHNexus Protocol S.L. aún no está constituida a fecha de
+            abril de 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+        <div class="bold">01</div>
+        <div>
+          <span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal
+            S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P.,
+            Madrid</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <div class="content-area">
+        <div class="title">
+          <span class="lang-en">USE OF FUNDS — €750,000</span><span class="lang-es">USO DE LOS FONDOS — €750.000</span>
+        </div>
+        <div class="subtitle">
+          <span class="lang-en">Allocation by category · €450K convertible + €300K ENISA</span><span class="lang-es">Asignación por categoría · €450K convertible + €300K ENISA</span>
+        </div>
+        <div class="grid-4 mb-6">
+          <div class="card highlight">
+            <div class="card-label">
+              <span class="lang-en">Engineering</span><span class="lang-es">Ingeniería</span>
+            </div>
+            <div class="metric-primary" style="font-size: 36px">40%</div>
+            <div class="metric-sm mb-2" style="font-size: 22px">€300,000</div>
+            <div class="card-value" style="font-size: 12px">
+              <span class="lang-en">4 staggered hires + founder salary</span><span class="lang-es">4 contrataciones escalonadas + salario fundador</span>
+            </div>
+          </div>
+          <div class="card highlight">
+            <div class="card-label">
+              <span class="lang-en">Legal &amp; Compliance</span><span class="lang-es">Legal y Compliance</span>
+            </div>
+            <div class="metric-primary" style="font-size: 36px">18%</div>
+            <div class="metric-sm mb-2" style="font-size: 22px">€135,000</div>
+            <div class="card-value" style="font-size: 12px">
+              <span class="lang-en">SL constitution, EU27 trademark, Audens retainer, DORA, GDPR</span><span class="lang-es">Constitución SL, marca UE27, retainer Audens, DORA, GDPR</span>
+            </div>
+          </div>
+          <div class="card highlight">
+            <div class="card-label">
+              <span class="lang-en">GTM / Sales</span><span class="lang-es">GTM / Ventas</span>
+            </div>
+            <div class="metric-primary" style="font-size: 36px">24%</div>
+            <div class="metric-sm mb-2" style="font-size: 22px">€180,000</div>
+            <div class="card-value" style="font-size: 12px">
+              <span class="lang-en">Pilot delivery, BD, EU market entry, events</span><span class="lang-es">Entrega piloto, BD, entrada mercado UE, eventos</span>
+            </div>
+          </div>
+          <div class="card highlight">
+            <div class="card-label">
+              <span class="lang-en">Operations / Buffer</span><span class="lang-es">Operaciones / Buffer</span>
+            </div>
+            <div class="metric-primary" style="font-size: 36px">18%</div>
+            <div class="metric-sm mb-2" style="font-size: 22px">€135,000</div>
+            <div class="card-value" style="font-size: 12px">
+              <span class="lang-en">Working capital, AWS scaling, contingency buffer</span><span class="lang-es">Capital circulante, escalado AWS, buffer de contingencia</span>
+            </div>
+          </div>
+        </div>
+        <div style="font-size: 13px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;">
+          <span class="lang-en">Use of Funds — Source Split (Equity vs ENISA)</span><span class="lang-es">Uso de los Fondos — Desglose por Fuente (Equity vs ENISA)</span>
+        </div>
+        <table class="mb-4">
+          <thead>
+            <tr>
+              <th><span class="lang-en">Category</span><span class="lang-es">Categoría</span></th>
+              <th>%</th>
+              <th><span class="lang-en">Total</span><span class="lang-es">Total</span></th>
+              <th><span class="lang-en">From Convertible</span><span class="lang-es">De Convertible</span></th>
+              <th><span class="lang-en">From ENISA</span><span class="lang-es">De ENISA</span></th>
+              <th><span class="lang-en">Rationale</span><span class="lang-es">Justificación</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="lang-en">Engineering</span><span class="lang-es">Ingeniería</span></td>
+              <td>40%</td>
+              <td>€300,000</td>
+              <td>€180,000</td>
+              <td>€120,000</td>
+              <td style="color: var(--support); font-size: 12px">
+                <span class="lang-en">4 staggered hires + founder salary. ENISA allows R&amp;D spend.</span><span class="lang-es">4 contrataciones escalonadas + salario fundador. ENISA permite gasto I+D.</span>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="lang-en">Legal / Compliance</span><span class="lang-es">Legal / Compliance</span></td>
+              <td>18%</td>
+              <td>€135,000</td>
+              <td>€135,000</td>
+              <td>€0</td>
+              <td style="color: var(--support); font-size: 12px">
+                <span class="lang-en">Constitution, Audens retainer, DORA, GDPR. Legal one-off funded from equity — ENISA restrictions
+                  apply.</span><span class="lang-es">Constitución, retainer Audens, DORA, GDPR. Gasto legal inicial financiado con equity — restricciones
+                  ENISA aplican.</span>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="lang-en">GTM / Sales</span><span class="lang-es">GTM / Ventas</span></td>
+              <td>24%</td>
+              <td>€180,000</td>
+              <td>€90,000</td>
+              <td>€90,000</td>
+              <td style="color: var(--support); font-size: 12px">
+                <span class="lang-en">Pilot development, BD, EU market entry. ENISA allows commercial expansion.</span><span class="lang-es">Desarrollo piloto, BD, entrada mercado UE. ENISA permite expansión comercial.</span>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="lang-en">Operations / Buffer</span><span class="lang-es">Operaciones / Buffer</span></td>
+              <td>18%</td>
+              <td>€135,000</td>
+              <td>€45,000</td>
+              <td>€90,000</td>
+              <td style="color: var(--support); font-size: 12px">
+                <span class="lang-en">Working capital, buffer, AWS scaling. ENISA allows working capital.</span><span class="lang-es">Capital circulante, buffer, escalado AWS. ENISA permite capital circulante.</span>
+              </td>
+            </tr>
+            <tr class="total-row">
+              <td><strong>TOTAL</strong></td>
+              <td><strong>100%</strong></td>
+              <td><strong>€750,000</strong></td>
+              <td><strong>€450,000</strong></td>
+              <td><strong>€300,000</strong></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout-amber mb-4" style="font-size: 12px">
+          <span class="lang-en">ENISA funds cannot be used for dividends, share buybacks, or debt repayment of other instruments. The
+            allocation above respects ENISA's eligible-expense framework for participative loans.</span><span class="lang-es">Los fondos ENISA no pueden destinarse a dividendos, recompra de participaciones ni repago de otra deuda. La
+            asignación superior respeta el marco de gastos elegibles de ENISA para préstamos participativos.</span>
+        </div>
+        <div style="font-size: 13px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;">
+          <span class="lang-en">Month 1 Legal One-Off Breakdown</span><span class="lang-es">Desglose Legal Inicial Mes 1</span>
+        </div>
+        <table class="mb-4">
+          <thead>
+            <tr>
+              <th><span class="lang-en">Item</span><span class="lang-es">Concepto</span></th>
+              <th><span class="lang-en">Cost</span><span class="lang-es">Coste</span></th>
+              <th><span class="lang-en">Notes</span><span class="lang-es">Notas</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="lang-en">SL constitution — Audens fees</span><span class="lang-es">Constitución SL — honorarios Audens</span>
+              </td>
+              <td>€700</td>
+              <td style="color: var(--support)">
+                €80 <span class="lang-en">negative name certificate</span><span class="lang-es">certificado negativo de denominación</span> + €500
+                <span class="lang-en">articles of association</span><span class="lang-es">estatutos sociales</span> +
+                €120 <span class="lang-en">advisory</span><span class="lang-es">asesoramiento</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="lang-en">SL constitution — notary + Registro Mercantil + administrative services</span><span class="lang-es">Constitución SL — notaría + Registro Mercantil + gestoría</span>
+              </td>
+              <td>€800–€1,500</td>
+              <td style="color: var(--support)">
+                <span class="lang-en">Estimated — external to Audens</span><span class="lang-es">Estimado — externo a Audens</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="lang-en">EU27 trademark — Audens fees (after 20% discount)</span><span class="lang-es">Marca UE27 — honorarios Audens (tras 20% descuento)</span>
+              </td>
+              <td>€960</td>
+              <td style="color: var(--support)">
+                <span class="lang-en">search</span><span class="lang-es">búsqueda</span> €720 +
+                <span class="lang-en">filing</span><span class="lang-es">tramitación</span> €240
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="lang-en">EU27 trademark — EUIPO official fees</span><span class="lang-es">Marca UE27 — tasas oficiales EUIPO</span>
+              </td>
+              <td>~€850</td>
+              <td style="color: var(--support)">
+                1 <span class="lang-en">class</span><span class="lang-es">clase</span>
+              </td>
+            </tr>
+            <tr class="total-row">
+              <td>
+                <strong><span class="lang-en">Month 1 legal total</span><span class="lang-es">Total legal Mes 1</span></strong>
+              </td>
+              <td><strong>€3,310–€4,010</strong></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout mb-4">
+          <strong><span class="lang-en">Capital efficiency</span><span class="lang-es">Eficiencia de capital</span>:</strong>
+          <span class="lang-en">Existing production infrastructure (AWS ECS Fargate deployed, 510 tests passing, 38 issues closed) means
+            engineering budget funds team growth and product iteration — not infrastructure from scratch.</span><span class="lang-es">La infraestructura de producción existente (AWS ECS Fargate desplegado, 510 tests pasando, 38 issues
+            cerradas) implica que el presupuesto de ingeniería financia crecimiento de equipo e iteración de producto —
+            no infraestructura desde cero.</span>
+        </div>
+        <div class="callout mb-4">
+          <strong>Capex vs Opex:</strong>
+          <span class="lang-en">100% of the €750,000 blended raise is deployed as operational expenditure (personnel, legal, GTM, cloud).
+            No capital expenditure is planned — infrastructure is AWS-native SaaS verified at €55/month on April 2026
+            billing. At pre-seed, capital efficiency and iteration speed outweigh asset ownership.</span><span class="lang-es">El 100% de la ronda mixta de €750.000 se despliega como gasto operativo (personal, legal, GTM, cloud). No
+            se planifica gasto de capital — la infraestructura es SaaS AWS-nativa verificada a €55/mes en facturación de
+            abril 2026. En pre-seed, la eficiencia de capital y la velocidad de iteración pesan más que la propiedad de
+            activos.</span>
+        </div>
+        <div class="footnote" style="font-size: 10px">
+          <span class="lang-en">Source: DOC_26-0005_Nikolay_Gyuneliev_Propuesta_260409 + DOC_Audens_Propuesta_Registro_de_marcas_2026</span><span class="lang-es">Fuente: DOC_26-0005_Nikolay_Gyuneliev_Propuesta_260409 + DOC_Audens_Propuesta_Registro_de_marcas_2026</span>
+        </div>
+        <div class="footnote">
+          <span class="lang-en">This financial plan contains forward-looking projections based on modelled assumptions. All figures
+            labelled as projections are directional targets and do not constitute a financial commitment, guarantee, or
+            representation of future performance. ØHNexus Protocol S.L. is not yet incorporated as of April 2026. Audens
+            Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span><span class="lang-es">Este plan financiero contiene proyecciones prospectivas basadas en asunciones modeladas. Todas las cifras
+            etiquetadas como proyecciones son objetivos direccionales y no constituyen un compromiso financiero,
+            garantía ni representación de resultados futuros. ØHNexus Protocol S.L. aún no está constituida a fecha de
+            abril de 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+        <div class="bold">02</div>
+        <div>
+          <span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal
+            S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P.,
+            Madrid</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <div class="content-area">
+        <div class="title">
+          <span class="lang-en">FUNDING STRUCTURE — BLENDED CAPITAL</span><span class="lang-es">ESTRUCTURA DE FINANCIACIÓN — CAPITAL MIXTO</span>
+        </div>
+        <div class="subtitle">
+          <span class="lang-en">€450K investors + €300K ENISA = €750K total · Lower dilution for investors than single-instrument
+            rounds.</span><span class="lang-es">€450K inversores + €300K ENISA = €750K total · Menor dilución para inversores que rondas de instrumento
+            único.</span>
+        </div>
+        <div class="grid-2 mb-6">
+          <div class="card highlight">
+            <div class="card-label" style="color: var(--primary)">
+              <span class="lang-en">CONVERTIBLE NOTE — €450K</span><span class="lang-es">NOTA CONVERTIBLE — €450K</span>
+            </div>
+            <div class="metric-primary" style="font-size: 42px">€450K</div>
+            <div class="card-value mb-4" style="font-size: 12px">
+              <span class="lang-en">Angels + business angels · Spanish-law compliant</span><span class="lang-es">Angels + business angels · Cumple legislación española</span>
+            </div>
+            <table style="font-size: 12px">
+              <tbody>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Instrument</span><span class="lang-es">Instrumento</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    <span class="lang-en">Convertible Note</span><span class="lang-es">Nota Convertible</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Valuation cap</span><span class="lang-es">Valuation cap</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">€5M–€6M</td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Discount</span><span class="lang-es">Descuento</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">10–20%</td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Maturity</span><span class="lang-es">Vencimiento</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    12–24 <span class="lang-en">months</span><span class="lang-es">meses</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Dilution (at €5M cap)</span><span class="lang-es">Dilución (al cap €5M)</span>
+                  </td>
+                  <td class="text-primary bold" style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    ~7–9%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="font-size: 10px; color: var(--support); margin-top: 8px; font-style: italic">
+              <span class="lang-en">Dilution calculated pre-discount. Post-money dilution depends on Series A valuation. Compare to ~15–18%
+                on a pure €900K round at same cap.</span><span class="lang-es">Dilución calculada pre-descuento. La dilución post-money depende de la valoración de Serie A. Comparar
+                con ~15–18% en una ronda all-equity de €900K al mismo cap.</span>
+            </div>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-label" style="color: var(--amber)">
+              <span class="lang-en">ENISA EMPRENDEDORES — €300K</span><span class="lang-es">ENISA EMPRENDEDORES — €300K</span>
+            </div>
+            <div class="metric-primary" style="font-size: 42px; color: var(--amber)">€300K</div>
+            <div class="card-value mb-4" style="font-size: 12px">
+              <span class="lang-en">Participative loan · Non-dilutive · Repayable</span><span class="lang-es">Préstamo participativo · No dilutivo · A devolver</span>
+            </div>
+            <table style="font-size: 12px">
+              <tbody>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Instrument</span><span class="lang-es">Instrumento</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    <span class="lang-en">Participative loan (préstamo participativo)</span><span class="lang-es">Préstamo participativo</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Max amount</span><span class="lang-es">Importe máximo</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    €300,000 (<span class="lang-en">instrument ceiling</span><span class="lang-es">tope del instrumento</span>)
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Interest</span><span class="lang-es">Interés</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    <span class="lang-en">Fixed (Euribor + diff.) + variable tied to results</span><span class="lang-es">Fijo (Euribor + dif.) + variable ligado a resultados</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Maturity</span><span class="lang-es">Vencimiento</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    7–9 <span class="lang-en">years</span><span class="lang-es">años</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Grace period (principal)</span><span class="lang-es">Período de carencia (principal)</span>
+                  </td>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    5–7 <span class="lang-en">years</span><span class="lang-es">años</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a">
+                    <span class="lang-en">Dilution</span><span class="lang-es">Dilución</span>
+                  </td>
+                  <td class="text-amber bold" style="padding: 6px 8px; border-bottom: 1px solid #1a1a1a; text-align: right">
+                    0% (<span class="lang-en">debt, not equity</span><span class="lang-es">deuda, no equity</span>)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="font-size: 10px; color: var(--support); margin-top: 8px; font-style: italic">
+              <span class="lang-en">ENISA requires equity co-investment ≥ loan amount. Our €450K convertible satisfies this. Interest
+                accrues during grace period and is included in runway modelling.</span><span class="lang-es">ENISA requiere co-inversión equity ≥ importe del préstamo. Nuestra convertible de €450K satisface este
+                requisito. El interés devenga durante la carencia y está incluido en el modelado de runway.</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-3 mb-6">
+          <div class="card">
+            <div class="card-label">
+              <span class="lang-en">Total Blended Capital</span><span class="lang-es">Capital Mixto Total</span>
+            </div>
+            <div class="metric-primary" style="font-size: 36px">€750K</div>
+          </div>
+</div><div class="card"><div class="card-label"><span class="lang-en">Real Dilution (vs 15–18% all-equity)</span><span class="lang-es">Dilución real (vs 15–18% all-equity)</span></div><div class="metric-primary" style="font-size:36px">~7–9%</div></div>
+      <div class="card"><div class="card-label"><span class="lang-en">Runway Blended</span><span class="lang-es">Runway Mixto</span></div><div class="metric-primary" style="font-size:36px">22–24 mo <span class="modelled-tag">[MA]</span></div></div>
+    </div>
+    <div class="callout" style="font-size:13px;line-height:1.6">
+      <span class="lang-en"><strong>Why blended capital?</strong> A €450K convertible note dilutes investors half as much as a full €900K equity round at the same cap. The €300K ENISA participative loan adds non-dilutive runway while signaling third-party due diligence. Both instruments together give 22–24 months of base runway — enough to reach 5–10 paying institutional clients and negotiate Series A from strength, not necessity.</span>
+      <span class="lang-es"><strong>¿Por qué capital mixto?</strong> Una nota convertible de €450K diluye a los inversores la mitad que una ronda all-equity de €900K al mismo cap. El préstamo participativo ENISA de €300K añade runway no dilutivo y aporta validación externa por due diligence pública. Juntos, ambos instrumentos generan 22–24 meses de runway base — suficiente para alcanzar 5–10 clientes institucionales de pago y negociar Serie A desde posición de fuerza, no por necesidad.</span>
+    </div>
+    <div class="footnote"><span class="lang-en">Source: ENISA — Programa Emprendedores (Línea Emprendedores), public 2024. ENISA public approval-rate statistics 2024.</span><span class="lang-es">Fuente: ENISA — Programa Emprendedores (Línea Emprendedores), pública 2024. Estadísticas públicas ENISA de tasas de aprobación 2024.</span></div>
+    <div class="footnote"><span class="lang-en">This financial plan contains forward-looking projections. ØHNexus Protocol S.L. is not yet incorporated as of April 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span><span class="lang-es">Este plan financiero contiene proyecciones prospectivas. ØHNexus Protocol S.L. aún no está constituida a fecha de abril de 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span></div>
+  <div class="footer-bar">
+  <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+  <div class="bold">03</div>
+  <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+</div>
+  </div>
+
+
+<div class="slide" style="min-height:auto;padding-bottom:96px">
+  <div class="content-area">
+    <div class="title"><span class="lang-en">MONTHLY BURN MODEL — MONTHS 1–18</span><span class="lang-es">MODELO DE BURN MENSUAL — MESES 1–18</span></div>
+    <div class="subtitle"><span class="lang-en">Base scenario · All costs fully loaded (Spanish Seguridad Social included) · Net Cash reflects €450K convertible at M1 + ENISA tranches at M6 and M12</span><span class="lang-es">Escenario base · Todos los costes con SS incluida · Net Cash refleja €450K convertible en M1 + tramos ENISA en M6 y M12</span></div>
+    <div class="burn-scroll">
+      <table class="burn-table">
+        <thead><tr>
+          <th><span class="lang-en">Month</span><span class="lang-es">Mes</span></th><th><span class="lang-en">Founder</span><span class="lang-es">Fundador</span></th><th>H1 Senior</th><th>H2 Mid</th><th>H3 SC</th><th>H4 DevOps</th><th>AWS</th><th>Legal</th><th>GTM</th><th><span class="lang-en">Other</span><span class="lang-es">Otros</span></th><th><span class="lang-en">Total Burn</span><span class="lang-es">Burn Total</span></th><th><span class="lang-en">Cumul.</span><span class="lang-es">Acum.</span></th><th><span class="lang-en">Revenue</span><span class="lang-es">Ingresos</span></th><th><span class="lang-en">Net Cash</span><span class="lang-es">Caja Neta</span></th>
+        </tr></thead>
+        <tbody>
+<tr class="key-event"><td>M1 <span class="badge-amber" style="font-size:9px;padding:2px 6px"><span class="lang-en">LEGAL ONE-OFF</span><span class="lang-es">LEGAL INICIAL</span></span></td><td>€5,850</td><td>—</td><td>—</td><td>—</td><td>—</td><td>€55</td><td>€4,410</td><td>—</td><td>€750</td><td>€11,065</td><td>€11,065</td><td style="color:var(--support)">—</td><td class="text-primary">€438,935</td></tr>
+<tr class="key-event"><td>M2 <span class="badge-amber" style="font-size:9px;padding:2px 6px"><span class="lang-en">HIRE 1</span><span class="lang-es">CONTRAT. 1</span></span></td><td>€5,850</td><td>€6,500</td><td>—</td><td>—</td><td>—</td><td>€55</td><td>€750</td><td>—</td><td>€750</td><td>€13,905</td><td>€24,970</td><td style="color:var(--support)">—</td><td class="text-primary">€425,030</td></tr>
+<tr><td>M3</td><td>€5,850</td><td>€6,500</td><td>—</td><td>—</td><td>—</td><td>€55</td><td>€750</td><td>—</td><td>€750</td><td>€13,905</td><td>€38,875</td><td style="color:var(--support)">—</td><td class="text-primary">€411,125</td></tr>
+<tr class="key-event"><td>M4 <span class="badge-amber" style="font-size:9px;padding:2px 6px"><span class="lang-en">HIRE 2 + GTM</span><span class="lang-es">CONTRAT. 2 + GTM</span></span></td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>—</td><td>—</td><td>€55</td><td>€750</td><td>€3,000</td><td>€750</td><td>€21,455</td><td>€60,330</td><td style="color:var(--support)">—</td><td class="text-primary">€389,670</td></tr>
+<tr><td>M5</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>—</td><td>—</td><td>€55</td><td>€750</td><td>€3,000</td><td>€750</td><td>€21,455</td><td>€81,785</td><td style="color:var(--support)">—</td><td class="text-primary">€368,215</td></tr>
+<tr class="key-event"><td>M6 <span class="badge" style="font-size:9px;padding:2px 6px"><span class="lang-en">ENISA T1 +€150K</span><span class="lang-es">ENISA T1 +€150K</span></span></td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>—</td><td>—</td><td>€100</td><td>€750</td><td>€3,000</td><td>€750</td><td>€21,500</td><td>€103,285</td><td style="color:var(--support)">—</td><td class="text-primary">€496,715</td></tr>
+<tr class="key-event"><td>M7 <span class="badge-amber" style="font-size:9px;padding:2px 6px"><span class="lang-en">HIRE 3</span><span class="lang-es">CONTRAT. 3</span></span></td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>—</td><td>€200</td><td>€750</td><td>€3,000</td><td>€750</td><td>€28,100</td><td>€131,385</td><td style="color:var(--support)">—</td><td class="text-primary">€468,615</td></tr>
+<tr><td>M8</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>—</td><td>€200</td><td>€750</td><td>€3,000</td><td>€750</td><td>€28,100</td><td>€159,485</td><td style="color:var(--support)">—</td><td class="text-primary">€440,515</td></tr>
+<tr class="key-event"><td>M9 <span class="badge" style="font-size:9px;padding:2px 6px"><span class="lang-en">FIRST REVENUE</span><span class="lang-es">PRIMER INGRESO</span></span></td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>—</td><td>€200</td><td>€750</td><td>€3,000</td><td>€750</td><td>€28,100</td><td>€187,585</td><td class="text-primary">€5,000 <span class="modelled-tag">[MA]</span></td><td class="text-primary">€417,415</td></tr>
+<tr><td>M10</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>—</td><td>€250</td><td>€750</td><td>€3,000</td><td>€750</td><td>€28,150</td><td>€215,735</td><td class="text-primary">€5,000</td><td class="text-primary">€394,265</td></tr>
+<tr><td>M11</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>—</td><td>€250</td><td>€750</td><td>€3,000</td><td>€750</td><td>€28,150</td><td>€243,885</td><td class="text-primary">€5,000</td><td class="text-primary">€371,115</td></tr>
+<tr class="key-event"><td>M12 <span class="badge" style="font-size:9px;padding:2px 6px"><span class="lang-en">ENISA T2 +€150K</span><span class="lang-es">ENISA T2 +€150K</span></span></td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>—</td><td>€300</td><td>€750</td><td>€3,000</td><td>€750</td><td>€28,200</td><td>€272,085</td><td class="text-primary">€5,000</td><td class="text-primary">€497,915</td></tr>
+<tr class="key-event"><td>M13 <span class="badge-amber" style="font-size:9px;padding:2px 6px"><span class="lang-en">HIRE 4</span><span class="lang-es">CONTRAT. 4</span></span></td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>€5,850</td><td>€300</td><td>€750</td><td>€3,000</td><td>€750</td><td>€34,050</td><td>€306,135</td><td class="text-primary">€5,000</td><td class="text-primary">€468,865</td></tr>
+<tr><td>M14</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>€5,850</td><td>€300</td><td>€750</td><td>€3,000</td><td>€750</td><td>€34,050</td><td>€340,185</td><td class="text-primary">€5,000</td><td class="text-primary">€439,815</td></tr>
+<tr><td>M15</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>€5,850</td><td>€300</td><td>€750</td><td>€3,000</td><td>€750</td><td>€34,050</td><td>€374,235</td><td class="text-primary">€5,000</td><td class="text-primary">€410,765</td></tr>
+<tr><td>M16</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>€5,850</td><td>€300</td><td>€750</td><td>€3,000</td><td>€750</td><td>€34,050</td><td>€408,285</td><td class="text-primary">€5,000</td><td class="text-primary">€381,715</td></tr>
+<tr><td>M17</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>€5,850</td><td>€300</td><td>€750</td><td>€3,000</td><td>€750</td><td>€34,050</td><td>€442,335</td><td class="text-primary">€5,000</td><td class="text-primary">€352,665</td></tr>
+<tr><td>M18</td><td>€5,850</td><td>€6,500</td><td>€4,550</td><td>€6,500</td><td>€5,850</td><td>€300</td><td>€750</td><td>€3,000</td><td>€750</td><td>€34,050</td><td>€476,385</td><td class="text-primary">€5,000</td><td class="text-primary">€323,615</td></tr>
+</tbody></table>
+    </div>
+    <div class="grid-4 mb-4">
+      <div class="card" style="padding:12px 16px"><div class="card-label"><span class="lang-en">Total Burn M1–18</span><span class="lang-es">Burn Total M1–18</span></div><div class="bold" style="font-size:18px">€476,385</div></div>
+      <div class="card" style="padding:12px 16px"><div class="card-label"><span class="lang-en">Total Revenue M1–18</span><span class="lang-es">Ingresos Total M1–18</span></div><div class="bold text-primary" style="font-size:18px">€50,000 <span class="modelled-tag">[MA]</span></div></div>
+      <div class="card" style="padding:12px 16px"><div class="card-label"><span class="lang-en">Net Consumed</span><span class="lang-es">Consumido Neto</span></div><div class="bold" style="font-size:18px">€426,385</div></div>
+      <div class="card" style="padding:12px 16px"><div class="card-label"><span class="lang-en">Cash at M18 (burn model)</span><span class="lang-es">Caja en M18 (burn model)</span></div><div class="bold text-primary" style="font-size:18px">€323,615</div></div>
+    </div>
+    <div class="footnote"><span class="lang-en">All salary figures fully loaded including ~30% Spanish Seguridad Social. AWS verified from April 2026 billing (€55/mo at zero traffic), scaled with pilot onboarding. ENISA tranches modelled at M6 (€150K) and M12 (€150K) subject to approval and milestone verification. Net Cash at M18 excludes ENISA interest accrual and contingency reserves — see Runway Scenarios for ~€140K adjusted figure.</span><span class="lang-es">Todos los costes de salario con ~30% SS empresarial. AWS verificado de facturación abril 2026 (€55/mes a tráfico cero), escalado con piloto. Tramos ENISA modelados en M6 (€150K) y M12 (€150K) sujetos a aprobación. Caja M18 excluye devengo intereses ENISA y reservas de contingencia — ver Escenarios de Runway para figura ajustada ~€140K.</span> <span class="modelled-tag">[MA]</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">04</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide" style="min-height:auto;padding-bottom:96px">
+  <div class="content-area">
+    <div class="title"><span class="lang-en">P&amp;L — 3-YEAR SUMMARY (BASE SCENARIO)</span><span class="lang-es">P&amp;L — RESUMEN 3 AÑOS (ESCENARIO BASE)</span></div>
+    <div class="subtitle"><span class="lang-en">Revenue → Gross Margin → Operating Costs → EBITDA · All figures modelled assumptions</span><span class="lang-es">Ingresos → Margen Bruto → Gastos Operativos → EBITDA · Todas las cifras son asunciones modeladas</span></div>
+    <div class="burn-scroll">
+      <table class="burn-table">
+        <thead><tr>
+          <th><span class="lang-en">Line Item</span><span class="lang-es">Partida</span></th><th>2026 (<span class="lang-en">Year 1</span><span class="lang-es">Año 1</span>)</th><th>2027 (<span class="lang-en">Year 2</span><span class="lang-es">Año 2</span>)</th><th>2028 (<span class="lang-en">Year 3</span><span class="lang-es">Año 3</span>)</th><th><span class="lang-en">Notes</span><span class="lang-es">Notas</span></th>
+        </tr></thead>
+        <tbody>
+          <tr class="key-event"><td><strong><span class="lang-en">Revenue</span><span class="lang-es">Ingresos</span></strong></td><td class="text-primary">€50K–€150K <span class="modelled-tag">[MA]</span></td><td class="text-primary">€400K–€800K <span class="modelled-tag">[MA]</span></td><td class="text-primary">€1.2M–€3M <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">From 3-Year Revenue Projections (base row)</span><span class="lang-es">De Proyecciones de Ingresos 3 años (fila base)</span></td></tr>
+          <tr><td>COGS (15–25%)</td><td>€7.5K–€37.5K <span class="modelled-tag">[MA]</span></td><td>€60K–€200K <span class="modelled-tag">[MA]</span></td><td>€180K–€750K <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Cloud infra, transaction fees, data usage</span><span class="lang-es">Cloud infra, tasas transaccionales, uso de datos</span></td></tr>
+          <tr class="key-event"><td><strong><span class="lang-en">Gross Margin</span><span class="lang-es">Margen Bruto</span></strong></td><td>€42.5K–€112.5K <span class="modelled-tag">[MA]</span></td><td>€340K–€600K <span class="modelled-tag">[MA]</span></td><td>€1.02M–€2.25M <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)">75–85% — Bessemer / OpenView 2023</td></tr>
+          <tr><td><span class="lang-en">Gross Margin %</span><span class="lang-es">% Margen Bruto</span></td><td>75–85% <span class="modelled-tag">[MA]</span></td><td>75–85% <span class="modelled-tag">[MA]</span></td><td>75–85% <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Infrastructure SaaS benchmark</span><span class="lang-es">Benchmark SaaS infra</span></td></tr>
+          <tr><td><span class="lang-en">Personnel (fully loaded, 30% SS)</span><span class="lang-es">Personal (coste total, 30% SS)</span></td><td>~€365K</td><td>~€600K–€700K <span class="modelled-tag">[MA]</span></td><td>~€800K–€1M <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Y1 from burn model; Y2–Y3 extrapolated</span><span class="lang-es">A1 del burn; A2–A3 extrapolados</span> <span class="modelled-tag">[MA]</span></td></tr>
+          <tr><td>AWS <span class="lang-en">infrastructure</span><span class="lang-es">infraestructura</span></td><td>~€2K</td><td>~€6K–€12K <span class="modelled-tag">[MA]</span></td><td>~€20K–€40K <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Scales with clients — €55/mo base April 2026</span><span class="lang-es">Escala con clientes — €55/mes base abril 2026</span></td></tr>
+          <tr><td><span class="lang-en">Legal &amp; compliance</span><span class="lang-es">Legal y compliance</span></td><td>~€13K</td><td>~€15K <span class="modelled-tag">[MA]</span></td><td>~€18K <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)">Audens retainer €750/<span class="lang-en">mo</span><span class="lang-es">mes</span> <span class="lang-en">from</span><span class="lang-es">desde</span> M2</td></tr>
+          <tr><td>GTM <span class="lang-en">&amp; other opex</span><span class="lang-es">y otros opex</span></td><td>~€36K</td><td>~€60K <span class="modelled-tag">[MA]</span></td><td>~€100K <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Founder-led sales, no dedicated hire</span><span class="lang-es">Ventas fundador, sin contratación dedicada</span></td></tr>
+          <tr><td><span class="lang-en">ENISA interest accrual</span><span class="lang-es">Devengo intereses ENISA</span></td><td>~€3K <span class="modelled-tag">[MA]</span></td><td>~€15K <span class="modelled-tag">[MA]</span></td><td>~€18K <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Euribor + diff. on €300K. Principal in grace.</span><span class="lang-es">Euribor + dif. sobre €300K. Principal en carencia.</span></td></tr>
+          <tr class="total-row"><td><strong><span class="lang-en">Total Operating Expenses</span><span class="lang-es">Gastos Operativos Total</span></strong></td><td>~€419K</td><td>~€695K–€805K <span class="modelled-tag">[MA]</span></td><td>~€958K–€1.18M <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Sum of above</span><span class="lang-es">Suma de lo anterior</span></td></tr>
+          <tr class="key-event"><td><strong>EBITDA</strong></td><td class="text-amber">-€376K to -€306K <span class="modelled-tag">[MA]</span></td><td class="text-amber">-€355K to -€205K <span class="modelled-tag">[MA]</span></td><td class="text-green">+€62K to +€1.07M <span class="modelled-tag">[MA]</span></td><td style="color:var(--support)"><span class="lang-en">Break-even approached mid-Year 3</span><span class="lang-es">Break-even aproximado a mediados Año 3</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout mt-4" style="font-size:13px"><span class="lang-en">Pre-revenue as of April 2026. Y1–Y2 EBITDA negative by design — blended raise funds path to first revenue (M8–9) and 5–10 paying institutional clients by M18. Break-even modelled for mid-Year 3 at base, dependent on EU institutional sales cycle (6–18 months per client) and mainnet migration. ENISA interest accrued from Year 1.</span><span class="lang-es">Pre-ingresos a abril 2026. EBITDA A1–A2 negativo por diseño — ronda mixta financia camino a primeros ingresos (M8–9) y 5–10 clientes institucionales en M18. Break-even en medio del Año 3 en base, dependiente del ciclo de ventas UE (6–18 meses por cliente) y migración mainnet. Intereses ENISA devengados desde Año 1.</span> <span class="modelled-tag">[MA]</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">05</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide" style="min-height:auto;padding-bottom:96px">
+  <div class="content-area">
+    <div class="title"><span class="lang-en">RUNWAY SCENARIOS — BLENDED CAPITAL</span><span class="lang-es">ESCENARIOS DE RUNWAY — CAPITAL MIXTO</span></div>
+    <div class="subtitle"><span class="lang-en">Conservative · Base · Optimistic — €450K convertible + €300K ENISA</span><span class="lang-es">Conservador · Base · Optimista — €450K convertible + €300K ENISA</span></div>
+    <div class="tranche-box">
+      <strong class="text-primary"><span class="lang-en">ENISA Disbursement Schedule</span><span class="lang-es">Calendario de Desembolso ENISA</span></strong><br>
+      <span class="lang-en">Cash arrives in tranches: the convertible note closes in Month 1 (€450K). ENISA approval typically takes 4–6 months from submission — modelled as €150K in Month 6 (50% on approval) + €150K in Month 12 (50% on milestone verification). The cash curve therefore has two inflection points, not one. ENISA submission is planned for Month 2 to minimize timing risk.</span>
+      <span class="lang-es">La caja entra en tramos: la nota convertible cierra en el Mes 1 (€450K). La aprobación ENISA normalmente tarda 4–6 meses desde la solicitud — modelada como €150K en el Mes 6 (50% tras aprobación) + €150K en el Mes 12 (50% tras verificación de hitos). La curva de caja tiene por tanto dos puntos de inflexión, no uno. La solicitud ENISA está planificada para el Mes 2 para minimizar el riesgo de timing.</span>
+    </div>
+    <table class="mb-6">
+      <thead><tr>
+        <th><span class="lang-en">Scenario</span><span class="lang-es">Escenario</span></th><th><span class="lang-en">Peak monthly burn</span><span class="lang-es">Pico burn mensual</span></th><th><span class="lang-en">Runway (months)</span><span class="lang-es">Runway (meses)</span></th><th><span class="lang-en">Cash at M18</span><span class="lang-es">Caja en M18</span></th><th><span class="lang-en">Notes</span><span class="lang-es">Notas</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="badge-amber"><span class="lang-en">CONSERVATIVE</span><span class="lang-es">CONSERVADOR</span></span></td><td>~€32,000</td><td class="text-amber bold">~24–26 <span class="modelled-tag">[MA]</span></td><td>~€175K <span class="modelled-tag">[MA]</span></td><td style="color:var(--support);font-size:12px"><span class="lang-en">ENISA delayed 2 months, no revenue</span><span class="lang-es">ENISA retrasa 2 meses, sin ingresos</span></td></tr>
+        <tr class="highlight-row"><td><span class="badge">BASE</span></td><td>€34,050</td><td class="text-primary bold">~22–24 <span class="modelled-tag">[MA]</span></td><td class="text-primary bold">~€140K <span class="modelled-tag">[MA]</span></td><td style="color:var(--support);font-size:12px"><span class="lang-en">ENISA on schedule, revenue M8–9</span><span class="lang-es">ENISA en calendario, ingresos M8–9</span></td></tr>
+        <tr><td><span class="badge-green"><span class="lang-en">OPTIMISTIC</span><span class="lang-es">OPTIMISTA</span></span></td><td>€34,050</td><td class="text-green bold">~26+ <span class="modelled-tag">[MA]</span></td><td>~€220K+ <span class="modelled-tag">[MA]</span></td><td style="color:var(--support);font-size:12px"><span class="lang-en">ENISA on schedule + revenue M7</span><span class="lang-es">ENISA en calendario + ingresos M7</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-amber mb-4" style="font-size:13px;line-height:1.6">
+      <strong>⚠ <span class="lang-en">ENISA Fallback Plan</span><span class="lang-es">Plan de Contingencia ENISA</span>:</strong>
+      <span class="lang-en"> If ENISA is denied or delayed beyond Month 9, the €450K convertible alone provides ~13 months of runway at base burn. Contingency actions: (1) slow H4 hire (DevOps, originally M13) by 3–6 months, (2) extend founder-led BD cycle, (3) open a bridge/top-up equity round of €150K–€250K in M10–12 from existing converts + 1–2 new angels. This is disclosed upfront so investors understand the downside is bounded.</span>
+      <span class="lang-es"> Si ENISA se deniega o retrasa más allá del Mes 9, la convertible de €450K sola proporciona ~13 meses de runway a burn base. Acciones de contingencia: (1) ralentizar la contratación H4 (DevOps, originalmente M13) 3–6 meses, (2) alargar ciclo BD del fundador, (3) abrir ronda bridge/ampliación de €150K–€250K en M10–12 con convertibles existentes + 1–2 nuevos angels. Se comunica de forma transparente para que los inversores entiendan que el downside está acotado.</span>
+    </div>
+    <div class="qa-block">
+      <div class="qa-q">Q: <span class="lang-en">What happens if ENISA rejects the application?</span><span class="lang-es">¿Qué pasa si ENISA deniega la solicitud?</span></div>
+      <div class="qa-a">
+        <span class="lang-en"><strong>Honest answer:</strong> the €450K convertible alone provides ~13 months of runway at base burn — below the 18-month target but still viable. Our fallback is three-step: (1) slow DevOps hire by 3–6 months, (2) extend founder-led BD cycle, (3) open a bridge/top-up round of €150K–€250K in M10–12 with existing convertible holders + 1–2 additional angels. ENISA approval rate for pre-seed tech with deployed MVP is ~55–65% (ENISA public data 2024), so risk is real but not catastrophic. We submit the ENISA application in M2 to minimize timing risk.</span>
+        <span class="lang-es"><strong>Respuesta honesta:</strong> la convertible de €450K sola proporciona ~13 meses de runway a burn base — por debajo del objetivo de 18 meses pero viable. Plan de contingencia tres pasos: (1) ralentizar contratación DevOps 3–6 meses, (2) alargar ciclo BD fundador, (3) abrir ronda bridge/ampliación €150K–€250K en M10–12 con convertibles existentes + 1–2 angels adicionales. Tasa aprobación ENISA para tech pre-seed con MVP desplegado ~55–65% (datos públicos ENISA 2024), riesgo existe pero no catastrófico. Enviaremos la solicitud ENISA en M2 para minimizar riesgo de timing.</span>
+      </div>
+    </div>
+    <div class="footnote"><span class="lang-en">This financial plan contains forward-looking projections. ØHNexus Protocol S.L. is not yet incorporated as of April 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span><span class="lang-es">Este plan financiero contiene proyecciones prospectivas. ØHNexus Protocol S.L. aún no está constituida a fecha de abril de 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">06</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide">
+  <div class="content-area">
+    <div class="title"><span class="lang-en">KEY ASSUMPTIONS</span><span class="lang-es">ASUNCIONES CLAVE</span></div>
+    <div class="subtitle"><span class="lang-en">Verified inputs and modelled projections underlying this financial plan</span><span class="lang-es">Inputs verificados y proyecciones modeladas que subyacen a este plan</span></div>
+    <div class="grid-2">
+      <div>
+        <ul class="assumption-list">
+          <li><span class="lang-en">All salary costs fully loaded at ~30% Spanish Seguridad Social employer contribution (general regime).</span><span class="lang-es">Todos los costes de salario con ~30% de cotización empresarial Seguridad Social (régimen general).</span></li>
+          <li><span class="lang-en">AWS infrastructure verified at $59.35/month (April 2026, zero traffic) — scales to ~€300/month at 5 clients</span><span class="lang-es">Infraestructura AWS verificada a $59,35/mes (abril 2026, tráfico cero) — escala a ~€300/mes con 5 clientes</span> <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.</li>
+          <li><span class="lang-en">SL constitution required in Month 1 before payroll, contracts, and invoicing can begin.</span><span class="lang-es">Constitución SL requerida en Mes 1 antes de poder iniciar nómina, contratos y facturación.</span></li>
+          <li><span class="lang-en">EU27 trademark registration initiated Month 1 alongside SL constitution.</span><span class="lang-es">Registro de marca UE27 iniciado en Mes 1 junto con constitución SL.</span></li>
+          <li><span class="lang-en">Founder draws no salary prior to raise close — €0 pre-raise burn on salary.</span><span class="lang-es">El fundador no cobra salario antes del cierre de ronda — €0 burn pre-ronda en salarios.</span></li>
+          <li><span class="lang-en">First revenue: Month 8–9 (base) — single client at €5,000/month entry tier</span><span class="lang-es">Primeros ingresos: Mes 8–9 (base) — cliente único en tier entry a €5.000/mes</span> <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.</li>
+          <li><span class="lang-en">Sales cycle: 6–18 months per institutional client (EU regulated financial institutions)</span><span class="lang-es">Ciclo de ventas: 6–18 meses por cliente institucional (entidades financieras reguladas UE)</span> <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.</li>
+          <li><span class="lang-en">Pilot-to-paid conversion: 50–70%</span><span class="lang-es">Conversión piloto-a-pago: 50–70%</span> <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.</li>
+          <li><span class="lang-en">Funding structure: €450K convertible + €300K ENISA = €750K blended</span><span class="lang-es">Estructura de financiación: €450K convertible + €300K ENISA = €750K mixto</span> <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.</li>
+          <li><span class="lang-en">ENISA approval rate for pre-seed tech with MVP deployed: ~55–65% (ENISA public data 2024).</span><span class="lang-es">Tasa aprobación ENISA para tech pre-seed con MVP desplegado: ~55–65% (datos públicos ENISA 2024).</span></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="assumption-list">
+          <li><span class="lang-en">GTM spend begins Month 4 — founder-led sales, no dedicated sales hire in funded period.</span><span class="lang-es">Gasto GTM comienza Mes 4 — ventas lideradas por fundador, sin contratación de ventas.</span></li>
+          <li><span class="lang-en">Legal retainer: €750/month from Month 2 (Audens — regulatory, DORA, investor docs).</span><span class="lang-es">Retainer legal: €750/mes desde Mes 2 (Audens — regulatorio, DORA, docs inversores).</span></li>
+          <li><span class="lang-en">Gross margin: 75–85% at scale (Bessemer/OpenView 2023 infrastructure SaaS benchmark)</span><span class="lang-es">Margen bruto: 75–85% a escala (benchmark SaaS infra Bessemer/OpenView 2023)</span> <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.</li>
+          <li><span class="lang-en">No token, no balance sheet exposure, no banking licence required.</span><span class="lang-es">Sin token, sin exposición de balance, sin licencia bancaria.</span></li>
+          <li><span class="lang-en">Raise base case: €750,000 blended — provides ~22–24 months runway at base burn</span><span class="lang-es">Caso base ronda: €750.000 mixto — proporciona ~22–24 meses runway a burn base</span> <span class="modelled-tag">[MODELLED ASSUMPTION]</span>.</li>
+          <li><span class="lang-en">€4,500 pre-raise founder personal investment not included in raise proceeds.</span><span class="lang-es">€4.500 de inversión personal pre-ronda del fundador no incluidos.</span></li>
+          <li><span class="lang-en">Revenue projections are directional targets — validation pending first pilot conversion.</span><span class="lang-es">Proyecciones de ingresos son objetivos direccionales — validación pendiente.</span></li>
+          <li><strong><span class="lang-en">Collections sensitivity</span><span class="lang-es">Sensibilidad a cobros</span>:</strong>
+            <span class="lang-en"> Base burn assumes client payments received in month of invoice. In EU institutional sales, payment terms of 30–60 days are standard; large institutions can exceed 90 days. At €5K/month per client and up to 5 active clients by M18 <span class="modelled-tag">[MA]</span>, a full 60-day delay represents ~€50K of working-capital timing — under 7% of the €750K raise and covered by existing runway buffer.</span>
+            <span class="lang-es"> Burn base asume cobros en mes de factura. En ventas institucionales UE, plazos 30–60 días estándar; grandes entidades pueden superar 90 días. A €5K/mes por cliente y hasta 5 activos en M18 <span class="modelled-tag">[MA]</span>, retraso completo 60 días representa ~€50K de timing de capital circulante — menos del 7% de la ronda €750K y cubierto por buffer.</span>
+          </li>
+        </ul>
+        <div class="callout mt-6" style="font-size:12px">
+          <strong><span class="lang-en">Summary</span><span class="lang-es">Resumen</span>:</strong>
+          <span class="lang-en"> €750K blended raise (€450K convertible + €300K ENISA) at €5M–€6M cap. 75–85% gross margin target at scale. No token exposure, no banking licence required. ENISA is debt, not equity — 0% dilution on that portion. Revenue projections directional — validation pending.</span>
+          <span class="lang-es"> Ronda mixta €750K (€450K convertible + €300K ENISA) al cap €5M–€6M. Objetivo margen bruto 75–85% a escala. Sin token, sin licencia bancaria. ENISA es deuda, no equity — 0% de dilución en esa parte. Proyecciones direccionales — validación pendiente.</span>
+        </div>
+      </div>
+    </div>
+    <div class="footnote"><span class="lang-en">This financial plan contains forward-looking projections. ØHNexus Protocol S.L. is not yet incorporated as of April 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span><span class="lang-es">Este plan financiero contiene proyecciones prospectivas. ØHNexus Protocol S.L. aún no está constituida a fecha de abril de 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">07</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide">
+  <div class="content-area">
+    <div class="title">UNIT ECONOMICS</div>
+    <div class="subtitle"><span class="lang-en">Modelled — pending validation via first pilot conversion</span><span class="lang-es">Modelado — pendiente de validación vía primera conversión piloto</span></div>
+    <div class="grid-4 mb-6">
+      <div class="card highlight">
+        <div class="card-label">ACV (<span class="lang-en">Entry</span><span class="lang-es">Entry</span>)</div>
+        <div class="metric-primary" style="font-size:30px">€60,000</div>
+        <div class="card-value text-support" style="font-size:12px;margin-top:4px">€5,000/<span class="lang-en">month × 12 · entry tier</span><span class="lang-es">mes × 12 · tier entry</span> <span class="modelled-tag">[MA]</span></div>
+      </div>
+      <div class="card highlight">
+        <div class="card-label">ACV <span class="lang-en">Range</span><span class="lang-es">Rango</span></div>
+        <div class="metric-primary" style="font-size:30px">€60K – €180K</div>
+        <div class="card-value text-support" style="font-size:12px;margin-top:4px"><span class="lang-en">Base tier</span><span class="lang-es">Tier base</span> (€5K–€15K/<span class="lang-en">mo</span><span class="lang-es">mes</span>) <span class="modelled-tag">[MA]</span></div>
+      </div>
+      <div class="card highlight">
+        <div class="card-label">CAC</div>
+        <div class="metric-primary" style="font-size:30px">€30K – €60K</div>
+        <div class="card-value text-support" style="font-size:12px;margin-top:4px"><span class="lang-en">Founder-led BD, EU institutional sales</span><span class="lang-es">BD liderado por fundador, ventas institucionales UE</span> <span class="modelled-tag">[MA]</span></div>
+      </div>
+      <div class="card highlight">
+        <div class="card-label">LTV</div>
+        <div class="metric-primary" style="font-size:30px">€150K – €400K</div>
+        <div class="card-value text-support" style="font-size:12px;margin-top:4px">3–5 <span class="lang-en">year retention, infra stickiness</span><span class="lang-es">años retención, fricción infra alta</span> <span class="modelled-tag">[MA]</span></div>
+      </div>
+    </div>
+    <div class="grid-3 mb-6">
+      <div class="card highlight">
+        <div class="card-label">LTV / CAC</div>
+        <div class="metric-primary" style="font-size:36px">3x – 8x</div>
+        <div class="card-value text-support" style="font-size:12px;margin-top:4px"><span class="lang-en">Consistent with EU B2B infrastructure SaaS benchmarks</span><span class="lang-es">Consistente con benchmarks SaaS infra B2B UE</span> <span class="modelled-tag">[MA]</span></div>
+      </div>
+      <div class="card highlight">
+        <div class="card-label">Payback <span class="lang-en">Period</span><span class="lang-es">Período</span></div>
+        <div class="metric-primary" style="font-size:36px">12 – 24 mo</div>
+        <div class="card-value text-support" style="font-size:12px;margin-top:4px"><span class="lang-en">Per institutional client acquisition</span><span class="lang-es">Por adquisición de cliente institucional</span> <span class="modelled-tag">[MA]</span></div>
+      </div>
+      <div class="card highlight">
+        <div class="card-label"><span class="lang-en">Gross Margin at Scale</span><span class="lang-es">Margen Bruto a Escala</span></div>
+        <div class="metric-primary" style="font-size:36px">75% – 85%</div>
+        <div class="card-value text-support" style="font-size:12px;margin-top:4px">Bessemer / OpenView 2023</div>
+      </div>
+    </div>
+    <div style="font-size:13px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px"><span class="lang-en">Pricing Tiers</span><span class="lang-es">Tiers de Pricing</span></div>
+    <table class="mb-4">
+      <thead><tr>
+        <th><span class="lang-en">Tier</span><span class="lang-es">Tier</span></th><th><span class="lang-en">Monthly Price</span><span class="lang-es">Precio Mensual</span></th><th>ACV</th><th><span class="lang-en">Target Segment</span><span class="lang-es">Segmento Objetivo</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><strong>Entry</strong></td><td>€5,000</td><td>€60,000</td><td style="color:var(--support)"><span class="lang-en">Early pilot / smaller FinTech</span><span class="lang-es">Piloto temprano / fintech pequeña</span></td></tr>
+        <tr class="highlight-row"><td><strong>Base</strong></td><td>€5,000–€15,000</td><td>€60,000–€180,000</td><td style="color:var(--support)"><span class="lang-en">Mid-size EMI, FinTech, asset manager</span><span class="lang-es">EMI tamaño medio, fintech, asset manager</span></td></tr>
+        <tr><td><strong>Enterprise</strong></td><td>€15,000–€20,000+</td><td>€180,000–€240,000+</td><td style="color:var(--support)"><span class="lang-en">Tier-1 bank, large asset manager</span><span class="lang-es">Banco Tier-1, asset manager grande</span></td></tr>
+      </tbody>
+    </table>
+    <div class="footnote"><span class="lang-en">All unit economics are modelled assumptions based on EU B2B infrastructure SaaS benchmarks; revalidated after first three paying clients. Primary CAC driver: founder-led BD with no dedicated sales hire. EU institutional sales cycles 6–18 months per client</span><span class="lang-es">Todos los unit economics son asunciones modeladas basadas en benchmarks SaaS infra B2B UE; revalidación tras los tres primeros clientes de pago. Driver CAC: BD fundador sin contratación dedicada. Ciclos ventas institucionales UE 6–18 meses por cliente</span> <span class="modelled-tag">[MA]</span>.</div>
+    <div class="footnote" style="margin-top:4px"><span class="lang-en">Sources: KeyBanc Capital Markets — SaaS Survey 2023–2024; OpenView — SaaS Benchmarks Report 2023; Bessemer Venture Partners — State of the Cloud 2023; Technavio — Open Banking Market Industry Analysis 2024.</span><span class="lang-es">Fuentes: KeyBanc Capital Markets — SaaS Survey 2023–2024; OpenView — SaaS Benchmarks Report 2023; Bessemer Venture Partners — State of the Cloud 2023; Technavio — Open Banking Market Industry Analysis 2024.</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">08</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide" style="min-height:auto;padding-bottom:96px">
+  <div class="content-area">
+    <div class="title"><span class="lang-en">MILESTONES FUNDED BY THIS RAISE</span><span class="lang-es">HITOS FINANCIADOS POR ESTA RONDA</span></div>
+    <div class="subtitle"><span class="lang-en">18-month execution roadmap · Pre-seed to Series A readiness</span><span class="lang-es">Roadmap 18 meses · Pre-seed a Serie A</span></div>
+    <table>
+      <thead><tr><th><span class="lang-en">Milestone</span><span class="lang-es">Hito</span></th><th><span class="lang-en">Target Month</span><span class="lang-es">Mes Objetivo</span></th><th><span class="lang-en">Funded By</span><span class="lang-es">Financiado Por</span></th><th><span class="lang-en">Category</span><span class="lang-es">Categoría</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-en">SL constitution complete</span><span class="lang-es">Constitución SL completa</span></td><td>M1</td><td>Legal (18%)</td><td><span class="badge-gray">LEGAL</span></td></tr>
+        <tr><td><span class="lang-en">EU27 trademark filed</span><span class="lang-es">Marca UE27 presentada</span></td><td>M1</td><td>Legal (18%)</td><td><span class="badge-gray">LEGAL</span></td></tr>
+        <tr class="highlight-row"><td><strong>ENISA <span class="lang-en">application submitted</span><span class="lang-es">solicitud presentada</span></strong></td><td>M2</td><td><span class="lang-en">Founder time</span><span class="lang-es">Tiempo fundador</span></td><td><span class="badge-amber">ENISA</span></td></tr>
+        <tr><td><span class="lang-en">Senior Backend engineer hired</span><span class="lang-es">Senior Backend contratado</span></td><td>M2–3</td><td><span class="lang-en">Engineering (40%)</span><span class="lang-es">Ingeniería (40%)</span></td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr><td><span class="lang-en">Mid SSI/API engineer hired</span><span class="lang-es">Mid SSI/API contratado</span></td><td>M4</td><td>Engineering (40%)</td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr style="background:rgba(0,180,200,.05)"><td><span class="lang-en">Beta pilot with first real users live</span><span class="lang-es">Piloto beta con primeros usuarios en vivo</span></td><td>M3–6</td><td><span class="lang-en">Engineering + GTM</span><span class="lang-es">Ingeniería + GTM</span></td><td><span class="badge">ENG</span> <span class="badge-amber">GTM</span></td></tr>
+        <tr class="highlight-row"><td><strong>ENISA <span class="lang-en">approval + 1st tranche (€150K)</span><span class="lang-es">aprobación + 1er tramo (€150K)</span></strong></td><td>M6 <span class="modelled-tag">[MA]</span></td><td>—</td><td><span class="badge-amber">ENISA</span></td></tr>
+        <tr><td><span class="lang-en">Smart Contracts/Oracle engineer hired</span><span class="lang-es">Smart Contracts/Oracle contratado</span></td><td>M6–7</td><td>Engineering (40%)</td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr><td><span class="lang-en">Admin issuer CRUD endpoint complete</span><span class="lang-es">Endpoint CRUD admin issuer completo</span></td><td>M4–6</td><td><span class="lang-en">Engineering</span><span class="lang-es">Ingeniería</span></td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr><td><span class="lang-en">Cryptographic VC JWT signing live</span><span class="lang-es">Firma VC JWT criptográfica en vivo</span></td><td>M4–6</td><td><span class="lang-en">Engineering</span><span class="lang-es">Ingeniería</span></td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr><td><span class="lang-en">Rate limiting layer deployed</span><span class="lang-es">Capa rate limiting desplegada</span></td><td>M4–6</td><td><span class="lang-en">Engineering</span><span class="lang-es">Ingeniería</span></td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr class="highlight-row"><td><strong><span class="lang-en">First paying institutional client</span><span class="lang-es">Primer cliente institucional de pago</span></strong></td><td>M8–9 <span class="modelled-tag">[MODELLED ASSUMPTION]</span></td><td>GTM (24%)</td><td><span class="badge-amber">GTM</span></td></tr>
+        <tr><td><span class="lang-en">Smart contract library expansion</span><span class="lang-es">Expansión librería smart contracts</span></td><td>M7–10</td><td><span class="lang-en">Engineering</span><span class="lang-es">Ingeniería</span></td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr><td><span class="lang-en">Oracle reliability layer</span><span class="lang-es">Capa fiabilidad Oracle</span></td><td>M7–10</td><td><span class="lang-en">Engineering</span><span class="lang-es">Ingeniería</span></td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr><td><span class="lang-en">EU market entry (Germany / Netherlands)</span><span class="lang-es">Entrada mercado UE (Alemania / Países Bajos)</span></td><td>M10–12</td><td>GTM</td><td><span class="badge-amber">GTM</span></td></tr>
+        <tr class="highlight-row"><td><strong>ENISA <span class="lang-en">2nd tranche (€150K) on milestone verification</span><span class="lang-es">2do tramo (€150K) tras verificación de hitos</span></strong></td><td>M12 <span class="modelled-tag">[MA]</span></td><td>—</td><td><span class="badge-amber">ENISA</span></td></tr>
+        <tr><td><span class="lang-en">DevOps / Security engineer hired</span><span class="lang-es">DevOps / Security contratado</span></td><td>M12–13</td><td>Engineering (40%)</td><td><span class="badge"><span class="lang-en">ENGINEERING</span><span class="lang-es">INGENIERÍA</span></span></td></tr>
+        <tr class="highlight-row"><td><strong><span class="lang-en">5–10 paying institutional clients</span><span class="lang-es">5–10 clientes institucionales de pago</span></strong></td><td>M12–18 <span class="modelled-tag">[MODELLED ASSUMPTION]</span></td><td><span class="lang-en">GTM + Engineering</span><span class="lang-es">GTM + Ingeniería</span></td><td><span class="badge">ENG</span> <span class="badge-amber">GTM</span></td></tr>
+        <tr style="background:rgba(0,180,200,.05)"><td><strong><span class="lang-en">Series A preparation</span><span class="lang-es">Preparación Serie A</span></strong></td><td>M16–18</td><td><span class="lang-en">All categories</span><span class="lang-es">Todas las categorías</span></td><td><span class="badge">ENG</span> <span class="badge-amber">GTM</span> <span class="badge-gray">LEGAL</span></td></tr>
+      </tbody>
+    </table>
+    <div class="footnote"><span class="lang-en">This financial plan contains forward-looking projections. ØHNexus Protocol S.L. is not yet incorporated as of April 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span><span class="lang-es">Este plan financiero contiene proyecciones prospectivas. ØHNexus Protocol S.L. aún no está constituida a fecha de abril de 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">09</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide">
+  <div class="content-area">
+    <div class="title"><span class="lang-en">RUNWAY PROJECTION</span><span class="lang-es">PROYECCIÓN DE RUNWAY</span></div>
+    <div class="subtitle"><span class="lang-en">Cash position trajectory · €750K blended raise · Base scenario</span><span class="lang-es">Trayectoria de caja · Ronda mixta €750K · Escenario base</span></div>
+    <div class="callout mb-6" style="font-size:13px;line-height:1.7">
+      <span class="lang-en">At base burn, the €750K blended raise (€450K convertible + €300K ENISA) provides approximately 22–24 months of runway <span class="modelled-tag">[MA]</span> after accounting for the Month 1 legal one-off, ENISA tranche timing, and interest accrual. The blended structure is deliberately sized to reach first revenue (M8–9 <span class="modelled-tag">[MA]</span>), 5–10 paying institutional clients by Month 18, and Series A readiness — with enough buffer to negotiate from strength. The ENISA portion is non-dilutive, keeping effective equity dilution at ~7–9% (vs 15–18% on a pure €900K equity round).</span>
+      <span class="lang-es">A burn base, la ronda mixta €750K (€450K convertible + €300K ENISA) proporciona ~22–24 meses de runway <span class="modelled-tag">[MA]</span> tras el gasto legal inicial, timing de tramos ENISA e intereses devengados. La estructura mixta permite llegar a primeros ingresos (M8–9 <span class="modelled-tag">[MA]</span>), 5–10 clientes institucionales en Mes 18 y preparación Serie A — con buffer para negociar desde la fuerza. ENISA es no dilutivo, manteniendo dilución equity efectiva ~7–9% (vs 15–18% en ronda pure-equity €900K).</span>
+    </div>
+    <div style="font-size:13px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px"><span class="lang-en">Cash Position Chart — Blended Structure</span><span class="lang-es">Gráfica de Caja — Estructura Mixta</span></div>
+    <table>
+      <thead><tr>
+        <th><span class="lang-en">Milestone</span><span class="lang-es">Hito</span></th><th><span class="lang-en">Event</span><span class="lang-es">Evento</span></th><th style="width:140px"><span class="lang-en">Cash Remaining</span><span class="lang-es">Caja Restante</span></th><th style="width:40%"><span class="lang-en">Visualisation</span><span class="lang-es">Visualización</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><strong>M0</strong></td><td><span class="lang-en">Convertible closes (€450K)</span><span class="lang-es">Convertible cierra (€450K)</span></td><td class="text-primary bold">€450,000</td><td><div class="bar-container"><div class="bar-fill" style="width:60%">€450,000</div></div></td></tr>
+        <tr><td><strong>M1</strong></td><td><span class="lang-en">Post legal one-off</span><span class="lang-es">Post legal inicial</span></td><td class="text-primary bold">€438,935</td><td><div class="bar-container"><div class="bar-fill" style="width:59%">€438,935</div></div></td></tr>
+        <tr><td><strong>M5</strong></td><td><span class="lang-en">Pre-ENISA low point (3 hires)</span><span class="lang-es">Punto bajo pre-ENISA (3 contrataciones)</span></td><td class="text-amber bold">€368,215</td><td><div class="bar-container"><div class="bar-fill" style="width:49%;background:var(--amber)">€368,215</div></div></td></tr>
+        <tr class="highlight-row"><td><strong>M6</strong></td><td><span class="lang-en">ENISA T1 approved (+€150K)</span><span class="lang-es">ENISA T1 aprobado (+€150K)</span> <span class="modelled-tag">[MA]</span></td><td class="text-primary bold">€496,715</td><td><div class="bar-container"><div class="bar-fill" style="width:66%">€496,715</div></div></td></tr>
+        <tr><td><strong>M9</strong></td><td><span class="lang-en">First revenue received</span><span class="lang-es">Primeros ingresos recibidos</span> <span class="modelled-tag">[MA]</span></td><td class="text-primary bold">€417,415</td><td><div class="bar-container"><div class="bar-fill" style="width:56%">€417,415</div></div></td></tr>
+        <tr class="highlight-row"><td><strong>M12</strong></td><td><span class="lang-en">ENISA T2 verified (+€150K) · 1 paying client</span><span class="lang-es">ENISA T2 verificado (+€150K) · 1 cliente de pago</span> <span class="modelled-tag">[MA]</span></td><td class="text-primary bold">€497,915</td><td><div class="bar-container"><div class="bar-fill" style="width:66%">€497,915</div></div></td></tr>
+        <tr><td><strong>M18</strong></td><td><span class="lang-en">Scaling · adjusted for ENISA interest &amp; reserves</span><span class="lang-es">Escalando · ajustado por intereses ENISA y reservas</span> <span class="modelled-tag">[MA]</span></td><td class="text-amber bold">~€140,000</td><td><div class="bar-container"><div class="bar-fill" style="width:19%;background:var(--amber)">~€140,000</div></div></td></tr>
+      </tbody>
+    </table>
+    <div class="footnote mt-4"><span class="lang-en">Month 18 adjusted cash (~€140K) reflects burn model endpoint (€323,615) less cumulative ENISA interest accrual, additional working-capital reserves, and prudent contingency buffer as modelled in the scenarios analysis. See Runway Scenarios slide for fallback plan if ENISA is delayed or denied.</span><span class="lang-es">Caja ajustada Mes 18 (~€140K) refleja endpoint burn model (€323.615) menos intereses ENISA acumulados, reservas adicionales de capital circulante y buffer de contingencia modelado en el análisis de escenarios. Ver diapositiva Escenarios de Runway para plan de contingencia si ENISA se retrasa o se deniega.</span></div>
+    <div class="footnote"><span class="lang-en">This financial plan contains forward-looking projections. ØHNexus Protocol S.L. is not yet incorporated as of April 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span><span class="lang-es">Este plan financiero contiene proyecciones prospectivas. ØHNexus Protocol S.L. aún no está constituida a fecha de abril de 2026. Audens Legal, S.L.P., Madrid. © 2026 ØHNexus Protocol.</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">10</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide" style="min-height:auto;padding-bottom:96px">
+  <div class="content-area">
+    <div class="title"><span class="lang-en">SERIES A — NEXT ROUND TRIGGERS</span><span class="lang-es">SERIE A — DISPARADORES DE SIGUIENTE RONDA</span></div>
+    <div class="subtitle"><span class="lang-en">Metrics required before initiating Series A fundraise</span><span class="lang-es">Métricas requeridas antes de iniciar ronda Serie A</span></div>
+    <table class="mb-6">
+      <thead><tr><th><span class="lang-en">Metric</span><span class="lang-es">Métrica</span></th><th><span class="lang-en">Minimum Threshold</span><span class="lang-es">Umbral Mínimo</span></th><th><span class="lang-en">Target</span><span class="lang-es">Objetivo</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-en">Paying institutional clients</span><span class="lang-es">Clientes institucionales de pago</span></td><td>5 <span class="modelled-tag">[MODELLED ASSUMPTION]</span></td><td class="text-primary bold">10–25 <span class="modelled-tag">[MODELLED ASSUMPTION]</span></td></tr>
+        <tr><td>ARR</td><td>€400,000 <span class="modelled-tag">[MODELLED ASSUMPTION]</span></td><td class="text-primary bold">€800,000–€1.5M <span class="modelled-tag">[MODELLED ASSUMPTION]</span></td></tr>
+        <tr><td><span class="lang-en">Gross margin</span><span class="lang-es">Margen bruto</span></td><td>&gt;70%</td><td class="text-primary bold">75–85%</td></tr>
+        <tr><td><span class="lang-en">Mainnet status</span><span class="lang-es">Estado mainnet</span></td><td><span class="lang-en">Sepolia → Mainnet migration complete</span><span class="lang-es">Migración Sepolia → Mainnet completa</span></td><td class="text-primary bold"><span class="lang-en">Mainnet live</span><span class="lang-es">Mainnet en vivo</span></td></tr>
+        <tr><td><span class="lang-en">EU regulatory certification</span><span class="lang-es">Certificación regulatoria UE</span></td><td><span class="lang-en">In progress</span><span class="lang-es">En curso</span></td><td class="text-primary bold"><span class="lang-en">Certified</span><span class="lang-es">Certificada</span></td></tr>
+        <tr><td><span class="lang-en">Cash runway at Series A raise</span><span class="lang-es">Runway al iniciar Serie A</span></td><td>&gt;6 <span class="lang-en">months</span><span class="lang-es">meses</span></td><td class="text-primary bold">&gt;9 <span class="lang-en">months</span><span class="lang-es">meses</span></td></tr>
+        <tr><td><span class="lang-en">Geography</span><span class="lang-es">Geografía</span></td><td>Spain + 1 EU <span class="lang-en">market</span><span class="lang-es">mercado</span></td><td class="text-primary bold">Spain + DE/FR/NL</td></tr>
+        <tr class="highlight-row"><td><strong>ENISA <span class="lang-en">loan status</span><span class="lang-es">estado del préstamo</span></strong></td><td><span class="lang-en">Disbursed fully (€300K received)</span><span class="lang-es">Desembolsado completo (€300K recibidos)</span></td><td class="text-primary bold"><span class="lang-en">Disbursed + good standing (no covenant breach)</span><span class="lang-es">Desembolsado + al corriente (sin incumplimiento)</span></td></tr>
+        <tr class="highlight-row"><td><strong>ENISA <span class="lang-en">repayment schedule</span><span class="lang-es">calendario de repago</span></strong></td><td><span class="lang-en">Understood &amp; modelled</span><span class="lang-es">Entendido y modelado</span></td><td class="text-primary bold"><span class="lang-en">Factored into Series A use of funds</span><span class="lang-es">Integrado en uso de fondos Serie A</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout mb-4" style="font-size:12px">
+      <span class="lang-en">ENISA principal repayment begins after the 5–7 year grace period. Series A proceeds do not repay ENISA directly — ENISA remains on the balance sheet as long-term debt. However, Series A investors will want to see the repayment schedule modelled against projected cash flows.</span>
+      <span class="lang-es">El repago del principal ENISA empieza tras el período de carencia 5–7 años. Los fondos de Serie A no repagan ENISA directamente — ENISA permanece en balance como deuda a largo plazo. No obstante, los inversores de Serie A querrán ver el calendario de repago modelado.</span>
+    </div>
+    <div class="callout mb-4">
+      <span class="lang-en">The Series A raise is expected in 2028 at 15–30 institutional clients and €1.2M–€3M ARR <span class="modelled-tag">[MODELLED ASSUMPTION]</span>. The blended pre-seed raise is structured to fund the company through to a position where Series A metrics are unambiguously met — not to the edge of survival.</span>
+      <span class="lang-es">La ronda Serie A se prevé en 2028 con 15–30 clientes institucionales y €1,2M–€3M ARR <span class="modelled-tag">[MODELLED ASSUMPTION]</span>. La ronda pre-seed mixta está estructurada para financiar hasta una posición donde las métricas de Serie A se cumplan inequívocamente — no al borde de la supervivencia.</span>
+    </div>
+    <div style="font-size:13px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;margin-top:8px"><span class="lang-en">Revenue Model — Driver Formula</span><span class="lang-es">Modelo de Ingresos — Fórmula del Driver</span></div>
+    <div style="background:#0a0a0a;border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:6px;padding:16px 20px;font-family:'Courier New',monospace;font-size:12px;color:var(--text);margin-bottom:16px;text-align:center;line-height:1.8">
+      <div style="color:var(--primary);font-weight:700">Annual Revenue (ARR) = Σ (Clients_tier × ACV_tier)</div>
+      <div style="color:var(--support);margin-top:8px;font-size:11px">
+        <span class="lang-en">where&nbsp;&nbsp;Clients_tier = number of institutional clients at that tier<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACV_tier&nbsp;&nbsp;&nbsp;&nbsp; = monthly price × 12</span>
+        <span class="lang-es">donde&nbsp;Clients_tier = número de clientes institucionales en ese tier<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACV_tier&nbsp;&nbsp;&nbsp;&nbsp; = precio mensual × 12</span>
+      </div>
+    </div>
+    <ul class="assumption-list" style="font-size:12px;margin-bottom:16px">
+      <li><strong class="text-amber"><span class="lang-en">Conservative 2028</span><span class="lang-es">Conservador 2028</span> <span class="modelled-tag">[MA]</span>:</strong> 8–12 <span class="lang-en">clients × ~€60K ACV avg = €480K–€720K ARR · reconciles with plan's "€500K–€1M"</span><span class="lang-es">clientes × ~€60K ACV avg = €480K–€720K ARR · reconcilia con "€500K–€1M"</span></li>
+      <li><strong class="text-primary">Base 2028 <span class="modelled-tag">[MA]</span>:</strong> 15–30 <span class="lang-en">clients at blended €80K–€120K ACV = €1.2M–€3.6M ARR · reconciles with "€1.2M–€3M"</span><span class="lang-es">clientes a ACV mezclado €80K–€120K = €1,2M–€3,6M ARR · reconcilia con "€1,2M–€3M"</span></li>
+      <li><strong class="text-green"><span class="lang-en">Optimistic 2028</span><span class="lang-es">Optimista 2028</span> <span class="modelled-tag">[MA]</span>:</strong> 25–50 <span class="lang-en">clients at blended €120K–€160K ACV = €3M–€8M ARR · reconciles with "€3M–€6M"</span><span class="lang-es">clientes a ACV mezclado €120K–€160K = €3M–€8M ARR · reconcilia con "€3M–€6M"</span></li>
+    </ul>
+    <a href="https://docs.google.com/spreadsheets/d/159heI9d4BYk34A71DVNfNBhsPOdrTL4q/edit?usp=drive_link&ouid=102690908189081542630&rtpof=true&sd=true" target="_blank" rel="noopener" class="excel-link-card">
+      <div class="excel-icon">📊</div>
+      <div>
+        <div class="excel-title"><span class="lang-en">Download interactive model (Excel)</span><span class="lang-es">Descargar modelo interactivo (Excel)</span></div>
+        <div class="excel-sub"><span class="lang-en">Full P&amp;L, burn, scenarios and unit economics · Google Drive</span><span class="lang-es">P&amp;L completo, burn, escenarios y unit economics · Google Drive</span></div>
+      </div>
+      <div class="excel-arrow">→</div>
+    </a>
+    <div style="font-size:13px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px"><span class="lang-en">3-Year Revenue Projections (Annual)</span><span class="lang-es">Proyecciones Ingresos 3 Años (Anual)</span></div>
+    <table class="mb-4">
+      <thead><tr><th><span class="lang-en">Scenario</span><span class="lang-es">Escenario</span></th><th>2026 (<span class="lang-en">Year 1</span><span class="lang-es">Año 1</span>)</th><th>2027 (<span class="lang-en">Year 2</span><span class="lang-es">Año 2</span>)</th><th>2028 (<span class="lang-en">Year 3</span><span class="lang-es">Año 3</span>)</th></tr></thead>
+      <tbody>
+        <tr><td><span class="text-amber bold"><span class="lang-en">Conservative</span><span class="lang-es">Conservador</span></span></td><td>€0–€50K ARR (<span class="lang-en">pilot only</span><span class="lang-es">solo piloto</span>) <span class="modelled-tag">[MA]</span></td><td>€150K–€300K (3–5 <span class="lang-en">clients</span><span class="lang-es">clientes</span>) <span class="modelled-tag">[MA]</span></td><td>€500K–€1M (8–12 <span class="lang-en">clients</span><span class="lang-es">clientes</span>) <span class="modelled-tag">[MA]</span></td></tr>
+        <tr class="highlight-row"><td><span class="text-primary bold">Base</span></td><td>€50K–€150K (1–3 <span class="lang-en">clients</span><span class="lang-es">clientes</span>) <span class="modelled-tag">[MA]</span></td><td>€400K–€800K (8–15 <span class="lang-en">clients</span><span class="lang-es">clientes</span>) <span class="modelled-tag">[MA]</span></td><td>€1.2M–€3M (15–30 <span class="lang-en">clients</span><span class="lang-es">clientes</span>) <span class="modelled-tag">[MA]</span></td></tr>
+        <tr><td><span class="text-green bold"><span class="lang-en">Optimistic</span><span class="lang-es">Optimista</span></span></td><td>€150K–€300K <span class="modelled-tag">[MA]</span></td><td>€1M–€2M <span class="modelled-tag">[MA]</span></td><td>€3M–€6M <span class="modelled-tag">[MA]</span></td></tr>
+      </tbody>
+    </table>
+    <div class="footnote"><span class="lang-en">Modelled projection — validation pending. Gross margin 75–85% (Bessemer/OpenView 2023). Primary cost driver: AWS cloud infrastructure. Pricing tiers: Technavio — Open Banking Market Industry Analysis 2024; competitive intelligence report April 2026.</span><span class="lang-es">Proyección modelada — validación pendiente. Margen bruto 75–85% (Bessemer/OpenView 2023). Driver primario: infraestructura cloud AWS. Tiers pricing: Technavio — Open Banking Market Industry Analysis 2024; informe inteligencia competitiva abril 2026.</span></div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" data-height-listener-added="true">
+    <div class="bold">11</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+<div class="slide" style="justify-content:center;align-items:center;text-align:center">
+  <div class="content-area" style="align-items:center;justify-content:center">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus Protocol" style="height:80px;margin-bottom:40px" data-height-listener-added="true">
+    <div class="title" style="text-align:center;font-size:28px;margin-bottom:8px">
+      <span class="lang-en">Pre-Seed Round — Open · April 2026</span><span class="lang-es">Ronda Pre-Seed — Abierta · Abril 2026</span>
+    </div>
+    <div class="subtitle" style="text-align:center;margin-bottom:40px">
+      €450K <span class="lang-en">Convertible Note</span><span class="lang-es">Nota Convertible</span> + €300K ENISA = €750K <span class="lang-en">Blended</span><span class="lang-es">Mixto</span> · €5M–€6M <span class="lang-en">Valuation Cap</span><span class="lang-es">Valuation Cap</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;max-width:900px;margin:0 auto 40px auto">
+      <div class="card highlight" style="text-align:center;padding:28px">
+        <div class="bold text-primary mb-2" style="font-size:13px;text-transform:uppercase;letter-spacing:1px"><span class="lang-en">Founder</span><span class="lang-es">Fundador</span></div>
+        <div class="bold" style="font-size:15px;margin-bottom:4px">Nikolay Gyuneliev Ivanov</div>
+        <div class="text-support" style="font-size:12px"><span class="lang-en">CEO &amp; Sole Founder · Madrid, Spain</span><span class="lang-es">CEO y Fundador Único · Madrid, España</span></div>
+      </div>
+      <div class="card highlight" style="text-align:center;padding:28px">
+        <div class="bold text-primary mb-2" style="font-size:13px;text-transform:uppercase;letter-spacing:1px"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></div>
+        <div class="bold" style="font-size:13px;margin-bottom:4px"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ef81868480838e96c188969a818a83868a99af88828e8683c18c8082">[email&#160;protected]</a></div>
+        <div class="text-support" style="font-size:12px">+34 610 983 805</div>
+      </div>
+      <div class="card highlight" style="text-align:center;padding:28px">
+        <div class="bold text-primary mb-2" style="font-size:13px;text-transform:uppercase;letter-spacing:1px">Data Room</div>
+        <div class="bold" style="font-size:13px;margin-bottom:4px">notion.so/HNexus-Virtual-Data-Room</div>
+        <div class="text-support" style="font-size:12px"><span class="lang-en">Full documentation available</span><span class="lang-es">Documentación completa disponible</span></div>
+      </div>
+    </div>
+    <div class="callout" style="max-width:700px;margin:0 auto;text-align:center;font-size:13px">
+      <span class="lang-en">Production-grade infrastructure. Pre-seed round open. Blended capital (€450K equity + €300K ENISA). Response within 24 hours.</span><span class="lang-es">Infraestructura grado producción. Ronda pre-seed abierta. Capital mixto (€450K equity + €300K ENISA). Respuesta en 24 horas.</span>
+    </div>
+  <div class="footer-bar">
+    <img src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" alt="OHNexus" style="height:44px" data-height-listener-added="true">
+    <div class="bold">12</div>
+    <div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. · Pending constitution — Audens Legal S.L.P., Madrid</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. · En proceso de constitución — Audens Legal S.L.P., Madrid</span></div>
+  </div>
+</div>
+  </div>
+
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+<script>
+(function () {
+  var DEFAULT_LANG = 'en';
+  var STORAGE_KEY = 'ohnexus-lang';
+
+  function setLang(lang) {
+    if (lang !== 'en' && lang !== 'es') lang = DEFAULT_LANG;
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    var btns = document.querySelectorAll('.lang-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed',
+        btns[i].getAttribute('data-set-lang') === lang ? 'true' : 'false');
+    }
+  }
+
+  var stored = null;
+  try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  setLang(stored || DEFAULT_LANG);
+
+  var btns = document.querySelectorAll('.lang-btn');
+  for (var i = 0; i < btns.length; i++) {
+    (function(btn) {
+      btn.addEventListener('click', function () {
+        setLang(btn.getAttribute('data-set-lang'));
+      });
+    })(btns[i]);
+  }
+})();
+</script>
+
+</body></html>
