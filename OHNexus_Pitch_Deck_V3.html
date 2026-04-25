@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ØHNexus Protocol - Investor Pitch Deck</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+      :root {
+        --bg: #0d0d0d;
+        --primary: #00b4c8;
+        --text: #ffffff;
+        --support: #a0a0a0;
+        --amber: #f59e0b;
+        --card-bg: #141414;
+        --border: #222222;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg);
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+      .slide {
+        width: 100%;
+        max-width: 1440px;
+        min-height: 810px;
+        aspect-ratio: 16/9;
+        padding: 48px 48px 96px 48px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        page-break-after: always;
+        margin: 0 auto;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #111;
+      }
+      .footer-bar {
+        position: absolute;
+        bottom: 24px;
+        left: 48px;
+        right: 48px;
+        height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: var(--support);
+      }
+      .content-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .title {
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 0 0 16px 0;
+      }
+      .subtitle {
+        font-size: 15px;
+        color: var(--support);
+        margin-bottom: 24px;
+      }
+      p,
+      li,
+      td {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 0;
+      }
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 20px;
+      }
+      .highlight {
+        border-left: 3px solid var(--primary);
+      }
+      .grid-2x2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+      }
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .metric {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 6px;
+      }
+      .metric-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--support);
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(0, 180, 200, 0.1);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .badge-amber {
+        display: inline-block;
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--amber);
+        border: 1px solid var(--amber);
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .footnote {
+        font-size: 11px;
+        color: var(--support);
+        font-style: italic;
+        margin-top: 16px;
+      }
+      svg.icon {
+        width: 28px;
+        height: 28px;
+        stroke: var(--primary);
+        stroke-width: 1.5;
+        fill: none;
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th,
+      td {
+        padding: 14px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+      }
+      th {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--support);
+      }
+      .text-support {
+        color: var(--support);
+      }
+      .text-primary {
+        color: var(--primary);
+      }
+      .text-amber {
+        color: var(--amber);
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .mb-1 {
+        margin-bottom: 8px;
+      }
+      .mb-2 {
+        margin-bottom: 16px;
+      }
+      .mt-2 {
+        margin-top: 16px;
+      }
+      .mt-4 {
+        margin-top: 32px;
+      }
+      .cover-slide {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 48px;
+      }
+      .diagram-box {
+        padding: 10px 20px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--card-bg);
+        font-weight: 600;
+      }
+      .diagram-arrow {
+        color: var(--primary);
+        font-weight: bold;
+        margin: 0 16px;
+      }
+    
+
+/* === Language toggle — added in V3 === */
+.lang-toggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 9999;
+  background: var(--card-bg, #141414);
+  border: 1px solid var(--border, #222);
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--support, #a0a0a0);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: color .15s, background .15s;
+}
+.lang-btn:hover { color: var(--text, #fff); }
+.lang-btn[aria-pressed="true"] {
+  color: var(--primary, #00b4c8);
+  background: rgba(0,180,200,0.10);
+}
+.lang-sep { color: var(--border, #222); font-size: 11px; }
+
+html[lang="en"] .lang-es { display: none !important; }
+html[lang="es"] .lang-en { display: none !important; }
+
+@media print { .lang-toggle { display: none !important; } }
+</style>
+</head>
+<body style=""><div aria-label="Language switcher" class="lang-toggle" role="group">
+<button aria-pressed="false" class="lang-btn" data-set-lang="en">EN</button>
+<span class="lang-sep">·</span>
+<button aria-pressed="false" class="lang-btn" data-set-lang="es">ES</button>
+</div>
+
+<!-- SLIDE 01 — COVER -->
+<div class="slide cover-slide">
+<img alt="ØHNexus Protocol" class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 220px; margin-bottom: 28px"/>
+<div style="font-size: 18px; color: #a0a0a0; max-width: 580px; text-align: center; margin: 0 auto 36px auto">
+        <span class="lang-en">Self-sovereign identity platform for verified credentials and compliant financial services access.</span><span class="lang-es">Plataforma de identidad auto-soberana para credenciales verificadas y acceso a servicios financieros con cumplimiento normativo.</span>
+      </div>
+<div class="badge" style="font-size: 15px; padding: 8px 24px; margin-bottom: 36px"><span class="lang-en">Pre-Seed Round — 2026</span><span class="lang-es">Ronda Pre-Seed — 2026</span></div>
+<div class="bold" style="color: #fff; font-size: 15px; margin-bottom: 4px">Nikolay Gyuneliev Ivanov</div>
+<div style="color: #a0a0a0; font-size: 13px"><span class="lang-en">Madrid, EU | April 2026</span><span class="lang-es">Madrid, UE | Abril 2026</span></div>
+<div style="position: absolute; bottom: 24px; left: 0; right: 0; text-align: center; font-size: 11px; color: #a0a0a0">
+        <span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span>
+      </div>
+</div>
+<!-- SLIDE 02 — CAUSE · PROBLEM · CONSEQUENCE -->
+<div class="slide">
+<div class="title"><span class="lang-en">The root cause is structural — not technological.</span><span class="lang-es">La causa raíz es estructural — no tecnológica.</span></div>
+<div class="content-area">
+<div class="grid-3">
+<div class="card" style="border-left: 3px solid #f59e0b">
+<div class="bold text-amber mb-2"><span class="lang-en">CAUSE</span><span class="lang-es">CAUSA</span></div>
+<div class="text-support">
+              <span class="lang-en">European financial regulations (MiFID II, DORA, eIDAS 2.0, AML) require every institution to independently
+              verify user identity and compliance for every interaction. There is no shared trust layer.</span><span class="lang-es">La regulación financiera europea (MiFID II, DORA, eIDAS 2.0, AML) obliga a cada institución a verificar la identidad y el cumplimiento del usuario de forma independiente en cada interacción. No existe una capa de confianza compartida.</span>
+            </div>
+</div>
+<div class="card" style="border-left: 3px solid #00b4c8">
+<div class="bold text-primary mb-2"><span class="lang-en">PROBLEM</span><span class="lang-es">PROBLEMA</span></div>
+<div class="text-support">
+              <span class="lang-en">Banks, EMIs and FinTechs build and maintain isolated, non-standardised point-to-point integrations. KYC,
+              AML and MiFID II processes are repeated from scratch with every provider — by every institution — at
+              massive cost.</span><span class="lang-es">Bancos, EMIs y FinTechs construyen y mantienen integraciones punto-a-punto aisladas y no estandarizadas. Los procesos de KYC, AML y MiFID II se repiten desde cero con cada proveedor — por cada institución — a un coste enorme.</span>
+            </div>
+</div>
+<div class="card" style="border-left: 3px solid #e05c5c">
+<div class="bold mb-2"><span class="lang-en">CONSEQUENCE</span><span class="lang-es">CONSECUENCIA</span></div>
+<div class="text-support">
+              <span class="lang-en">$85B wasted annually across EMEA in duplicated financial crime compliance processes. Average institution:
+              $72.9M/year. Germany alone: $32.5B. France: $25.3B.</span><span class="lang-es">$85B desperdiciados anualmente en EMEA en procesos duplicados de compliance contra delitos financieros. Institución media: $72.9M/año. Solo Alemania: $32.5B. Francia: $25.3B.</span>
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 8px">
+                <span class="lang-en">Source: LexisNexis Risk Solutions, 2024</span><span class="lang-es">Fuente: LexisNexis Risk Solutions, 2024</span>
+              </div>
+</div>
+</div>
+</div>
+<div style="
+            border-top: 1px solid #00b4c8;
+            padding-top: 16px;
+            margin-top: 32px;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 14px;
+          ">
+          <span class="lang-en">The affected party: Banks, EMIs, FinTechs and asset managers operating in the EU regulated financial
+          ecosystem.</span><span class="lang-es">Parte afectada: bancos, EMIs, FinTechs y gestoras de activos que operan en el ecosistema financiero regulado de la UE.</span>
+        </div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">02</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 03 — THE PROBLEM -->
+<div class="slide">
+<div class="title"><span class="lang-en">The infrastructure of regulated finance is broken.</span><span class="lang-es">La infraestructura de la banca regulada está rota.</span></div>
+<div class="content-area" style="justify-content: flex-start">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px">
+<div class="card highlight" style="padding: 14px">
+<div class="bold" style="margin-bottom: 4px; font-size: 14px"><span class="lang-en">Fragmented Access</span><span class="lang-es">Acceso Fragmentado</span></div>
+<div class="text-support" style="font-size: 12px; line-height: 1.4">
+              <span class="lang-en">Costly non-standardized point-to-point integrations. Institutions maintain isolated API silos.</span><span class="lang-es">Integraciones punto-a-punto costosas y no estandarizadas. Las instituciones mantienen silos de API aislados.</span>
+            </div>
+<div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              <span class="lang-en">Cost: Core banking integrations take 12–18 months to complete per provider connection — repeated from
+              scratch for every new institutional relationship.</span><span class="lang-es">Coste: las integraciones de banca core tardan 12–18 meses por conexión con cada proveedor — repetidas desde cero por cada nueva relación institucional.</span>
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                <span class="lang-en">Source: Industry benchmark, 2026</span><span class="lang-es">Fuente: benchmark del sector, 2026</span>
+              </div>
+</div>
+</div>
+<div class="card highlight" style="padding: 14px">
+<div class="bold" style="margin-bottom: 4px; font-size: 14px"><span class="lang-en">Repeated Onboarding</span><span class="lang-es">Onboarding Repetido</span></div>
+<div class="text-support" style="font-size: 12px; line-height: 1.4">
+              <span class="lang-en">Users repeat KYC, AML, and MiFID processes for every new provider. High abandonment rates.</span><span class="lang-es">Los usuarios repiten KYC, AML y MiFID con cada nuevo proveedor. Altos índices de abandono.</span>
+            </div>
+<div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              <span class="lang-en">Cost: Up to 100 days per corporate KYC onboarding. Average $2,211 per single KYC review — up 17% since
+              2022. 1,500–2,500 FTEs dedicated to KYC at 52% of institutions.</span><span class="lang-es">Coste: hasta 100 días por onboarding KYC corporativo. Media de $2.211 por revisión KYC — un 17% más que en 2022. 1.500–2.500 FTEs dedicados a KYC en el 52% de las instituciones.</span>
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                <span class="lang-en">Source: Trulioo; Coforge KYC Survey, 2024–2025</span><span class="lang-es">Fuente: Trulioo; Coforge KYC Survey, 2024–2025</span>
+              </div>
+</div>
+</div>
+<div class="card highlight" style="padding: 14px">
+<div class="bold" style="margin-bottom: 4px; font-size: 14px"><span class="lang-en">No Traceability</span><span class="lang-es">Sin Trazabilidad</span></div>
+<div class="text-support" style="font-size: 12px; line-height: 1.4">
+              <span class="lang-en">No real-time visibility on who accesses what data. Regulatory audits are manual and reactive.</span><span class="lang-es">Sin visibilidad en tiempo real sobre quién accede a qué datos. Las auditorías regulatorias son manuales y reactivas.</span>
+            </div>
+<div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              <span class="lang-en">Cost: Manual compliance audit cycles require 3+ weeks of full-time team effort per regulatory review —
+              with no automated audit trail generated.</span><span class="lang-es">Coste: los ciclos de auditoría manual requieren más de 3 semanas de trabajo a tiempo completo por revisión regulatoria — sin trazas de auditoría automatizadas.</span>
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                <span class="lang-en">Source: Docsie Financial Services Audit Analysis, 2026</span><span class="lang-es">Fuente: Docsie Financial Services Audit Analysis, 2026</span>
+              </div>
+</div>
+</div>
+<div class="card highlight" style="padding: 14px">
+<div class="bold" style="margin-bottom: 4px; font-size: 14px"><span class="lang-en">High Compliance Costs</span><span class="lang-es">Altos Costes de Compliance</span></div>
+<div class="text-support" style="font-size: 12px; line-height: 1.4">
+              <span class="lang-en">Operational burden for banks and FinTechs across every regulated digital interaction.</span><span class="lang-es">Carga operativa para bancos y FinTechs en cada interacción digital regulada.</span>
+            </div>
+<div style="font-size: 11px; color: #f59e0b; font-weight: 600; margin-top: 8px; line-height: 1.4">
+              <span class="lang-en">Cost: $85B annually across EMEA in financial crime compliance. Average institution: $72.9M/year. 60%+ cost
+              increase vs pre-crisis levels. Germany alone: $32.5B. France: $25.3B.</span><span class="lang-es">Coste: $85B anuales en EMEA en compliance contra delitos financieros. Institución media: $72.9M/año. Más del 60% de aumento vs niveles pre-crisis. Solo Alemania: $32.5B. Francia: $25.3B.</span>
+              <div style="font-size: 10px; color: #a0a0a0; font-style: italic; margin-top: 3px">
+                <span class="lang-en">Source: LexisNexis Risk Solutions, True Cost of Financial Crime Compliance Study, 2024; Fenergo
+                Financial Institutions Survey, 2025</span><span class="lang-es">Fuente: LexisNexis Risk Solutions, True Cost of Financial Crime Compliance Study, 2024; Fenergo Financial Institutions Survey, 2025</span>
+              </div>
+</div>
+</div>
+</div>
+<div class="card" style="display: flex; align-items: center; justify-content: center; padding: 12px 20px; flex-shrink: 0">
+<div class="diagram-box" style="padding: 8px 14px; font-size: 13px"><span class="lang-en">Bank A</span><span class="lang-es">Banco A</span></div>
+<div class="diagram-arrow" style="margin: 0 10px">→</div>
+<div class="text-support" style="margin-right: 16px; font-size: 12px"><span class="lang-en">Proprietary API</span><span class="lang-es">API Propietaria</span></div>
+<div class="diagram-box" style="padding: 8px 14px; font-size: 13px"><span class="lang-en">Scoring Provider</span><span class="lang-es">Proveedor de Scoring</span></div>
+<div class="diagram-arrow" style="margin: 0 10px">→</div>
+<div class="text-support" style="margin-right: 16px; font-size: 12px"><span class="lang-en">Legacy System</span><span class="lang-es">Sistema Legacy</span></div>
+<div class="diagram-box" style="padding: 8px 14px; font-size: 13px"><span class="lang-en">Asset Manager</span><span class="lang-es">Gestora de Activos</span></div>
+<div class="diagram-arrow" style="margin: 0 10px">→</div>
+<div class="text-support" style="font-size: 12px"><span class="lang-en">Offline Processes</span><span class="lang-es">Procesos Offline</span></div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">03</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 04 — WHY NOW -->
+<div class="slide">
+<div class="title"><span class="lang-en">Why now? Three regulations demand action before 2027.</span><span class="lang-es">¿Por qué ahora? Tres regulaciones exigen acción antes de 2027.</span></div>
+<div class="content-area">
+<div class="grid-3 mb-4">
+<div class="card highlight">
+<div class="bold mb-1">eIDAS 2.0 / EUDI Wallet</div>
+<div class="badge mb-2"><span class="lang-en">MANDATORY 2026–2027</span><span class="lang-es">OBLIGATORIO 2026–2027</span></div>
+<div class="text-support">
+              <span class="lang-en">EU Regulation 2024/1183. Active May 2024. Every EU member state must deploy EUDI digital identity wallets
+              by 2026–2027. Every bank and FinTech must adapt their identity layer. This is not optional. STRONGEST
+              regulatory pull in EU digital identity history.</span><span class="lang-es">Reglamento UE 2024/1183. Activo desde mayo 2024. Cada estado miembro de la UE debe desplegar las EUDI Wallet de identidad digital antes de 2026–2027. Cada banco y FinTech debe adaptar su capa de identidad. No es opcional. La señal regulatoria más fuerte en la historia de la identidad digital en la UE.</span>
+            </div>
+</div>
+<div class="card">
+<div class="bold mb-1"><span class="lang-en">DORA Enforcement</span><span class="lang-es">Aplicación de DORA</span></div>
+<div class="badge-amber mb-2"><span class="lang-en">ACTIVE JAN 2025</span><span class="lang-es">ACTIVO ENE 2025</span></div>
+<div class="text-support">
+              <span class="lang-en">Digital Operational Resilience Act. Mandatory from January 2025. Requires cryptographic audit trails and
+              auditable ICT infrastructure across all regulated EU financial entities. Non-compliance: supervisory
+              sanctions.</span><span class="lang-es">Digital Operational Resilience Act. Obligatorio desde enero 2025. Exige trazas de auditoría criptográficas e infraestructura TIC auditable en todas las entidades financieras reguladas de la UE. El incumplimiento: sanciones supervisoras.</span>
+            </div>
+</div>
+<div class="card">
+<div class="bold mb-1">PSD3 / PSR + MiFID II</div>
+<div class="badge mb-2">2025–2027</div>
+<div class="text-support">
+              <span class="lang-en">PSD3/PSR expanding Open Banking into Open Finance. 2,500+ TPPs already registered under PSD2. MiFID II
+              structural compliance burden ongoing. Combined: every financial interaction must be traceable, auditable
+              and provable on demand.</span><span class="lang-es">PSD3/PSR expanden Open Banking hacia Open Finance. Más de 2.500 TPPs ya registrados bajo PSD2. La carga estructural de compliance de MiFID II sigue. En conjunto: cada interacción financiera debe ser trazable, auditable y demostrable bajo demanda.</span>
+            </div>
+</div>
+</div>
+<div style="
+            background: rgba(0, 180, 200, 0.08);
+            border-left: 3px solid #00b4c8;
+            padding: 16px;
+            border-radius: 0 6px 6px 0;
+          ">
+<div class="bold text-primary">
+            <span class="lang-en">The compliance window is open now. Institutions that delay face regulatory penalties and operational
+            disruption.</span><span class="lang-es">La ventana de compliance está abierta ahora. Las instituciones que retrasen su adaptación se enfrentan a sanciones regulatorias y disrupción operativa.</span>
+          </div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">04</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 05 — SOLUTION VALUE PROPOSITION -->
+<div class="slide">
+<div class="title"><span class="lang-en">One integration. Every institution. Full auditability.</span><span class="lang-es">Una integración. Toda institución. Auditabilidad total.</span></div>
+<div class="subtitle">
+        <span class="lang-en">ØHNexus Protocol replaces fragmented compliance infrastructure with a single neutral layer.</span><span class="lang-es">ØHNexus Protocol sustituye la infraestructura de compliance fragmentada por una única capa neutra.</span>
+      </div>
+<div class="content-area">
+<div class="grid-3 mb-4">
+<div class="card highlight">
+<svg class="icon" viewbox="0 0 24 24">
+<rect height="16" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+<line x1="7" x2="13" y1="15" y2="15"></line>
+</svg>
+<div class="bold text-primary" style="font-size: 18px; margin-bottom: 10px">
+              <span class="lang-en">One credential. Reused everywhere.</span><span class="lang-es">Una credencial. Reutilizable en todas partes.</span>
+            </div>
+<div class="text-support" style="font-size: 14px; line-height: 1.5">
+              <span class="lang-en">A single verified credential works across every connected institution. KYC done once — valid everywhere in
+              the network. No repeated onboarding. No duplicated compliance processes per provider.</span><span class="lang-es">Una única credencial verificada funciona en cada institución conectada. KYC hecho una sola vez — válido en toda la red. Sin onboarding repetido. Sin procesos de compliance duplicados por proveedor.</span>
+            </div>
+<div style="
+                font-size: 11px;
+                color: #666;
+                font-style: italic;
+                margin-top: 12px;
+                border-top: 1px solid #222;
+                padding-top: 8px;
+              ">
+              <span class="lang-en">Pilot validation in progress — metrics to be confirmed with first institutional client.</span><span class="lang-es">Validación con pilot en curso — las métricas se confirmarán con el primer cliente institucional.</span>
+            </div>
+</div>
+<div class="card highlight">
+<svg class="icon" viewbox="0 0 24 24">
+<circle cx="12" cy="5" r="3"></circle>
+<circle cx="4" cy="19" r="3"></circle>
+<circle cx="20" cy="19" r="3"></circle>
+<line x1="12" x2="4" y1="8" y2="16"></line>
+<line x1="12" x2="20" y1="8" y2="16"></line>
+<line x1="4" x2="20" y1="19" y2="19"></line>
+</svg>
+<div class="bold text-primary" style="font-size: 18px; margin-bottom: 10px">
+              <span class="lang-en">Shared infrastructure replaces duplication.</span><span class="lang-es">La infraestructura compartida sustituye a la duplicación.</span>
+            </div>
+<div class="text-support" style="font-size: 14px; line-height: 1.5">
+              <span class="lang-en">A neutral SSI layer eliminates point-to-point integrations. Institutions connect once and access the full
+              network. Compliance costs shift from per-provider duplication to a single shared infrastructure
+              investment.</span><span class="lang-es">Una capa SSI neutra elimina las integraciones punto-a-punto. Las instituciones se conectan una sola vez y acceden a toda la red. Los costes de compliance pasan de la duplicación por proveedor a una única inversión en infraestructura compartida.</span>
+            </div>
+<div style="
+                font-size: 11px;
+                color: #666;
+                font-style: italic;
+                margin-top: 12px;
+                border-top: 1px solid #222;
+                padding-top: 8px;
+              ">
+              <span class="lang-en">Based on architecture design. Cost reduction to be validated with production pilots.</span><span class="lang-es">Basado en el diseño de arquitectura. La reducción de coste se validará con pilots en producción.</span>
+            </div>
+</div>
+<div class="card highlight">
+<svg class="icon" viewbox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+<rect height="5" rx="1" width="4" x="10" y="10"></rect>
+<circle cx="12" cy="8" r="1.5"></circle>
+</svg>
+<div class="bold text-primary" style="font-size: 18px; margin-bottom: 10px">
+              <span class="lang-en">Every interaction. Cryptographically auditable.</span><span class="lang-es">Cada interacción. Criptográficamente auditable.</span>
+            </div>
+<div class="text-support" style="font-size: 14px; line-height: 1.5">
+              <span class="lang-en">Every credential verification and service interaction generates a cryptographic proof — stored as a
+              SHA-256 hash. Real-time auditability for regulators. No manual audit cycles. No data exposed
+              unnecessarily.</span><span class="lang-es">Cada verificación de credencial y cada interacción con un servicio genera una prueba criptográfica — almacenada como hash SHA-256. Auditabilidad en tiempo real para los reguladores. Sin ciclos de auditoría manuales. Sin exposición innecesaria de datos.</span>
+            </div>
+<div style="
+                font-size: 11px;
+                color: #666;
+                font-style: italic;
+                margin-top: 12px;
+                border-top: 1px solid #222;
+                padding-top: 8px;
+              ">
+              <span class="lang-en">Verified — implemented in production. 510 tests passing. AWS deployed.</span><span class="lang-es">Verificado — implementado en producción. 510 tests pasando. Desplegado en AWS.</span>
+            </div>
+</div>
+</div>
+<div style="
+            background: rgba(0, 180, 200, 0.08);
+            border-left: 3px solid #00b4c8;
+            padding: 16px;
+            border-radius: 0 6px 6px 0;
+          ">
+<div class="bold text-primary">
+            <span class="lang-en">Not DeFi. Not a bank. Not an aggregator. A neutral B2B SaaS infrastructure layer — no balance sheet, no
+            custody, no banking licence required.</span><span class="lang-es">No es DeFi. No es un banco. No es un agregador. Una capa de infraestructura SaaS B2B neutra — sin balance, sin custodia, sin licencia bancaria necesaria.</span>
+          </div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">05</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 06 — END-TO-END FLOW -->
+<div class="slide">
+<div class="title"><span class="lang-en">End-to-End Flow — 6 Steps</span><span class="lang-es">Flujo End-to-End — 6 Pasos</span></div>
+<div class="content-area">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+<div class="card">
+<div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">01</div>
+<div class="bold mb-1" style="font-size: 14px"><span class="lang-en">DID Authentication</span><span class="lang-es">Autenticación DID</span></div>
+<div class="text-support" style="font-size: 13px"><span class="lang-en">User authenticates with DID in dApp.</span><span class="lang-es">El usuario se autentica con un DID en la dApp.</span></div>
+</div>
+<div class="card">
+<div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">02</div>
+<div class="bold mb-1" style="font-size: 14px"><span class="lang-en">Presents VCs</span><span class="lang-es">Presenta VCs</span></div>
+<div class="text-support" style="font-size: 13px"><span class="lang-en">Presents KYC/AML, MiFID, jurisdiction VCs.</span><span class="lang-es">Presenta VCs de KYC/AML, MiFID y jurisdicción.</span></div>
+</div>
+<div class="card">
+<div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">03</div>
+<div class="bold mb-1" style="font-size: 14px"><span class="lang-en">Smart Contract Validation</span><span class="lang-es">Validación por Smart Contract</span></div>
+<div class="text-support" style="font-size: 13px"><span class="lang-en">Contract validates VCs, policies, and consents.</span><span class="lang-es">El contrato valida VCs, políticas y consentimientos.</span></div>
+</div>
+<div class="card">
+<div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">04</div>
+<div class="bold mb-1" style="font-size: 14px"><span class="lang-en">Signed Request</span><span class="lang-es">Solicitud Firmada</span></div>
+<div class="text-support" style="font-size: 13px"><span class="lang-en">Sealed and signed request created on ledger.</span><span class="lang-es">Solicitud sellada y firmada creada en el ledger.</span></div>
+</div>
+<div class="card">
+<div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">05</div>
+<div class="bold mb-1" style="font-size: 14px"><span class="lang-en">Oracle Execution</span><span class="lang-es">Ejecución del Oracle</span></div>
+<div class="text-support" style="font-size: 13px">
+              <span class="lang-en">Oracle executes API call to provider and collects evidence.</span><span class="lang-es">El oracle ejecuta la llamada API al proveedor y recoge la evidencia.</span>
+            </div>
+</div>
+<div class="card">
+<div class="bold text-primary" style="font-size: 32px; margin-bottom: 8px">06</div>
+<div class="bold mb-1" style="font-size: 14px"><span class="lang-en">Verifiable Result</span><span class="lang-es">Resultado Verificable</span></div>
+<div class="text-support" style="font-size: 13px">
+              <span class="lang-en">Result + cryptographic proof returned. Auditable traces registered.</span><span class="lang-es">Se devuelve el resultado + prueba criptográfica. Trazas auditables registradas.</span>
+            </div>
+</div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">06</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 07 — PRODUCT DEMO -->
+<div class="slide">
+<div class="title"><span class="lang-en">Production-grade platform. Live today.</span><span class="lang-es">Plataforma production-grade. En vivo hoy.</span></div>
+<div class="content-area">
+<div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 24px; align-items: center">
+<div class="card">
+<div class="bold text-primary mb-2"><span class="lang-en">What is built</span><span class="lang-es">Qué está construido</span></div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">38 issues closed</span><span class="lang-es">38 issues cerrados</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">510 tests passing</span><span class="lang-es">510 tests pasando</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">AWS ECS Fargate deployed</span><span class="lang-es">AWS ECS Fargate desplegado</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">Walt.id SSI stack integrated</span><span class="lang-es">Stack SSI Walt.id integrado</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">OID4VP QR credential flow live</span><span class="lang-es">Flujo OID4VP de credencial por QR en vivo</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">Chainlink-compatible oracle live</span><span class="lang-es">Oracle compatible con Chainlink en vivo</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #22c55e;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">Silent browser-native VP verification</span><span class="lang-es">Verificación VP silenciosa nativa de navegador</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #f59e0b;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">Beta pilot in progress</span><span class="lang-es">Beta pilot en curso</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 8px; font-size: 13px">
+<div style="
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: #f59e0b;
+                  margin-right: 10px;
+                  flex-shrink: 0;
+                "></div>
+<div class="text-support"><span class="lang-en">SL constitution pending (Audens)</span><span class="lang-es">Constitución de la SL pendiente (Audens)</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center">
+<style>
+              @keyframes pulse-glow {
+                0%,
+                100% {
+                  opacity: 1;
+                }
+                50% {
+                  opacity: 0.3;
+                }
+              }
+              @keyframes grid-drift {
+                0% {
+                  background-position: 0 0;
+                }
+                100% {
+                  background-position: 30px 30px;
+                }
+              }
+              .browser-frame {
+                transition:
+                  box-shadow 0.3s ease,
+                  border-color 0.3s ease;
+              }
+              .browser-frame:hover {
+                box-shadow:
+                  0 0 40px rgba(0, 180, 200, 0.3),
+                  0 0 80px rgba(0, 180, 200, 0.1) !important;
+                border-color: rgba(0, 180, 200, 0.8) !important;
+              }
+            </style>
+<a href="https://d17irz6h7nb562.cloudfront.net/" rel="noopener noreferrer" style="text-decoration: none; display: block; width: 65%" target="_blank">
+<div class="browser-frame" style="
+                  background: #0a0a0a;
+                  border: 1px solid #00b4c8;
+                  border-radius: 12px;
+                  box-shadow:
+                    0 0 30px rgba(0, 180, 200, 0.15),
+                    0 0 60px rgba(0, 180, 200, 0.05);
+                  cursor: pointer;
+                  overflow: hidden;
+                ">
+<!-- Top bar -->
+<div style="
+                    background: #111;
+                    border-bottom: 1px solid #1a1a1a;
+                    border-radius: 12px 12px 0 0;
+                    padding: 10px 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                  ">
+<div style="display: flex; gap: 6px; flex-shrink: 0">
+<div style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f57"></div>
+<div style="width: 10px; height: 10px; border-radius: 50%; background: #febc2e"></div>
+<div style="width: 10px; height: 10px; border-radius: 50%; background: #28c840"></div>
+</div>
+<div style="
+                      background: rgba(0, 180, 200, 0.1);
+                      border: 1px solid #00b4c8;
+                      border-radius: 4px;
+                      padding: 2px 10px;
+                      font-size: 10px;
+                      color: #00b4c8;
+                      font-weight: 700;
+                      letter-spacing: 1px;
+                      flex-shrink: 0;
+                    ">
+                    <span class="lang-en">LIVE</span><span class="lang-es">EN VIVO</span>
+                  </div>
+</div>
+<!-- Screen area -->
+<div style="
+                    background: #050505;
+                    border-radius: 0 0 12px 12px;
+                    padding: 16px;
+                    min-height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    overflow: hidden;
+                    background-image:
+                      linear-gradient(rgba(0, 180, 200, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 180, 200, 0.03) 1px, transparent 1px);
+                    background-size: 30px 30px;
+                    animation: grid-drift 20s linear infinite;
+                  ">
+<div style="width: 100%">
+<div style="
+                        background: #0f0f0f;
+                        border: 1px solid #1e1e1e;
+                        border-radius: 6px;
+                        padding: 10px 16px;
+                        margin-bottom: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                      ">
+<div style="color: #fff; font-size: 13px; font-weight: 700"><span class="lang-en">KYC Data Service</span><span class="lang-es">Servicio de Datos KYC</span></div>
+<div style="
+                          background: rgba(0, 180, 200, 0.15);
+                          color: #00b4c8;
+                          border: 1px solid #00b4c8;
+                          border-radius: 4px;
+                          padding: 2px 10px;
+                          font-size: 10px;
+                          font-weight: 700;
+                        ">
+                        <span class="lang-en">ELIGIBLE</span><span class="lang-es">ELEGIBLE</span>
+                      </div>
+</div>
+<div style="
+                        background: #0f0f0f;
+                        border: 1px solid #1e1e1e;
+                        border-radius: 6px;
+                        padding: 10px 16px;
+                        margin-bottom: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                      ">
+<div style="color: #fff; font-size: 13px; font-weight: 700"><span class="lang-en">MiFID II Scoring</span><span class="lang-es">Scoring MiFID II</span></div>
+<div style="
+                          background: rgba(0, 180, 200, 0.15);
+                          color: #00b4c8;
+                          border: 1px solid #00b4c8;
+                          border-radius: 4px;
+                          padding: 2px 10px;
+                          font-size: 10px;
+                          font-weight: 700;
+                        ">
+                        <span class="lang-en">ELIGIBLE</span><span class="lang-es">ELEGIBLE</span>
+                      </div>
+</div>
+<div style="
+                        background: #0f0f0f;
+                        border: 1px solid #1e1e1e;
+                        border-radius: 6px;
+                        padding: 10px 16px;
+                        margin-bottom: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                      ">
+<div style="color: #fff; font-size: 13px; font-weight: 700"><span class="lang-en">AML Screening</span><span class="lang-es">Screening AML</span></div>
+<div style="
+                          background: rgba(245, 158, 11, 0.15);
+                          color: #f59e0b;
+                          border: 1px solid #f59e0b;
+                          border-radius: 4px;
+                          padding: 2px 10px;
+                          font-size: 10px;
+                          font-weight: 700;
+                        ">
+                        <span class="lang-en">LOCKED</span><span class="lang-es">BLOQUEADO</span>
+                      </div>
+</div>
+<div style="
+                        background: #00b4c8;
+                        color: #000;
+                        font-weight: 700;
+                        font-size: 13px;
+                        border: none;
+                        border-radius: 6px;
+                        padding: 10px 0;
+                        width: 100%;
+                        margin-top: 8px;
+                        text-align: center;
+                        cursor: pointer;
+                      ">
+                      <span class="lang-en">Verify Credentials →</span><span class="lang-es">Verificar Credenciales →</span>
+                    </div>
+</div>
+<div style="
+                      font-size: 10px;
+                      color: rgba(0, 180, 200, 0.5);
+                      font-family: monospace;
+                      margin-top: 16px;
+                      text-align: center;
+                    ">
+<span style="animation: pulse-glow 2s ease-in-out infinite; display: inline-block">●</span> <span class="lang-en">LIVE ·
+                    Click to access platform</span><span class="lang-es">EN VIVO ·
+                    Click para acceder a la plataforma</span>
+                  </div>
+</div>
+</div>
+</a>
+<div style="text-align: center; color: #a0a0a0; font-size: 12px; font-style: italic; margin-top: 12px">
+              <span class="lang-en">Live credential-gated service catalog — click to access</span><span class="lang-es">Catálogo de servicios con credencial en vivo — click para acceder</span>
+            </div>
+</div>
+<div class="card">
+<div class="bold text-primary mb-2"><span class="lang-en">Tech stack</span><span class="lang-es">Stack técnico</span></div>
+<div class="text-support" style="font-size: 13px; line-height: 1.8">
+<div><span class="lang-en">▸ Rust · Actix-web backend</span><span class="lang-es">▸ Rust · backend Actix-web</span></div>
+<div>▸ React 18 · Vite · Tailwind</div>
+<div>▸ AWS ECS Fargate · CloudFront</div>
+<div>▸ Ethereum Sepolia · Oracle</div>
+<div><span class="lang-en">▸ Walt.id SSI stack</span><span class="lang-es">▸ Stack SSI Walt.id</span></div>
+<div>▸ DynamoDB · Terraform IaC</div>
+<div><span class="lang-en">▸ No raw credentials stored</span><span class="lang-es">▸ No se almacenan credenciales en bruto</span></div>
+<div><span class="lang-en">▸ SHA-256 hashes only</span><span class="lang-es">▸ Solo hashes SHA-256</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">07</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 08 — MARKET SIZE -->
+<div class="slide">
+<div class="title"><span class="lang-en">The market ØHNexus sits within is large and growing.</span><span class="lang-es">El mercado donde se sitúa ØHNexus es grande y creciente.</span></div>
+<div class="content-area">
+<div style="
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 12px;
+            align-items: start;
+            margin-bottom: 24px;
+          ">
+<!-- TAM -->
+<div class="card" style="padding: 24px">
+<div style="
+                display: inline-block;
+                background: rgba(0, 180, 200, 0.1);
+                color: #00b4c8;
+                border: 1px solid #00b4c8;
+                border-radius: 4px;
+                padding: 3px 10px;
+                font-size: 11px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              ">
+              TAM
+            </div>
+<div style="font-size: 52px; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 8px">
+              $135B
+            </div>
+<div style="font-size: 13px; font-weight: 600; color: #a0a0a0; margin-bottom: 16px">
+              <span class="lang-en">Global Open Banking &amp; regulated financial infrastructure market by 2030</span><span class="lang-es">Mercado global de Open Banking e infraestructura financiera regulada en 2030</span>
+            </div>
+<div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+              <span class="lang-en">ØHNexus sits above the Open Banking API layer — adding SSI identity, compliance orchestration and
+              cryptographic auditability. The adjacent RegTech and digital identity markets are not included in this
+              figure, making the true serviceable market structurally larger.</span><span class="lang-es">ØHNexus se sitúa por encima de la capa API de Open Banking — añadiendo identidad SSI, orquestación de compliance y auditabilidad criptográfica. Los mercados adyacentes de RegTech e identidad digital no están incluidos en esta cifra, lo que hace que el mercado direccionable real sea estructuralmente mayor.</span>
+            </div>
+<div style="font-size: 11px; color: #a0a0a0; font-style: italic; margin-top: 12px">
+              <span class="lang-en">Source: Grand View Research — Open Banking Market Size &amp; Share Report, 2025</span><span class="lang-es">Fuente: Grand View Research — Open Banking Market Size &amp; Share Report, 2025</span>
+            </div>
+</div>
+<!-- Arrow TAM→SAM -->
+<div style="
+              display: flex;
+              align-items: center;
+              align-self: center;
+              color: #00b4c8;
+              font-size: 24px;
+              font-weight: 700;
+              padding-top: 40px;
+            ">
+            ▸
+          </div>
+<!-- SAM -->
+<div class="card" style="padding: 24px">
+<div style="
+                display: inline-block;
+                background: rgba(245, 158, 11, 0.1);
+                color: #f59e0b;
+                border: 1px solid #f59e0b;
+                border-radius: 4px;
+                padding: 3px 10px;
+                font-size: 11px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              ">
+              SAM
+            </div>
+<div style="font-size: 52px; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 8px">
+              $44.9B
+            </div>
+<div style="font-size: 13px; font-weight: 600; color: #a0a0a0; margin-bottom: 16px">
+              <span class="lang-en">European regulated financial infrastructure market by 2030</span><span class="lang-es">Mercado europeo de infraestructura financiera regulada en 2030</span>
+            </div>
+<div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+              <span class="lang-en">Europe held 36.4% of global Open Banking market share in 2024. Target customers: banks, EMIs and FinTechs
+              operating under PSD2/PSD3, DORA and eIDAS 2.0. 2,500+ TPPs already registered under PSD2.</span><span class="lang-es">Europa concentra el 36,4% de la cuota global de Open Banking en 2024. Cliente objetivo: bancos, EMIs y FinTechs operando bajo PSD2/PSD3, DORA y eIDAS 2.0. Más de 2.500 TPPs ya registrados bajo PSD2.</span>
+            </div>
+<div style="font-size: 11px; color: #a0a0a0; font-style: italic; margin-top: 12px">
+              <span class="lang-en">Source: Grand View Research — Europe Open Banking Market Outlook, 2025; Imarc Group — PSD2 TPP data</span><span class="lang-es">Fuente: Grand View Research — Europe Open Banking Market Outlook, 2025; Imarc Group — PSD2 TPP data</span>
+            </div>
+</div>
+<!-- Arrow SAM→SOM -->
+<div style="
+              display: flex;
+              align-items: center;
+              align-self: center;
+              color: #00b4c8;
+              font-size: 24px;
+              font-weight: 700;
+              padding-top: 40px;
+            ">
+            ▸
+          </div>
+<!-- SOM -->
+<div class="card" style="padding: 24px">
+<div style="
+                display: inline-block;
+                background: transparent;
+                color: #a0a0a0;
+                border: 1px solid #a0a0a0;
+                border-radius: 4px;
+                padding: 3px 10px;
+                font-size: 11px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              ">
+              SOM
+            </div>
+<div style="font-size: 52px; font-weight: 700; color: #a0a0a0; line-height: 1.1; margin-bottom: 8px">
+              <span class="lang-en">€1.2M–€9M</span><span class="lang-es">€1,2M–€9M</span>
+            </div>
+<div style="font-size: 13px; font-weight: 600; color: #a0a0a0; margin-bottom: 8px">
+              <span class="lang-en">ØHNexus realistic ARR capture · 2026–2028</span><span class="lang-es">Captura realista de ARR de ØHNexus · 2026–2028</span>
+            </div>
+<div style="
+                display: inline-block;
+                border: 1px solid #a0a0a0;
+                color: #a0a0a0;
+                background: transparent;
+                border-radius: 16px;
+                padding: 4px 10px;
+                font-size: 11px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 16px;
+              ">
+              <span class="lang-en">INFERRED</span><span class="lang-es">INFERIDO</span>
+            </div>
+<div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+              <span class="lang-en">Internal model: 10–50 institutional clients at €2,000–€15,000/month base subscription. Consistent with EU
+              enterprise sales cycles of 6–18 months and eIDAS 2.0 regulatory adoption windows 2025–2027. Not a
+              financial commitment — validation pending first pilot conversions.</span><span class="lang-es">Modelo interno: 10–50 clientes institucionales a una suscripción base de €2.000–€15.000/mes. Consistente con ciclos de venta enterprise UE de 6–18 meses y la ventana regulatoria de adopción de eIDAS 2.0 en 2025–2027. No constituye un compromiso financiero — validación pendiente de las primeras conversiones de pilot.</span>
+            </div>
+<div style="font-size: 11px; color: #a0a0a0; font-style: italic; margin-top: 12px">
+              <span class="lang-en">Source: Internal model based on Technavio — Open Banking Market Analysis, 2024; Imarc Group PSD2 TPP
+              statistics</span><span class="lang-es">Fuente: modelo interno basado en Technavio — Open Banking Market Analysis, 2024; Imarc Group PSD2 TPP statistics</span>
+            </div>
+</div>
+</div>
+<!-- Context bar -->
+<div style="
+            background: rgba(0, 180, 200, 0.05);
+            border-left: 3px solid #00b4c8;
+            border-radius: 0 6px 6px 0;
+            padding: 16px 20px;
+            margin-top: 0;
+          ">
+<div style="font-size: 13px; color: #a0a0a0; line-height: 1.5">
+            <span class="lang-en">Market context: ØHNexus operates at the intersection of Open Banking ($135B), RegTech and SSI digital
+            identity — three converging markets with mandatory EU regulatory drivers (eIDAS 2.0, DORA, PSD3) creating
+            structural demand through 2027.</span><span class="lang-es">Contexto de mercado: ØHNexus opera en la intersección de Open Banking ($135B), RegTech e identidad digital SSI — tres mercados convergentes con drivers regulatorios obligatorios en la UE (eIDAS 2.0, DORA, PSD3) que generan demanda estructural hasta 2027.</span>
+          </div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">08</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 09 — COMPETITIVE LANDSCAPE -->
+<div class="slide">
+<div class="title"><span class="lang-en">No player occupies this intersection.</span><span class="lang-es">Ningún player ocupa esta intersección.</span></div>
+<div class="content-area">
+<table style="margin-bottom: 20px; font-size: 12px; table-layout: fixed; width: 100%">
+<colgroup>
+<col style="width: 22%"/>
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+</colgroup>
+<thead>
+<tr>
+<th style="padding: 10px 8px; font-size: 10px"></th>
+<th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                DOCK LABS<br/><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic"><span class="lang-en">undisclosed</span><span class="lang-es">no revelado</span></span>
+</th>
+<th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                CHEQD<br/><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic"><span class="lang-en">$2.6M raised</span><span class="lang-es">$2,6M levantado</span></span>
+</th>
+<th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                SPHERITY<br/><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic"><span class="lang-en">undisclosed</span><span class="lang-es">no revelado</span></span>
+</th>
+<th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                TINK/VISA<br/><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic"><span class="lang-en">$2.15B acq.</span><span class="lang-es">adq. $2,15B</span></span>
+</th>
+<th style="padding: 10px 6px; font-size: 10px; text-align: center; line-height: 1.4">
+                SUMSUB<br/><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic"><span class="lang-en">~$37M raised</span><span class="lang-es">~$37M levantado</span></span>
+</th>
+<th style="
+                  padding: 10px 6px;
+                  font-size: 10px;
+                  text-align: center;
+                  line-height: 1.4;
+                  background: rgba(0, 180, 200, 0.1);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                  border-top: 1px solid #00b4c8;
+                  color: #00b4c8;
+                ">
+                ØNEXUS<br/><span style="font-size: 11px; color: #a0a0a0; text-transform: none; font-weight: 400; font-style: italic">Pre-seed 2026</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px">SSI / Verifiable Credentials</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px"><span class="lang-en">Financial API orchestration</span><span class="lang-es">Orquestación de API financieras</span></td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px"><span class="lang-en">Smart contract enforcement</span><span class="lang-es">Aplicación por smart contract</span></td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px"><span class="lang-en">Oracle layer</span><span class="lang-es">Capa Oracle</span></td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px"><span class="lang-en">EU regulatory native</span><span class="lang-es">Nativo regulatorio UE</span></td>
+<td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+<td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px"><span class="lang-en">Cryptographic auditability</span><span class="lang-es">Auditabilidad criptográfica</span></td>
+<td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+<td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+<td style="text-align: center; padding: 8px; color: #f59e0b">⚠️</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px"><span class="lang-en">No banking licence required</span><span class="lang-es">Sin licencia bancaria necesaria</span></td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #555">❌</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+<tr>
+<td class="bold" style="padding: 8px; font-size: 12px"><span class="lang-en">Production deployed</span><span class="lang-es">Desplegado en producción</span></td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="text-align: center; padding: 8px; color: #fff">✅</td>
+<td style="
+                  text-align: center;
+                  padding: 8px;
+                  color: #fff;
+                  background: rgba(0, 180, 200, 0.08);
+                  border-left: 1px solid #00b4c8;
+                  border-right: 1px solid #00b4c8;
+                  border-bottom: 1px solid #00b4c8;
+                ">
+                ✅
+              </td>
+</tr>
+</tbody>
+</table>
+<div style="font-size: 10px; color: #666; font-style: italic; text-align: right; margin-bottom: 12px">
+          <span class="lang-en">Funding data: cheqd — Tracxn 2026; Tink — TechCrunch 2021; Sumsub — Crunchbase / Finovate 2024; Dock Labs and
+          Spherity — funding undisclosed (no public data)</span><span class="lang-es">Datos de financiación: cheqd — Tracxn 2026; Tink — TechCrunch 2021; Sumsub — Crunchbase / Finovate 2024; Dock Labs y Spherity — financiación no revelada (sin datos públicos)</span>
+        </div>
+<div style="
+            background: rgba(0, 180, 200, 0.08);
+            border-left: 3px solid #00b4c8;
+            padding: 12px 16px;
+            border-radius: 0 6px 6px 0;
+          ">
+<div class="bold text-primary" style="font-size: 13px; line-height: 1.5">
+            <span class="lang-en">No identified player combines all four layers: SSI identity + smart contract orchestration + oracle
+            execution + EU regulatory-native financial infrastructure.</span><span class="lang-es">No se ha identificado ningún player que combine las cuatro capas: identidad SSI + orquestación por smart contract + ejecución por oracle + infraestructura financiera nativa de regulación UE.</span>
+          </div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">09</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 10 — BUSINESS MODEL -->
+<div class="slide">
+<div class="title"><span class="lang-en">B2B SaaS infrastructure. Subscription + usage.</span><span class="lang-es">Infraestructura SaaS B2B. Suscripción + uso.</span></div>
+<div class="subtitle"><span class="lang-en">Revenue from institutions — not consumers. No token. No balance sheet exposure.</span><span class="lang-es">Ingresos de instituciones — no de consumidores. Sin token. Sin exposición de balance.</span></div>
+<div class="content-area">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px">
+<div class="card" style="padding:16px;overflow:visible">
+<div class="bold text-primary" style="font-size:14px;margin-bottom:6px"><span class="lang-en">Revenue streams</span><span class="lang-es">Líneas de ingresos</span> <span style="font-size:10px;color:#a0a0a0;border:1px solid #a0a0a0;background:transparent;border-radius:4px;padding:2px 8px;font-weight:600;margin-left:6px;vertical-align:middle"><span class="lang-en">INFERRED</span><span class="lang-es">INFERIDO</span></span></div>
+<div class="text-support" style="font-size:13px;line-height:1.4"><span class="lang-en">Base subscription: €5,000–€20,000/month per institution</span><span class="lang-es">Suscripción base: €5.000–€20.000/mes por institución</span><br/><span class="lang-en">Usage fees: €0.001–€0.01 per API/oracle call</span><span class="lang-es">Tarifas por uso: €0,001–€0,01 por llamada API/oracle</span><br/><span class="lang-en">Enterprise contracts: €50,000–€250,000/year</span><span class="lang-es">Contratos enterprise: €50.000–€250.000/año</span></div>
+<div style="font-size:10px;color:#666;font-style:italic;margin-top:8px;border-top:1px solid #222;padding-top:6px"><span class="lang-en">INFERRED from EU SaaS benchmarks. No signed contracts. Source: Technavio 2024; competitive intelligence report April 2026</span><span class="lang-es">INFERIDO a partir de benchmarks SaaS UE. Sin contratos firmados. Fuente: Technavio 2024; informe de inteligencia competitiva, abril 2026</span></div>
+</div>
+<div class="card" style="padding:16px;overflow:visible">
+<div class="bold text-primary" style="font-size:14px;margin-bottom:6px"><span class="lang-en">Target customer</span><span class="lang-es">Cliente objetivo</span></div>
+<div class="text-support" style="font-size:13px;line-height:1.4"><span class="lang-en">Banks · EMIs · FinTechs · Asset managers</span><span class="lang-es">Bancos · EMIs · FinTechs · Gestoras de activos</span><br/><span class="lang-en">Operating under: PSD2/PSD3, DORA, MiFID II, eIDAS 2.0</span><span class="lang-es">Operando bajo: PSD2/PSD3, DORA, MiFID II, eIDAS 2.0</span><br/><span class="lang-en">Initial market: Spain and EU</span><span class="lang-es">Mercado inicial: España y UE</span><br/><span class="lang-en">Distribution: B2B direct + white-label</span><span class="lang-es">Distribución: B2B directo + white-label</span></div>
+</div>
+<div class="card" style="padding:16px;overflow:visible">
+<div class="bold text-primary" style="font-size:14px;margin-bottom:6px"><span class="lang-en">Why institutions pay</span><span class="lang-es">Por qué pagan las instituciones</span></div>
+<div class="text-support" style="font-size:13px;line-height:1.4"><span class="lang-en">Compliance sale — not discretionary</span><span class="lang-es">Venta de compliance — no discrecional</span><br/><span class="lang-en">eIDAS 2.0 and DORA create mandatory infrastructure need</span><span class="lang-es">eIDAS 2.0 y DORA crean una necesidad obligatoria de infraestructura</span><br/><span class="lang-en">Switching cost is high once integrated</span><span class="lang-es">El coste de cambio es alto una vez integrado</span><br/><span class="lang-en">Core banking integrations take 12–18 months per provider — shared infrastructure eliminates that</span><span class="lang-es">Las integraciones de banca core llevan 12–18 meses por proveedor — la infraestructura compartida elimina ese coste</span></div>
+<div style="font-size:10px;color:#666;font-style:italic;margin-top:8px;border-top:1px solid #222;padding-top:6px"><span class="lang-en">Source: Industry benchmark, 2026</span><span class="lang-es">Fuente: benchmark del sector, 2026</span></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px">
+<div class="card" style="padding:16px">
+<div class="bold text-primary" style="font-size:14px;margin-bottom:6px"><span class="lang-en">Gross margin</span><span class="lang-es">Margen bruto</span> <span style="font-size:10px;color:#a0a0a0;border:1px solid #a0a0a0;padding:2px 6px;border-radius:12px;margin-left:6px"><span class="lang-en">INFERRED</span><span class="lang-es">INFERIDO</span></span></div>
+<div class="text-support" style="font-size:13px;line-height:1.4"><span class="lang-en">75%–85% (infrastructure SaaS benchmark)</span><span class="lang-es">75%–85% (benchmark SaaS de infraestructura)</span><br/><span class="lang-en">Primary cost: AWS cloud infrastructure</span><span class="lang-es">Coste principal: infraestructura cloud AWS</span><br/><span class="lang-en">Source: Bessemer, OpenView 2023</span><span class="lang-es">Fuente: Bessemer, OpenView 2023</span></div>
+</div>
+<div class="card" style="padding:16px">
+<div class="bold text-primary" style="font-size:14px;margin-bottom:6px"><span class="lang-en">ACV per client</span><span class="lang-es">ACV por cliente</span> <span style="font-size:10px;color:#a0a0a0;border:1px solid #a0a0a0;padding:2px 6px;border-radius:12px;margin-left:6px"><span class="lang-en">INFERRED</span><span class="lang-es">INFERIDO</span></span></div>
+<div class="text-support" style="font-size:13px;line-height:1.4"><span class="lang-en">€60,000–€240,000 per year</span><span class="lang-es">€60.000–€240.000 por año</span><br/><span class="lang-en">Derived from base subscription of €5,000–€20,000/month × 12 months.</span><span class="lang-es">Derivado de la suscripción base de €5.000–€20.000/mes × 12 meses.</span><br/><span class="lang-en">Consistent with 10–50 institutional client target.</span><span class="lang-es">Consistente con el objetivo de 10–50 clientes institucionales.</span></div>
+<div style="font-size:10px;color:#666;font-style:italic;margin-top:8px;border-top:1px solid #222;padding-top:6px"><span class="lang-en">INFERRED — modelled from pricing benchmarks. No historical revenue data. Source: Technavio 2024</span><span class="lang-es">INFERIDO — modelado a partir de benchmarks de pricing. Sin datos históricos de ingresos. Fuente: Technavio 2024</span></div>
+</div>
+</div>
+<div style="font-size:10px;color:#666;font-style:italic"><span class="lang-en">Unit economics are modelled assumptions based on EU B2B SaaS infrastructure benchmarks. No historical revenue data yet. Validation pending first pilot conversions.</span><span class="lang-es">Los unit economics son asunciones modeladas basadas en benchmarks SaaS de infraestructura B2B UE. Sin datos históricos de ingresos todavía. Validación pendiente de las primeras conversiones de pilot.</span></div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">10</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 11 — GO-TO-MARKET -->
+<div class="slide">
+<div class="title"><span class="lang-en">Pilot-first. Spain. EU. Pan-European.</span><span class="lang-es">Primero pilot. España. UE. Pan-europeo.</span></div>
+<div class="content-area">
+<div class="grid-3 mb-4">
+<div class="card highlight">
+<div class="bold text-primary mb-2"><span class="lang-en">Phase 1 — Pilots · Months 0–12</span><span class="lang-es">Fase 1 — Pilots · Meses 0–12</span></div>
+<div class="text-support">
+              <span class="lang-en">Geography: Spain</span><span class="lang-es">Geografía: España</span><br/><span class="lang-en">Motion: Founder-led direct outreach</span><span class="lang-es">Motion: outreach directo liderado por el fundador</span><br/><span class="lang-en">Entry: BBVA, BME/SIX, KPMG, Santander
+              network</span><span class="lang-es">Entrada: red BBVA, BME/SIX, KPMG, Santander</span><br/><span class="lang-en">Channels: Outbound ABM to compliance officers, CTOs</span><span class="lang-es">Canales: ABM outbound a compliance officers y CTOs</span><br/><span class="lang-en">Target: 1–2 signed pilots</span><span class="lang-es">Objetivo: 1–2 pilots firmados</span><br/><span class="lang-en">Goal:
+              Proof of production deployment</span><span class="lang-es">Goal: prueba de despliegue en producción</span>
+            </div>
+</div>
+<div class="card" style="border-left: 3px solid #f59e0b">
+<div class="bold text-amber mb-2"><span class="lang-en">Phase 2 — Launch · Months 12–24</span><span class="lang-es">Fase 2 — Lanzamiento · Meses 12–24</span></div>
+<div class="text-support">
+              <span class="lang-en">Geography: Spain + Germany, France, Netherlands</span><span class="lang-es">Geografía: España + Alemania, Francia, Países Bajos</span><br/><span class="lang-en">Motion: Pilot reference + partnership channel</span><span class="lang-es">Motion: referencia de pilot + canal de partnership</span><br/><span class="lang-en">Channels:
+              Partner integrations, inbound from eIDAS 2.0 mandates</span><span class="lang-es">Canales: integraciones con partners, inbound de mandatos eIDAS 2.0</span><br/><span class="lang-en">Target: 5–10 paying institutional clients</span><span class="lang-es">Objetivo: 5–10 clientes institucionales de pago</span><br/><span class="lang-en">First
+              channel partner or integration deal</span><span class="lang-es">Primer partner de canal o acuerdo de integración</span>
+            </div>
+</div>
+<div class="card" style="border-left: 3px solid #a0a0a0">
+<div class="bold text-support mb-2"><span class="lang-en">Phase 3 — Scale · Months 24–36</span><span class="lang-es">Fase 3 — Escala · Meses 24–36</span></div>
+<div class="text-support">
+              <span class="lang-en">Geography: Full EU</span><span class="lang-es">Geografía: UE completa</span><br/><span class="lang-en">Motion: Partner-led + regulatory inbound</span><span class="lang-es">Motion: liderado por partners + inbound regulatorio</span><br/><span class="lang-en">Distribution: White-label, B2B2C via
+              FinTech platforms, Developer API marketplace</span><span class="lang-es">Distribución: white-label, B2B2C vía plataformas FinTech, Developer API marketplace</span><br/><span class="lang-en">Target: 25–50 institutional clients</span><span class="lang-es">Objetivo: 25–50 clientes institucionales</span><br/><span class="lang-en">First
+              commercial sales hire</span><span class="lang-es">Primera contratación de ventas comerciales</span>
+            </div>
+</div>
+</div>
+<div style="margin-top:24px">
+<div style="font-size:10px;color:#a0a0a0;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px"><span class="lang-en">Current status — verified</span><span class="lang-es">Estado actual — verificado</span></div>
+<div style="background:#141414;border:1px solid #222;border-radius:8px;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;width:100%">
+<div>
+<div class="bold" style="font-size:24px">38</div>
+<div style="font-size:12px;color:#a0a0a0"><span class="lang-en">issues closed · verified</span><span class="lang-es">issues cerrados · verificado</span></div>
+</div>
+<div style="border-left:1px solid rgba(0,180,200,0.3);padding-left:24px">
+<div class="bold" style="font-size:24px">510</div>
+<div style="font-size:12px;color:#a0a0a0"><span class="lang-en">tests passing · AWS deployed</span><span class="lang-es">tests pasando · desplegado en AWS</span></div>
+</div>
+<div style="border-left:1px solid rgba(0,180,200,0.3);padding-left:24px">
+<div class="bold" style="font-size:24px">1</div>
+<div style="font-size:12px;color:#a0a0a0"><span class="lang-en">pilot in progress</span><span class="lang-es">pilot en curso</span></div>
+</div>
+<div style="border-left:1px solid rgba(0,180,200,0.3);padding-left:24px">
+<div class="bold" style="font-size:24px">Pre-seed</div>
+<div style="font-size:12px;color:#a0a0a0"><span class="lang-en">round open · April 2026</span><span class="lang-es">ronda abierta · abril 2026</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">11</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 12 — TRACTION -->
+<div class="slide">
+<div class="title"><span class="lang-en">MVP built. Pilot in progress.</span><span class="lang-es">MVP construido. Pilot en curso.</span></div>
+<div class="content-area">
+<div class="grid-2x2" style="align-items: stretch; margin-bottom: 32px">
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; justify-content: center">
+<div style="display: flex; align-items: center; margin-bottom: 16px">
+<div style="width: 12px; height: 12px; border-radius: 50%; background: #00b4c8; margin-right: 16px"></div>
+<div class="bold" style="width: 100px"><span class="lang-en">Platform:</span><span class="lang-es">Plataforma:</span></div>
+<div class="text-support"><span class="lang-en">MVP built and deployed</span><span class="lang-es">MVP construido y desplegado</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 16px">
+<div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b; margin-right: 16px"></div>
+<div class="bold" style="width: 100px">Pilot:</div>
+<div class="text-support"><span class="lang-en">1 beta pilot in development</span><span class="lang-es">1 beta pilot en desarrollo</span></div>
+</div>
+<div style="display: flex; align-items: center; margin-bottom: 16px">
+<div style="width: 12px; height: 12px; border-radius: 50%; background: #a0a0a0; margin-right: 16px"></div>
+<div class="bold" style="width: 100px"><span class="lang-en">Revenue:</span><span class="lang-es">Ingresos:</span></div>
+<div class="text-support">Pre-revenue</div>
+</div>
+<div style="display: flex; align-items: center">
+<div style="width: 12px; height: 12px; border-radius: 50%; background: #a0a0a0; margin-right: 16px"></div>
+<div class="bold" style="width: 100px">Partners:</div>
+<div class="text-support"><span class="lang-en">None signed yet</span><span class="lang-es">Ninguno firmado aún</span></div>
+</div>
+</div>
+<div class="card highlight" style="background: rgba(0, 180, 200, 0.04); padding: 40px; display: flex; align-items: center; justify-content: center; text-align: center;">
+<div class="bold text-primary" style="font-size: 24px; line-height: 1.4">
+              <span class="lang-en">Launching pilots with 2–3 strategic providers in Q3 2026 — 90 days</span><span class="lang-es">Lanzando pilots con 2–3 proveedores estratégicos en Q3 2026 — 90 días</span>
+            </div>
+</div>
+</div>
+<div class="card" style="display: flex; justify-content: space-between; align-items: center; padding: 24px 48px">
+<div style="text-align: center; width: 180px">
+<div style="width: 20px; height: 20px; border-radius: 50%; background: #00b4c8; margin: 0 auto 12px"></div>
+<div class="bold"><span class="lang-en">NOW</span><span class="lang-es">AHORA</span></div>
+</div>
+<div style="flex: 1; height: 2px; background: #222; position: relative; top: -16px"></div>
+<div style="text-align: center; width: 180px">
+<div style="width: 20px; height: 20px; border-radius: 50%; background: #f59e0b; margin: 0 auto 12px"></div>
+<div class="bold">Pilot (Q3 2026)</div>
+</div>
+<div style="flex: 1; height: 2px; background: #222; position: relative; top: -16px"></div>
+<div style="text-align: center; width: 180px">
+<div style="width: 20px; height: 20px; border-radius: 50%; background: #a0a0a0; margin: 0 auto 12px"></div>
+<div class="bold text-support"><span class="lang-en">Production (18 months)</span><span class="lang-es">Producción (18 meses)</span></div>
+</div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height: 44px"/>
+<div class="bold">12</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 13 — TEAM -->
+<div class="slide">
+<div class="title"><span class="lang-en">Built by someone who lived the problem.</span><span class="lang-es">Construido por alguien que ha vivido el problema.</span></div>
+<div class="content-area">
+<div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px">
+<div class="card highlight" style="padding: 28px">
+<div style="display: flex; align-items: center">
+<div style="width: 100px; height: 100px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #a0a0a0; font-size: 13px; margin-right: 20px; flex-shrink: 0;"><span class="lang-en">Photo</span><span class="lang-es">Foto</span></div>
+<div>
+<div style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 4px">Nikolay Gyuneliev Ivanov</div>
+<div style="font-size: 14px; color: #00b4c8; margin-bottom: 4px"><span class="lang-en">CEO &amp; Sole Founder</span><span class="lang-es">CEO y Fundador Único</span></div>
+<div style="font-size: 13px; color: #a0a0a0"><span class="lang-en">Madrid, Spain</span><span class="lang-es">Madrid, España</span></div>
+</div>
+</div>
+<div style="margin-top: 20px">
+<div style="display: flex; font-size: 13px; line-height: 1.6; margin-bottom: 6px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span class="text-support"><strong style="color: #fff">BBVA Asset Management</strong> <span class="lang-en">(2019–present) — Solution Development Lead &amp; Product Owner. Real-time market risk systems on AWS.</span><span class="lang-es">(2019–presente) — Solution Development Lead y Product Owner. Sistemas de riesgo de mercado en tiempo real sobre AWS.</span></span>
+</div>
+<div style="display: flex; font-size: 13px; line-height: 1.6; margin-bottom: 6px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span class="text-support"><strong style="color: #fff">BME / SIX</strong> <span class="lang-en">(2018–2019) — Quantitative Risk Analyst. FX Rolling risk model development.</span><span class="lang-es">(2018–2019) — Quantitative Risk Analyst. Desarrollo de modelo de riesgo FX Rolling.</span></span>
+</div>
+<div style="display: flex; font-size: 13px; line-height: 1.6; margin-bottom: 6px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span class="text-support"><strong style="color: #fff">KPMG</strong> <span class="lang-en">(2017–2018) — Financial Risk Management. Credit model validation at Banco Santander.</span><span class="lang-es">(2017–2018) — Financial Risk Management. Validación de modelos de crédito en Banco Santander.</span></span>
+</div>
+</div>
+<div style="margin-top: 16px">
+<div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span><span class="lang-en">BSc Finance &amp; Accounting — First Class Honours, UC3M · Winner Extraordinary End of Studies Prize 2016</span><span class="lang-es">Grado en Finanzas y Contabilidad — Matrícula de Honor, UC3M · Premio Extraordinario de Fin de Estudios 2016</span></span>
+</div>
+<div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span><span class="lang-en">Master's Financial Engineering — AFI Madrid</span><span class="lang-es">Máster en Ingeniería Financiera — AFI Madrid</span></span>
+</div>
+<div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span><span class="lang-en">CFA Level II Candidate</span><span class="lang-es">Candidato CFA Nivel II</span></span>
+</div>
+</div>
+<div style="margin-top: 12px">
+<div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span>Rust/LLMOps — Duke University (2024–2025)</span>
+</div>
+<div style="display: flex; font-size: 12px; color: #a0a0a0; margin-bottom: 4px">
+<span style="color: #00b4c8; margin-right: 8px">▸</span>
+<span>Ethereum Smart Contracts (2025)</span>
+</div>
+</div>
+</div>
+<div>
+<div class="card mb-2">
+<div class="bold text-primary mb-2"><span class="lang-en">Institutional pedigree</span><span class="lang-es">Pedigree institucional</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">BBVA</span>
+<span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">Banco Santander</span>
+<span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">BME·SIX</span>
+<span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600">KPMG</span>
+<span style="display:inline-block;background:#1a1a1a;border:1px solid #333;padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600"><span class="lang-en">Bank of Spain</span><span class="lang-es">Banco de España</span></span>
+</div>
+</div>
+<div class="card">
+<div class="bold text-amber mb-2"><span class="lang-en">Team growth plan</span><span class="lang-es">Plan de crecimiento del equipo</span></div>
+<div class="text-support" style="font-size:13px"><span class="lang-en">Pre-seed funds first 3 hires:</span><span class="lang-es">La pre-seed financia las 3 primeras contrataciones:</span><br/><span class="lang-en">Months 0–6: Senior Backend + Mid SSI/API</span><span class="lang-es">Meses 0–6: Senior Backend + Mid SSI/API</span><br/><span class="lang-en">Months 6–12: Smart Contracts/Oracle engineer</span><span class="lang-es">Meses 6–12: Smart Contracts/Oracle engineer</span><br/><span class="lang-en">Months 12–18: DevOps/Security engineer</span><span class="lang-es">Meses 12–18: DevOps/Security engineer</span><br/><span class="lang-en">Co-founder search: active</span><span class="lang-es">Búsqueda de co-fundador: activa</span></div>
+</div>
+<div style="font-size:11px;color:#a0a0a0;font-style:italic;margin-top:12px"><span class="lang-en">Currently transitioning full-time upon pre-seed close.</span><span class="lang-es">Transición a tiempo completo con el cierre de la pre-seed.</span></div>
+</div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height:44px"/>
+<div class="bold">13</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 14 — THE ASK -->
+<div class="slide">
+<div class="title"><span class="lang-en">Pre-Seed Round — €750K Blended Capital</span><span class="lang-es">Ronda Pre-Seed — €750K Capital Mixto</span></div>
+<div class="content-area">
+<div style="display:grid;grid-template-columns:1fr 2px 1.5fr;gap:32px;align-items:center">
+<div style="text-align:center">
+<div style="font-size:48px;font-weight:700;margin-bottom:8px">€750K</div>
+<div style="font-size:13px;color:#a0a0a0;margin-bottom:20px;letter-spacing:0.5px">€450K CONVERTIBLE + €300K ENISA</div>
+<div class="badge" style="font-size:14px;padding:8px 20px;margin-bottom:24px"><span class="lang-en">Pre-Seed Round · Blended Capital</span><span class="lang-es">Ronda Pre-Seed · Capital Mixto</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;text-align:left">
+<div style="background:#1a1a1a;border-left:3px solid #00b4c8;padding:10px 12px;border-radius:0 6px 6px 0">
+<div style="font-size:11px;color:#00b4c8;font-weight:700;letter-spacing:0.5px;margin-bottom:4px">EQUITY · €450K</div>
+<div style="font-size:12px;color:#a0a0a0;line-height:1.4">Convertible Note<br/>Cap: €5M–€6M<br/><span class="lang-en">Discount: 10–20%</span><span class="lang-es">Descuento: 10–20%</span><br/><span class="lang-en">Maturity: 12–24 mo</span><span class="lang-es">Vencimiento: 12–24 meses</span></div>
+</div>
+<div style="background:#1a1a1a;border-left:3px solid #f59e0b;padding:10px 12px;border-radius:0 6px 6px 0">
+<div style="font-size:11px;color:#f59e0b;font-weight:700;letter-spacing:0.5px;margin-bottom:4px">ENISA · €300K</div>
+<div style="font-size:12px;color:#a0a0a0;line-height:1.4"><span class="lang-en">Participative loan</span><span class="lang-es">Préstamo participativo</span><br/><span class="lang-en">Non-dilutive</span><span class="lang-es">No dilutivo</span><br/><span class="lang-en">7–9 yr maturity</span><span class="lang-es">Vencimiento 7–9 años</span><br/><span class="lang-en">5–7 yr grace</span><span class="lang-es">Carencia 5–7 años</span></div>
+</div>
+</div>
+<div style="font-size:11px;color:#a0a0a0;margin-top:12px"><span class="lang-en">Legal counsel: Audens Legal S.L.P.</span><span class="lang-es">Asesoría legal: Audens Legal S.L.P.</span></div>
+</div>
+<div style="width:2px;background:#00b4c8;align-self:stretch"></div>
+<div>
+<div class="bold" style="font-size:16px;margin-bottom:20px"><span class="lang-en">Use of funds</span><span class="lang-es">Uso de los fondos</span></div>
+<div style="margin-bottom:14px">
+<div style="width:100%;height:32px;background:#1a1a1a;border-radius:6px;overflow:hidden;margin-bottom:6px"><div style="width:40%;height:100%;background:#00b4c8;border-radius:6px 0 0 6px"></div></div>
+<div class="bold" style="font-size:13px"><span class="lang-en">40% · Engineering — €300K</span><span class="lang-es">40% · Ingeniería — €300K</span></div>
+<div style="font-size:11px;color:#a0a0a0"><span class="lang-en">4 staggered hires + founder · Senior Backend, SSI/API, Smart Contracts, DevOps</span><span class="lang-es">4 contrataciones escalonadas + fundador · Senior Backend, SSI/API, Smart Contracts, DevOps</span></div>
+</div>
+<div style="margin-bottom:14px">
+<div style="width:100%;height:32px;background:#1a1a1a;border-radius:6px;overflow:hidden;margin-bottom:6px"><div style="width:18%;height:100%;background:#f59e0b;border-radius:6px 0 0 6px"></div></div>
+<div class="bold" style="font-size:13px"><span class="lang-en">18% · Legal &amp; Compliance — €135K</span><span class="lang-es">18% · Legal y Compliance — €135K</span></div>
+<div style="font-size:11px;color:#a0a0a0"><span class="lang-en">SL constitution, EU27 trademark, Audens retainer, DORA, GDPR</span><span class="lang-es">Constitución de SL, marca EU27, retainer Audens, DORA, GDPR</span></div>
+</div>
+<div style="margin-bottom:14px">
+<div style="width:100%;height:32px;background:#1a1a1a;border-radius:6px;overflow:hidden;margin-bottom:6px"><div style="width:24%;height:100%;background:#a0a0a0;border-radius:6px 0 0 6px"></div></div>
+<div class="bold" style="font-size:13px">24% · GTM — €180K</div>
+<div style="font-size:11px;color:#a0a0a0"><span class="lang-en">Pilot delivery, BD outreach, EU market entry, CRM</span><span class="lang-es">Entrega de pilots, outreach de BD, entrada en mercado UE, CRM</span></div>
+</div>
+<div>
+<div style="width:100%;height:32px;background:#1a1a1a;border-radius:6px;overflow:hidden;margin-bottom:6px"><div style="width:18%;height:100%;background:#00b4c8;opacity:0.5;border-radius:6px 0 0 6px"></div></div>
+<div class="bold" style="font-size:13px"><span class="lang-en">18% · Operations / Buffer — €135K</span><span class="lang-es">18% · Operaciones / Buffer — €135K</span></div>
+<div style="font-size:11px;color:#a0a0a0"><span class="lang-en">Working capital, AWS scaling, contingency reserve</span><span class="lang-es">Capital circulante, escalado AWS, reserva de contingencia</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height:44px"/>
+<div class="bold">14</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 15 — FINANCIAL PROJECTIONS -->
+<div class="slide">
+<div class="title"><span class="lang-en">Revenue projections — base scenario.</span><span class="lang-es">Proyecciones de ingresos — escenario base.</span></div>
+<div class="content-area">
+<table style="margin-bottom:32px;font-size:15px">
+<thead>
+<tr>
+<th style="color:#00b4c8"><span class="lang-en">METRIC</span><span class="lang-es">MÉTRICA</span></th>
+<th style="color:#00b4c8">2026</th>
+<th style="color:#00b4c8">2027</th>
+<th style="color:#00b4c8">2028</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:rgba(0,180,200,0.08)">
+<td class="bold text-primary"><span class="lang-en">Clients</span><span class="lang-es">Clientes</span></td>
+<td class="bold text-primary">1–3</td>
+<td class="bold text-primary">8–10</td>
+<td class="bold text-primary">15–30</td>
+</tr>
+<tr><td class="bold">ARR</td><td>€50k–€150k</td><td>€400k–€800k</td><td><span class="lang-en">€1.2M–€3M</span><span class="lang-es">€1,2M–€3M</span></td></tr>
+<tr><td class="bold"><span class="lang-en">Key market</span><span class="lang-es">Mercado clave</span></td><td class="text-support"><span class="lang-en">Spain</span><span class="lang-es">España</span></td><td class="text-support"><span class="lang-en">Spain + DE/FR</span><span class="lang-es">España + DE/FR</span></td><td class="text-support"><span class="lang-en">Full EU</span><span class="lang-es">UE completa</span></td></tr>
+<tr><td class="bold"><span class="lang-en">Stage</span><span class="lang-es">Fase</span></td><td class="text-support"><span class="lang-en">Pilot → Paid</span><span class="lang-es">Pilot → De pago</span></td><td class="text-support"><span class="lang-en">Beta launch</span><span class="lang-es">Lanzamiento beta</span></td><td class="text-support"><span class="lang-en">Scale</span><span class="lang-es">Escala</span></td></tr>
+</tbody>
+</table>
+<div style="border-top:2px solid #00b4c8;padding-top:20px;margin-bottom:20px">
+<div class="bold text-primary mb-2" style="font-size:13px;text-transform:uppercase"><span class="lang-en">Key Assumptions</span><span class="lang-es">Asunciones clave</span></div>
+<ul class="text-support" style="font-size:14px;column-count:2;column-gap:40px">
+<li style="margin-bottom:6px"><span class="lang-en">Sales cycle: 6–18 months per institutional client</span><span class="lang-es">Ciclo de venta: 6–18 meses por cliente institucional</span></li>
+<li style="margin-bottom:6px"><span class="lang-en">ACV: €60,000–€240,000 per year (base subscription €5,000–€20,000/month × 12 months)</span><span class="lang-es">ACV: €60.000–€240.000 por año (suscripción base €5.000–€20.000/mes × 12 meses)</span></li>
+<li style="margin-bottom:6px"><span class="lang-en">Pilot-to-paid conversion: 50–70%</span><span class="lang-es">Conversión pilot a pago: 50–70%</span></li>
+<li style="margin-bottom:6px"><span class="lang-en">Regulatory demand spike: eIDAS 2.0 deployment 2025–2027</span><span class="lang-es">Pico de demanda regulatoria: despliegue eIDAS 2.0 2025–2027</span></li>
+<li style="margin-bottom:6px"><span class="lang-en">Founder-led sales: first 12–18 months</span><span class="lang-es">Ventas lideradas por el fundador: primeros 12–18 meses</span></li>
+<li style="margin-bottom:6px"><span class="lang-en">Target: 10–50 institutional clients</span><span class="lang-es">Objetivo: 10–50 clientes institucionales</span></li>
+</ul>
+</div>
+<div class="footnote" style="margin-top:0"><span class="lang-en">Single base scenario shown. Conservative and optimistic scenarios available on request. All figures are modelled projections — not a financial commitment. Validation pending first pilot conversions.</span><span class="lang-es">Se muestra un único escenario base. Escenarios conservador y optimista disponibles bajo petición. Todas las cifras son proyecciones modeladas — no constituyen un compromiso financiero. Validación pendiente de las primeras conversiones de pilot.</span></div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height:44px"/>
+<div class="bold">15</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 16 — ROADMAP -->
+<div class="slide">
+<div class="title"><span class="lang-en">Next 18 months — funded by this raise.</span><span class="lang-es">Próximos 18 meses — financiados por esta ronda.</span></div>
+<div class="content-area">
+<div class="grid-3 mb-4">
+<div class="card highlight">
+<div class="bold text-primary mb-2"><span class="lang-en">Months 0–6 · Foundations</span><span class="lang-es">Meses 0–6 · Fundamentos</span></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Beta pilot with first real users</span><span class="lang-es">Beta pilot con los primeros usuarios reales</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">ØHNexus SL legally constituted</span><span class="lang-es">ØHNexus SL constituida legalmente</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">First 2 engineering hires (Senior Backend M2, Mid SSI/API M4)</span><span class="lang-es">Primeras 2 contrataciones de ingeniería (Senior Backend M2, Mid SSI/API M4)</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Admin issuer CRUD endpoint</span><span class="lang-es">Endpoint CRUD del admin issuer</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Cryptographic VC JWT signing</span><span class="lang-es">Firma criptográfica de VC en JWT</span></div></div>
+<div style="display:flex;align-items:flex-start"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Rate limiting layer</span><span class="lang-es">Capa de rate limiting</span></div></div>
+</div>
+<div class="card" style="border-left:3px solid #f59e0b">
+<div class="bold text-amber mb-2"><span class="lang-en">Months 6–12 · Traction</span><span class="lang-es">Meses 6–12 · Tracción</span></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Production pilot live with paying institution</span><span class="lang-es">Pilot en producción con una institución de pago en vivo</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Smart contract library expansion</span><span class="lang-es">Expansión de la librería de smart contracts</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Oracle reliability layer</span><span class="lang-es">Capa de fiabilidad del oracle</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">First channel partner or integration deal</span><span class="lang-es">Primer partner de canal o acuerdo de integración</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">EU market entry (Germany / Netherlands)</span><span class="lang-es">Entrada en mercado UE (Alemania / Países Bajos)</span></div></div>
+<div style="display:flex;align-items:flex-start"><div style="width:8px;height:8px;border-radius:50%;background:#00b4c8;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">5–10 institutional clients pipeline</span><span class="lang-es">Pipeline de 5–10 clientes institucionales</span></div></div>
+</div>
+<div class="card" style="border-left:3px solid #a0a0a0">
+<div class="bold text-support mb-2"><span class="lang-en">Months 12–18 · Scale</span><span class="lang-es">Meses 12–18 · Escala</span></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Mainnet migration from Sepolia testnet</span><span class="lang-es">Migración a mainnet desde el testnet Sepolia</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">EU regulatory certification process</span><span class="lang-es">Proceso de certificación regulatoria UE</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">First commercial sales hire</span><span class="lang-es">Primera contratación de ventas comerciales</span></div></div>
+<div style="display:flex;align-items:flex-start;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">25–50 clients pipeline</span><span class="lang-es">Pipeline de 25–50 clientes</span></div></div>
+<div style="display:flex;align-items:flex-start"><div style="width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;margin-top:5px;flex-shrink:0"></div><div class="text-support" style="font-size:13px"><span class="lang-en">Series A preparation</span><span class="lang-es">Preparación de Serie A</span></div></div>
+</div>
+</div>
+<div class="card" style="display:flex;justify-content:space-between;align-items:center;padding:20px 40px">
+<div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#00b4c8;margin:0 auto 8px"></div><div class="bold" style="font-size:13px"><span class="lang-en">NOW</span><span class="lang-es">AHORA</span></div></div>
+<div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+<div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#f59e0b;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">Q3 2026<br/><span class="text-support">Pilot</span></div></div>
+<div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+<div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#00b4c8;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">Q1 2027<br/><span class="text-support"><span class="lang-en">Production</span><span class="lang-es">Producción</span></span></div></div>
+<div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+<div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#fff;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">Q3 2027<br/><span class="text-support"><span class="lang-en">Scale</span><span class="lang-es">Escala</span></span></div></div>
+<div style="flex:1;height:2px;background:#222;margin:0 12px;position:relative;top:-10px"></div>
+<div style="text-align:center"><div style="width:16px;height:16px;border-radius:50%;background:#a0a0a0;margin:0 auto 8px"></div><div class="bold" style="font-size:12px">2028<br/><span class="text-support"><span class="lang-en">Series A</span><span class="lang-es">Serie A</span></span></div></div>
+</div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height:44px"/>
+<div class="bold">16</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 17 — WHY INVEST -->
+<div class="slide">
+<div class="title"><span class="lang-en">Three reasons to invest in ØHNexus now.</span><span class="lang-es">Tres razones para invertir en ØHNexus ahora.</span></div>
+<div class="content-area">
+<div class="grid-3">
+<div class="card" style="border:2px solid #00b4c8;padding:28px">
+<div class="bold text-primary" style="font-size:64px;line-height:1;margin-bottom:12px">01</div>
+<div class="bold" style="font-size:16px;margin-bottom:12px"><span class="lang-en">Mandatory infrastructure</span><span class="lang-es">Infraestructura obligatoria</span></div>
+<div class="text-support"><span class="lang-en">eIDAS 2.0 and DORA create non-discretionary demand. Institutions must build or buy SSI compliance infrastructure before 2027 regulatory deadlines. ØHNexus is the only production-ready EU-native stack at this intersection.</span><span class="lang-es">eIDAS 2.0 y DORA crean demanda no discrecional. Las instituciones deben construir o comprar infraestructura de compliance SSI antes de los plazos regulatorios de 2027. ØHNexus es el único stack production-ready nativo UE en esta intersección.</span></div>
+</div>
+<div class="card" style="border:2px solid #00b4c8;padding:28px">
+<div class="bold text-primary" style="font-size:64px;line-height:1;margin-bottom:12px">02</div>
+<div class="bold" style="font-size:16px;margin-bottom:12px"><span class="lang-en">Unfair founder advantage</span><span class="lang-es">Ventaja de fundador difícil de replicar</span></div>
+<div class="text-support"><span class="lang-en">10 years inside BBVA, KPMG, Santander, BME/SIX building the exact systems ØHNexus replaces. Direct institutional network for pilot acquisition. Not guessing at the problem — built from the inside.</span><span class="lang-es">10 años dentro de BBVA, KPMG, Santander, BME/SIX construyendo los sistemas exactos que ØHNexus sustituye. Red institucional directa para captar pilots. No es una hipótesis sobre el problema — está construido desde dentro.</span></div>
+</div>
+<div class="card" style="border:2px solid #00b4c8;padding:28px">
+<div class="bold text-primary" style="font-size:64px;line-height:1;margin-bottom:12px">03</div>
+<div class="bold" style="font-size:16px;margin-bottom:12px"><span class="lang-en">White space with proof</span><span class="lang-es">Hueco de mercado con evidencia</span></div>
+<div class="text-support"><span class="lang-en">No identified player combines SSI + smart contracts + oracle + EU regulatory infrastructure in one production-grade stack. 38 issues closed. 510 tests passing. Deployed on AWS. The platform exists — the raise accelerates adoption.</span><span class="lang-es">No se ha identificado ningún player que combine SSI + smart contracts + oracle + infraestructura regulatoria UE en un único stack production-grade. 38 issues cerrados. 510 tests pasando. Desplegado en AWS. La plataforma ya existe — la ronda acelera la adopción.</span></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:32px;font-size:14px;color:#a0a0a0"><span class="lang-en">Raise target: €750K blended · €450K Convertible Note (cap €5M–€6M) + €300K ENISA Emprendedores · Legal: Audens Legal S.L.P.</span><span class="lang-es">Objetivo de ronda: €750K capital mixto · €450K Convertible Note (cap €5M–€6M) + €300K ENISA Emprendedores · Asesoría legal: Audens Legal S.L.P.</span></div>
+</div>
+<div class="footer-bar">
+<img class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height:44px"/>
+<div class="bold">17</div>
+<div><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L.</span></div>
+</div>
+</div>
+<!-- SLIDE 18 — CLOSING -->
+<div class="slide cover-slide">
+<img alt="ØHNexus Protocol" class="logo-img" data-height-listener-added="true" src="https://raw.githubusercontent.com/h2owealthplatform-collab/OHNexusDocumentation/main/logoOHNexus.png" style="height:120px;margin-bottom:20px"/>
+<div class="bold" style="font-size:36px;margin-bottom:8px">ØHNexus Protocol</div>
+<div style="font-size:16px;color:#a0a0a0;margin-bottom:32px"><span class="lang-en">SSI Infrastructure for Compliant Financial Services</span><span class="lang-es">Infraestructura SSI para Servicios Financieros con Cumplimiento Normativo</span></div>
+<div style="width:200px;height:2px;background:#00b4c8;margin:0 auto 32px"></div>
+<div style="font-size:15px;margin-bottom:8px"><strong><a class="__cf_email__" data-cfemail="e58b8c8e8a89849ca58a8d8b809d9096cb8c8a" href="/cdn-cgi/l/email-protection">[email protected]</a></strong></div>
+<div style="font-size:15px;color:#a0a0a0;margin-bottom:8px">+34 610 983 805</div>
+<div style="font-size:15px;color:#a0a0a0;margin-bottom:28px">linkedin.com/in/nikolay-gyuneliev-a15aa7a3</div>
+<div class="badge" style="font-size:14px;padding:10px 28px"><span class="lang-en">Schedule a 30-minute call →</span><span class="lang-es">Reserva una llamada de 30 minutos →</span></div>
+<div style="font-size:13px;color:#a0a0a0;margin-top:24px"><span class="lang-en">Madrid, Spain · Pre-Seed Round 2026</span><span class="lang-es">Madrid, España · Ronda Pre-Seed 2026</span></div>
+<div style="position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:10px;color:#a0a0a0"><span class="lang-en">Confidential &amp; Proprietary — © 2026 ØHNexus Protocol S.L. All financial projections are modelled assumptions. Not a financial commitment.</span><span class="lang-es">Confidencial y Propiedad — © 2026 ØHNexus Protocol S.L. Todas las proyecciones financieras son asunciones modeladas. No constituyen un compromiso financiero.</span></div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+<script>
+(function () {
+  var DEFAULT_LANG = 'en';
+  var STORAGE_KEY = 'ohnexus-lang';
+  function setLang(lang) {
+    if (lang !== 'en' && lang !== 'es') lang = DEFAULT_LANG;
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    var btns = document.querySelectorAll('.lang-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed',
+        btns[i].getAttribute('data-set-lang') === lang ? 'true' : 'false');
+    }
+  }
+  var stored = null;
+  try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  setLang(stored || DEFAULT_LANG);
+  var btns = document.querySelectorAll('.lang-btn');
+  for (var i = 0; i < btns.length; i++) {
+    (function(btn) {
+      btn.addEventListener('click', function () {
+        setLang(btn.getAttribute('data-set-lang'));
+      });
+    })(btns[i]);
+  }
+})();
+</script></body></html>
